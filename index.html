@@ -9,8 +9,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="h-auto bg-auto bg-[url('assets/img/hero-desktop.jpg')]">
-        <nav class="bg-transparent py-6 relative">
+    <div class="bg-fixed bg-cover bg-no-repeat h-auto bg-[url('assets/img/hero-desktop.jpg')]">
+        <nav id="nav-bar-noumanity" class="bg-transparent py-6 relative">
             <div class="container mx-auto flex">
                 <div class="flex flex-grow">
                     <img class="w-48" src="assets/img/logo noumanity-white.png" alt="">
@@ -44,161 +44,127 @@
     </div>
     <!--Second section-->
     <section name="rodeate">
-        <div class="bg-zinc-900 py-20 px-44 flex flex-grow justify-between">
-            <div>
-                <quote class="text-orange-600 text-5xl leading-tight">
+        <div class="bg-stone-900 py-20 w-auto grid grid-cols-2 gap-4">
+            <div class="text-orange-600 text-5xl leading-tight font-bold flex flex-col justify-start items-center">
                     <p>Rodéate de aquellos<br> 
                         que necesitas para<br> 
                         asegurar tu éxito.</p>
-                </quote>
             </div>
-            <div class="pt-8">
-                <quote class="text-white text-2xl font-bold">
-                    <ul>
-                        <li>Consultoría digital.</li>
-                        <li>Investigación y práctica de la innovación.</li>
-                        <li>Transformación digital.</li>
-                    </ul>
-                </quote>
+            <div class="pt-8 text-white text-2xl font-bold flex flex-col justify-start items-center">
+                <ul>
+                    <li>Consultoría digital.</li>
+                    <li>Investigación y práctica de la innovación.</li>
+                    <li>Transformación digital.</li>
+                </ul>
             </div>
         </div>
     </section>
     <!--Third section-->
     <section name="rodeate">
-        <div class="bg-white pt-20 pb-10 px-44 flex flex-grow justify-between">
-            <div>
-                <quote class="text-orange-600 font-semibold tracking-widest">
-                    <p>ACERCA DE</p>
-                </quote>
-            </div>
-            <div class="pr-56">
-                <quote class="text-black text-5xl">
-                    <ul>
-                        <p>Estámos ayudando<br> 
-                            a las empresas a <br> 
-                            evolucionar gracias<br>
-                            a las nuevas<br>
-                            tecnologías.</p>
-                    </ul>
-                </quote>
-            </div>
-        </div>
-        <div class="bg-white py-5 px-44 flex flex-grow justify-between">
-            <div class="pt-8 pl-20">
-                <quote class="text-black text-lg font-semibold">
-                    <p>Numanity es una empresa de<br> 
+        <div class="pt-20 pb-10 bg-white w-auto grid grid-cols-2 gap-10 ">
+            <div class="pl-40 h-auto text-orange-600 font-semibold tracking-widest">
+                <p>ACERCA DE</p>
+            </div>    
+            <div class="h-auto text-black text-5xl">
+                <p>Estámos ayudando<br> 
+                    a las empresas a <br> 
+                    evolucionar gracias<br>
+                    a las nuevas<br>
+                    tecnologías.</p>
+            </div>    
+            <div class="pt-10 h-auto flex flex-col justify-start items-center">
+                <p class="text-black text-lg font-semibold">Numanity es una empresa de<br> 
                         innovación tecnológica que<br> 
                         lleva a las empresas hacia la<br>
                         transformación digital. Lorem<br>
                         ipsum dolor sit amet, nibh<br>
                         euismod tincidunt ut laoreet<br>
                         dolore magna erad voluptat.</p>
-                </quote>
-            </div>
-            <div class="w-2/5">
+            </div>    
+            <div class="h-auto">
                 <img src="assets/img/business-people.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="bg-white py-5 px-44 flex flex-grow justify-between">
-           <div class="-mt-32  w-2/5">
+            </div>    
+            <div class="-mt-36 h-auto flex flex-col justify-center items-center">
                 <img src="assets/img/business-man.jpg" alt="">
-            </div>
-            <div class="pr-72">
-                <quote class="text-black text-lg font-semibold">
-                    <p>Aquí va una imagen de trabajo<br> 
-                        breve descripción sobre el proceso<br> 
-                        que se lleva a cabo para cada<br>
-                        proyecto. Lorem ipsum dolor sit amet,<br>
-                        consectetuer adipiscing elit, sed diam<br>
-                        nonummy nibh euismod tincidunt ut<br>
-                        laoreet dolore magna erat<br>
-                        volutpat. Lorem ipsum dolor sit amet,<br>
-                        consectetuer adipiscing elit.
-                    </p>
-                </quote>
-            </div>
+            </div>    
+            <div class="h-auto text-black text-lg font-semibold">
+                <p>Aquí va una imagen de trabajo<br> 
+                    breve descripción sobre el proceso<br> 
+                    que se lleva a cabo para cada<br>
+                    proyecto. Lorem ipsum dolor sit amet,<br>
+                    consectetuer adipiscing elit, sed diam<br>
+                    nonummy nibh euismod tincidunt ut<br>
+                    laoreet dolore magna erat<br>
+                    volutpat. Lorem ipsum dolor sit amet,<br>
+                    consectetuer adipiscing elit.
+                </p>
+            </div>    
+        </div>    
+        <div class="bg-white w-auto grid grid-cols-1 pb-10">
+            <div class="h-auto text-orange-600 flex flex-col justify-start items-center">
+                <p class="text-5xl font-normal ">Enfoque multidisciplinar, pero siempre<br> 
+                    bajo la lupa digital.
+                </p>
+            </div>    
         </div>
-
-        <div class="bg-white py-5 px-44 flex flex-col justify-center items-center">
-           <div>
-                <quote class="text-orange-600 text-5xl font-normal">
-                    <p>Enfoque multidisciplinar, pero siempre<br> 
-                        bajo la lupa digital<br> 
-                    </p>
-                </quote>
-            </div>
+        <div class="pb-10 bg-white w-auto grid grid-cols-2 gap-10 ">
+            <div class="h-auto flex flex-col justify-start items-center">
+                <p class="text-black text-4xl">Trabajar con Noumanity<br> 
+                    es avanzar con confianza<br> 
+                    y seguridad.
+                </p>
+            </div>    
+            <div class="h-auto"></div>    
+            <div class="h-auto flex flex-col justify-start items-center">
+                <ul class="leading-loose text-black text-2xl font-semibold">
+                    <li class="hover:font-bold">Seguridad</li>
+                    <li class="hover:font-bold">Calidad</li>
+                    <li class="hover:font-bold">Confianza</li>
+                    <li class="hover:font-bold">Experiencia</li>
+                </ul>
+            </div>    
+            <div class="-ml-40 h-auto">
+                <p class="text-black text-xl">Breve descripción de cada cualidad, principio o<br> 
+                    valor que tiene Noumanity como proveedor de<br> 
+                    servicio.Lorem ipsum dolor sit amet,<br>
+                    consectetuer adipiscing elit, sed diam nibh<br>
+                    euismod tincidunt ut laoreet dolore magna aliquam<br>
+                    erat volutpat
+                 </p>
+            </div>   
         </div>
-        <div class="bg-white py-10 px-56 flex flex-col justify-start items-start">
-            <div>
-                 <quote class="text-black text-4xl">
-                     <p>Trabajar con Noumanity<br> 
-                         es avanzar con confianza<br> 
-                         y seguridad.
-                     </p>
-                 </quote>
-             </div>
-         </div>
-         <div class="bg-white pt-20 pb-10 px-56 flex flex-grow justify-between">
-            <div>
-                <quote class="text-black text-2xl font-semibold ">
-                    <ul class="leading-loose">
-                        <li class="hover:font-bold">Seguridad</li>
-                        <li class="hover:font-bold">Calidad</li>
-                        <li class="hover:font-bold">Confianza</li>
-                        <li class="hover:font-bold">Experiencia</li>
-                    </ul>
-                </quote>
-            </div>
-            <div class="pr-96">
-                <quote class="text-black text-xl">
-                    <p>Breve descripción de cada cualidad, principio o<br> 
-                       valor que tiene Noumanity como proveedor de<br> 
-                       servicio.Lorem ipsum dolor sit amet,<br>
-                       consectetuer adipiscing elit, sed diam nibh<br>
-                       euismod tincidunt ut laoreet dolore magna aliquam<br>
-                       erat volutpat
-                    </p>
-                </quote>
-            </div>
-        </div>
-        <!--Pending-->
     </section>
-    <!--Fourth section-->
+    <!--Fifth section-->
     <section name="especialidad">
-        <div class="bg-zinc-900 py-20 px-44 flex flex-grow justify-between">
-            <div>
-                <quote class="text-orange-600 font-semibold tracking-widest">
-                    <p>ESPECIALIDAD</p>
-                </quote>
+        <div class="bg-stone-900 py-20 grid grid-cols-2 gap-4">
+            <div class="pl-40">
+                <p class="text-orange-600 font-semibold tracking-widest">
+                    ESPECIALIDAD
+                </p>
             </div>
             <div class="pr-56">
-                <quote class="text-white text-5xl">
-                    <ul>
-                        <p>Te ayudamos a poner<br> 
-                            el uso de la tecnología <br> 
-                            en el centro de tus<br>
-                            decisiones empresariales<br>
-                            para lograr tus objetivos<br>
-                            comerciales.</p>
-                    </ul>
-                </quote>
+                <p class="text-white text-5xl">Te ayudamos a poner<br> 
+                    el uso de la tecnología <br> 
+                    en el centro de tus<br>
+                    decisiones empresariales<br>
+                    para lograr tus objetivos<br>
+                    comerciales.
+                </p>
             </div>
         </div>
     </section>   
-    <!--Fourth section-->
+    <!--Sixth  section-->
     <section name="pexels">
         <div>
             <img src="assets/img/pexels-fauxels-3184302.jpg" alt="">
         </div>
     </section>
-    <!--Fourth section-->
-    <section name="pexels">
-        <div class="bg-zinc-900 py-20 px-44 flex flex-grow justify-between">
-            <div class="pr-72">
-                
+    <!--Seventh section-->
+    <section name="strategics">
+        <div class="bg-stone-900 py-20 grid grid-cols-2 gap-4">
+            <div class="flex flex-col justify-start items-center">
                     <p class="text-orange-600 text-2xl font-semibold">Análisis estratégico</p> 
-                    <p class="text-white text-lg font-semibold">Aquí va una imagen de trabajo<br> 
+                    <p class="pt-10 text-white text-lg font-semibold">Aquí va una imagen de trabajo<br> 
                         Identifica las fortalezas y debilidades de<br> 
                         tu empresa en el uso de la tecnología y<br>
                         lo digital.<br>
@@ -209,17 +175,15 @@
                     </p>
                 
             </div>
-            <div>
+            <div class="flex flex-col justify-center items-center">
                 <img src="assets/img/icon-analisys.JPG" alt="">
             </div>
         </div>
-        <div class="bg-zinc-900 py-20 px-44 flex flex-col justify-center items-center">
-            <div>
-                 <quote class="text-orange-600 text-5xl font-normal">
-                     <p>Innovación tecnológica que abre<br> 
-                         nuevas posibilidades 
-                     </p>
-                 </quote>
+        <div class="bg-stone-900 py-20 grid grid-cols-1">
+            <div class="flex flex-col justify-center items-center">
+                <p class="text-orange-600 text-5xl font-normal">Innovación tecnológica que abre<br> 
+                    nuevas posibilidades 
+                </p>
              </div>
          </div>
     </section>
@@ -241,14 +205,16 @@
                 </quote>
             </div>
             <div>
-                <a href="#" class="text-white hover:text-zinc-900 px-5">Acerca</a>
-                <a href="#" class="text-white hover:text-zinc-900 px-5">Especialidad</a>
-                <a href="#" class="text-white hover:text-zinc-900 px-5">Blog</a>
+                <a href="#" class="text-white hover:text-stone-900 px-5">Acerca</a>
+                <a href="#" class="text-white hover:text-stone-900 px-5">Especialidad</a>
+                <a href="#" class="text-white hover:text-stone-900 px-5">Blog</a>
             </div>
-            <div class="inline">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-white hover:text-zinc-900 h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                </svg>
+            <div>
+                <a href="#nav-bar-noumanity">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-white hover:text-stone-900 h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                    </svg>
+                </a>
             </div>
         </div>
     </footer>
