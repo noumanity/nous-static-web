@@ -21,34 +21,44 @@
     
 </head>
 <body class="font-body">
-    <div class="bg-cover bg-no-repeat h-auto bg-hero-desktop">
+    <div class="bg-cover bg-no-repeat h-auto bg-hero-tablet lg:bg-hero-desktop">
         <nav id="nav-bar-noumanity" class="bg-transparent py-6 relative">
             <!--<div class="container mx-auto flex">-->
-            <div class="container mx-auto grid grid-cols-5 gap-4">    
+            <div class="container mx-auto grid md:grid-cols-4 lg:grid-cols-5 gap-4">    
             <!--<div class="flex flex-grow">-->
-                <div class="col-span-3 pl-20">
-                    <img class="w-96" src="./assets/img/logo noumanity-orange.png" alt="">
+                <div class="col-span-2 md:10 lg:pl-20">
+                    <img class="md:w-80 lg:w-96" src="./assets/img/logo noumanity-orange.png" alt="">
                 </div>    
             <!--</div>-->
             <!--<div class="flex flex-grow justify-between">-->
-                    <div class=" pt-8 text-right">
-                        <a href="#" class=" text-white hover:text-orange-600 pr-3">Acerca</a>
-                        <a href="#" class=" text-white hover:text-orange-600 pr-3">Especialidad</a>
-                        <a href="#" class=" text-white hover:text-orange-600 ">Blog</a>
+                    <div class=" pt-8 text-right md:grid grid-cols-3">
+                        <a href="#" class="text-sm text-white hover:text-orange-600 pr-3">Acerca</a>
+                        <a href="#" class="text-sm text-white hover:text-orange-600 pr-3">Especialidad</a>
+                        <a href="#" class="text-sm text-white hover:text-orange-600 ">Blog</a>
                     </div>
-                    <div class="pt-8 pl-40 text-center">
-                        <a href="#" class=" text-white hover:text-orange-600 pr-2 hover:font-bold">ES</a>
-                        <a href="#" class=" text-white hover:text-orange-600 hover:font-bold">FR</a>
+                    <div class="pt-8 md:pl-10 lg:pl-40 text-center">
+                        <a href="#" class="text-sm text-white hover:text-orange-600 pr-2 hover:font-bold">ES</a>
+                        <a href="#" class="text-sm text-white hover:text-orange-600 hover:font-bold">FR</a>
                     </div>
             <!--</div>-->
             </div>
         </nav>
-        <div class="py-96 flex flex-col justify-end items-end">
+        <div class="py-96 flex flex-col justify-end items-end lg:block md:hidden">
             <p class="text-white text-right text-5xl font-bold px-44">Sé parte del futuro de tu <br> 
                 industria rodéandote de lo <br> 
                 mejor en transformación <br>
                 digital.</p>
         </div>
+
+        <div class="pt-80 pb-32 flex flex-col justify-end items-end lg:hidden md:block">
+            <p class="text-white text-center text-5xl font-bold px-88">Sé parte del futuro<br> 
+                de tu industria <br>
+                rodéandote de <br> 
+                lo mejor en<br>
+                transformación <br>
+                digital.</p>
+        </div>
+
         <div class="pb-32 text-white hover:text-orange-600 text-5xl flex flex-col justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />

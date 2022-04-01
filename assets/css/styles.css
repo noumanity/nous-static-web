@@ -644,6 +644,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('../img/hero-desktop.jpg');
 }
 
+.bg-hero-tablet{
+  background-image: url('../img/hero-ipad.jpg');
+}
+
+.bg-\[url\(\'assets\/img\/hero-ipad\.jpg\'\)\]{
+  background-image: url('assets/img/hero-ipad.jpg');
+}
+
 .bg-\[url\(\'assets\/img\/hero-desktop\.jpg\'\)\]{
   background-image: url('assets/img/hero-desktop.jpg');
 }
