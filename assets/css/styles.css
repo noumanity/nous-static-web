@@ -947,77 +947,198 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+  
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
 
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
   }
-}
 
-@media (min-width: 1024px){
-  .lg\:block{
-    display: block;
+  .md\:px-44{
+    padding-left: 11rem;
+    padding-right: 11rem;
   }
 
-  .lg\:flex{
-    display: flex;
+  .md\:py-96{
+    padding-top: 24rem;
+    padding-bottom: 24rem;
   }
 
-  .lg\:hidden{
-    display: none;
+  .md\:pt-80{
+    padding-top: 20rem;
   }
 
-  .lg\:w-96{
-    width: 24rem;
+  .md\:pb-32{
+    padding-bottom: 8rem;
   }
 
-  .lg\:grid-cols-5{
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  .md\:font-bold{
+    font-weight: 700;
   }
 
-  .lg\:items-center{
+  .md\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .md\:w-auto{
+    width: auto;
+  }
+
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:gap-4{
+    gap: 1rem;
+  }
+
+  .md\:items-center{
     align-items: center;
   }
 
-  .lg\:bg-hero-desktop{
-    background-image: url('../img/hero-desktop.jpg');
+  .md\:justify-start{
+    justify-content: flex-start;
   }
+} 
 
-  .lg\:px-20{
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+@media (min-width: 1024px){
+    .lg\:block{
+      display: block;
+    }
 
-  .lg\:pl-20{
-    padding-left: 5rem;
-  }
+    .lg\:flex{
+      display: flex;
+    }
 
-  .lg\:pl-40{
-    padding-left: 10rem;
-  }
+    .lg\:hidden{
+      display: none;
+    }
 
-  .lg\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
-  }
+    .lg\:w-96{
+      width: 24rem;
+    }
 
-  .lg\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
+    .lg\:grid-cols-5{
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
 
-  .lg\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
+    .lg\:items-center{
+      align-items: center;
+    }
 
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
+    .lg\:bg-hero-desktop{
+      background-image: url('../img/hero-desktop.jpg');
+    }
 
-  .lg\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    .lg\:px-20{
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    .lg\:pl-20{
+      padding-left: 5rem;
+    }
+
+    .lg\:pl-40{
+      padding-left: 10rem;
+    }
+
+    .lg\:text-5xl{
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .lg\:text-lg{
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .lg\:text-4xl{
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+
+    .lg\:text-2xl{
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .lg\:text-xl{
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .lg\:py-96{
+      padding-top: 24rem;
+      padding-bottom: 24rem;
+    }
+
+    .lg\:justify-end{
+      justify-content: flex-end;
+    }
+
+    .lg\:pb-32{
+      padding-bottom: 8rem;
+    }
+  
+    .lg\:font-bold{
+      font-weight: 700;
+    }
+
+    .lg\:text-right{
+      text-align: right;
+    }
+
+    .lg\:text-5xl{
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .lg\:font-bold{
+      font-weight: 700;
+    }
+
+    .lg\:px-44{
+      padding-left: 11rem;
+      padding-right: 11rem;
+    }
+
+    .lg\:leading-tight{
+      line-height: 1.25;
+    }
+
+    .lg\:text-sm{
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .lg\:justify-start{
+      justify-content: flex-start;
+    }
+
+    .lg\:py-20{
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .lg\:w-auto{
+      width: auto;
+    }
+
+    .lg\:grid-cols-2{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lg\:gap-4{
+      gap: 1rem;
+    }
+
+    .lg\:flex-col{
+      flex-direction: column;
+    }
   }
-}
