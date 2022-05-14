@@ -1,0 +1,280 @@
+<div class="bg-cover bg-no-repeat h-auto bg-hero-tablet lg:bg-hero-desktop">
+    <nav id="nav-bar-noumanity" class="bg-transparent py-6 relative">
+        <!--<div class="container mx-auto flex">-->
+        <div class="container mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <!--<div class="flex flex-grow">-->
+            <div class="col-span-2 md:10 lg:pl-20">
+                <img class="hidden md:block lg:block md:w-80 lg:w-96" src="./assets/img/logo noumanity-orange.png"
+                    alt="">
+                <!--MOBILE-->
+                <img class="block w-28 md:hidden lg:hidden md:w-80 lg:w-96"
+                    src="./assets/img/logo noumanity-white.png" alt="">
+                <!--END MOBILE-->
+            </div>
+            <!--</div>-->
+            <!--<div class="flex flex-grow justify-between">-->
+
+            <!--MOBILE-->
+            <div class=" block md:hidden lg:hidden grid grid-cols-3 items-center">
+                <div class="col-end-auto">
+                    <svg xmlcol-span-4 ns="http://www.w3.org/2000/svg" class="stroke-0 text-white" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+            </div>
+            <!--END MOBILE-->
+
+            <div class="hidden md:block lg:block">
+                <div class=" pt-8 text-right md:grid grid-cols-3">
+                    <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 pr-3">{{about}}</a>
+                    <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 pr-3">{{specialty}}</a>
+                    <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 ">{{blog}}</a>
+                </div>
+            </div>
+            <div class="hidden md:block lg:block pt-8 md:pl-10 lg:pl-40 text-center">
+                <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 pr-2 hover:font-bold">{{lenguage_es}}</a>
+                <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 hover:font-bold">{{lenguage_fr}}</a>
+            </div>
+            <!--</div>-->
+        </div>
+    </nav>
+
+    <div
+        class="py-20 grid grid-cols-1 justify-center items-center md:py-96 md:pt-80 md:pb-32 md:flex md:flex-col md:justify-end md:items-end lg:py-96 lg:flex lg:flex-col lg:justify-end lg:items-end">
+        <p
+            class="text-white text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
+            {{{banner_message}}}
+    </div>
+
+    <div class="grid grid-cols-4 hidden md:block lg:block">
+        <div
+            class="col-start-2 col-span-4 text-white hover:text-{{light_mode_color}}-600 text-5xl flex flex-col justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+            </svg>
+        </div>
+    </div>
+
+</div>
+
+<!--Second section-->
+<section name="rodeate">
+    <div class="bg-{{light_mode_color}}-600 dark:bg-{{dark_mode_color}}-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
+        <div class="block sm:hidden lg:hidden text-xl pl-20 text-white  font-bold flex flex-col justify-start ">
+            <ul class="px-20">
+                <li>Consultoría digital.</li>
+                <li>Investigación y práctica </li>
+                <li>de la innovación.</li>
+                <li>Transformación digital.</li>
+            </ul>
+        </div>
+
+        <div class="text-sm  text-white  dark:text-{{light_mode_color}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
+        md:leading-tight md:font-bold md:flex md:flex-col md:justify-start md:items-center     
+        lg:leading-tight lg:font-bold lg:flex lg:flex-col lg:justify-start lg:items-center">
+            <p class="pl-10">{{{second_section_left_message}}}
+        </div>
+        <div class="hidden sm:block lg:block text-2xl sm:text-base pt-8 text-white  font-bold flex flex-col justify-start items-center">
+            <ul>
+                {{{second_section_right_message}}}
+            </ul>
+        </div>
+        
+        <div class="grid grid-cols-4 block md:hidden lg:hidden">
+            <div
+                class="col-start-2 col-span-4 text-white hover:text-{{light_mode_color}}-600 text-5xl flex flex-col justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+                </svg>
+            </div>
+        </div>
+
+</section>
+<!--Third section-->
+<!--MOBILE-->
+<section name="rodeate " class="block md:hidden lg:hidden">
+    <div class="bg-about dark:bg-white pt-20 pb-10 w-auto ">
+        <div class="h-auto text-{{light_mode_color}}-600 font-semibold tracking-widest pl-10">
+            <p>{{third_section_tittle}}</p>
+        </div>
+        <div class="h-auto text-2xl pl-10 pt-10">
+            <p>{{{third_section_subtittle}}}</p>
+        </div>
+        <div class="h-auto md:w-80 pl-10 pt-10 pr-10">
+            <img src="./assets/img/business-people.jpg" alt="">
+        </div>
+        <div class="pt-10 pb-10 pl-10 pr-10 h-auto text-xs justify-start items-center">
+            <p class="text-black  font-semibold">
+                {{{text_above_image}}}
+            </p>
+        </div>
+
+        <div class=" justify-center items-center pl-10 pr-10">
+            <img src="./assets/img/business-man-talk.jpg" alt="">
+        </div>
+        <div class="h-auto text-black md:text-base lg:text-lg font-semibold pl-10 pr-10 py-10">
+            <p>
+                {{{text_below_image}}}
+            </p>
+        </div>
+        <div class=" h-auto text-{{light_mode_color}}-600  justify-start ">
+            <p class="md:text-4xl lg:text-5xl font-normal pl-10 pr-10">
+                {{{fourth_section_title}}}
+            </p>
+        </div>
+        <div class="h-auto justify-start pl-10 pr-10 py-10">
+            <p class="text-black sm:text-2xl lg:text-4xl">
+                {{{fourth_section_subtitle}}}
+            </p>
+        </div>
+        <div class="h-auto"></div>
+        <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
+            <ul class="leading-loose text-black sm:text-xl lg:text-2xl font-semibold">
+                <div class=" h-auto">
+                    <p class="text-black pb-10 ">
+                        {{{fourth_section_right_message}}}
+                    </p>
+                </div>
+                <li class="hover:font-bold">{{security}}</li>
+                <li class="hover:font-bold">{{quality}}</li>
+                <li class="hover:font-bold">{{confidence}}</li>
+                <li class="hover:font-bold">{{experience}}</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!--END MOBILE-->
+<section name="rodeate" class="hidden md:block lg:block">
+    <div class="bg-about dark:bg-white pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
+        <div class="md:pl-10 lg:pl-40 h-auto text-{{light_mode_color}}-600 font-semibold tracking-widest">
+            <p>{{third_section_tittle}}</p>
+        </div>
+        <div class="h-auto text-black md:text-4xl lg:text-5xl">
+            {{{third_section_subtittle}}}
+        </div>
+        <div class="pt-10 h-auto flex flex-col justify-start items-center">
+            <p class="text-black md:text-base lg:text-lg font-semibold">{{{text_above_image}}}</p>
+        </div>
+        <div class="h-auto md:w-80">
+            <img src="./assets/img/business-people.jpg" alt="">
+        </div>
+        <div class="md:pl-10 -mt-36 h-auto flex flex-col justify-center items-center">
+            <img src="./assets/img/business-man-talk.jpg" alt="">
+        </div>
+        <div class="h-auto text-black md:text-base lg:text-lg font-semibold">
+            <p>
+                {{{text_below_image}}}
+            </p>
+        </div>
+        <div class="col-span-2 h-auto text-{{light_mode_color}}-600 flex flex-col justify-start items-center">
+            <p class="md:text-4xl lg:text-5xl font-normal "> {{{fourth_section_title}}}
+            </p>
+        </div>
+        <div class="h-auto flex flex-col justify-start items-center">
+            <p class="text-black sm:text-2xl lg:text-4xl"> {{{fourth_section_subtitle}}}
+            </p>
+        </div>
+        <div class="h-auto"></div>
+        <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
+            <ul class="leading-loose text-black sm:text-xl lg:text-2xl font-semibold">
+                <li class="hover:font-bold">{{security}}</li>
+                <li class="hover:font-bold">{{quality}}</li>
+                <li class="hover:font-bold">{{confidence}}</li>
+                <li class="hover:font-bold">{{experience}}</li>
+            </ul>
+        </div>
+        <div class="-ml-40 h-auto">
+            <p class="text-black sm:text-lg lg:text-xl">
+                {{{fourth_section_right_message}}}
+            </p>
+        </div>
+    </div>
+</section>
+<!--Fifth section-->
+
+<section name="especialidad">
+    <div class="bg-white dark:bg-{{dark_mode_color}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="pl-10 sm:pl-10 lg:pl-40">
+            <p class="text-{{light_mode_color}}-600 font-semibold tracking-widest">
+                {{fifth_section_title}}
+            </p>
+        </div>
+        <div class="pl-10 md:pr-56 lg:pr-56">
+            <p class="text-{{dark_mode_color}}-900 dark:text-white text-2xl md:text-4xl lg:text-4xl">
+                {{{fifth_section_subtitle}}}
+            </p>
+        </div>
+    </div>
+</section>
+<!--Sixth  section-->
+<section name="pexels">
+    <div>
+        <img src="assets/img/pexels-fauxels-3184302.jpg" alt="">
+    </div>
+</section>
+<!--Seventh section-->
+<section name="strategics">
+    <div class="bg-white dark:bg-{{dark_mode_color}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="pl-10 flex flex-col justify-start lg:items-center sm:pl-20">
+            <p class="text-{{light_mode_color}}-600 text-2xl font-semibold">{{seventh_section_left_title}}</p>
+            <p class="pt-10 text-xs text-black dark:text-white md:text-lg lg:text-lg font-semibold">
+                {{{seventh_section_left_text}}}
+            </p>
+
+        </div>
+        <div class="flex flex-col justify-center items-center w-40 md:w-80 lg:w-80">
+            <img class="hidden dark:block" src="assets/img/ilustraciones para web-black.png" alt="">
+            <img class="block dark:hidden" src="assets/img/ilustraciones para web-white.png" alt="">
+        </div>
+        <div
+            class="pl-10 md:pd-0 lg:pd-0 pt-10 col-span-2  flex flex-col md:justify-center md:items-center lg:justify-center lg:items-center">
+            <p class="text-{{light_mode_color}}-600 sm:text-4xl lg:text-5xl font-normal">
+                {{{seventh_section_title}}}
+            </p>
+        </div>
+    </div>
+</section>
+<!--Footer-->
+<footer>
+    <div class=" bg-black dark:bg-{{light_mode_color}}-600 py-10 flex flex-col justify-center items-center">
+        <div>
+            <quote class="text-white text-2xl sm:text-4xl lg:text-lg font-normal text-center">
+                <p>{{email}}</p>
+                <br class="block md:hidden lg:hidden">
+                <p class="">{{cellphone}}</p>
+                <img class="w-96 pt-20 hidden dark:block" src="assets/img/logo noumanity-white.png" alt="">
+            </quote>
+        </div>
+    </div>
+    <div class=" block dark:hidden grid grid-cols-3 bg-black">
+        <img class="w-96 pl-10 block dark:hidden" src="assets/img/logo noumanity-white.png" alt="">
+    </div>
+    <div
+        class="sm:pl-10 sm:text-xs text-sm bg-black dark:bg-{{light_mode_color}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
+        <div>
+            <quote class="text-white tracking-widest sm:text-sm">
+                <p>{{copyright}}</p>
+            </quote>
+        </div>
+        <div class="hidden md:block lg:block">
+            <a href="#" class="sm:text-sm text-white hover:text-{{dark_mode_color}}-900 px-5">{{about}}</a>
+            <a href="#" class="sm:text-sm text-white hover:text-{{dark_mode_color}}-900 px-5">{{specialty}}</a>
+            <a href="#" class="sm:text-sm text-white hover:text-{{dark_mode_color}}-900 px-5">{{blog}}</a>
+        </div>
+        <div>
+            <a href="#nav-bar-noumanity">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class=" text-{{light_mode_color}}-600 dark:text-white hover:text-{{dark_mode_color}}-900 h-10 w-10" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
