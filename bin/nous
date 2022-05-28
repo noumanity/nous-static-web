@@ -1,0 +1,95 @@
+
+#! /bin/bash
+
+nous()(
+  set -eu -o pipefail
+     SCRIPT_BASE=$(dirname $(dirname "$(readlink -f ${BASH_SOURCE[0]})"))
+     failed(){
+         >&2 echo -e "\nnous ERROR\nFailed $@\n" && exit 1 ;
+     }
+
+     usage(){
+     cat <<-EOM
+
+        NAME
+           nous  -  Motor de plantillas para objetos semánticos
+
+        SYNOPSIS
+
+            nous [VERBOS] [ARGS]
+
+            nous [g|gen|generar] TEMPLATE CONTENIDO DISENO   # generar el sitio 
+            nous c|conf|configuración                        # mostrar los configuraciones (variables de entorno)
+            nous v|ver|versión
+            nous help|man|usage                              # mostrar página de ayuda
+
+        ARGS
+        
+            TEMPLATE
+
+
+
+EOM
+}
+
+
+
+ver(){
+  echo "branch: $(git -C ${SCRIPT_BASE} branch | grep \* | awk '{ print $2}' )"
+  echo "ref:    $(git -C ${SCRIPT_BASE} rev-parse HEAD)"
+}
+
+conf(){
+  echo "SCRIPT_BASE: $SCRIPT_BASE"
+
+}
+
+# Variables de Entorno
+
+NOUS_TEMPLATES=${SCRIPT_BASE}/templates
+
+# VERBOS
+
+
+generar(){
+
+  template=$1
+  #contenido=$2
+  #diseno=$3
+  contenido=$SCRIPT_BASE/templates/$template/content.yml 
+  diseno=$SCRIPT_BASE/templates/$template/diseno.yml 
+  template_index=$SCRIPT_BASE/templates/$template/index.html.mustache
+
+
+  mkdir -p ./build/
+  rsync -a "$SCRIPT_BASE"/assets/ build/assets
+  cat $contenido $diseno | mustache - $template_index > build/index.html
+
+
+}
+
+
+
+# Parse et valide les arguments
+nous_COMMAND=${1:-g}
+
+case ${nous_COMMAND} in
+  usage|help|man|h|-h|--help) set -- usage ${@:2} ;;
+  c|conf|configuración) set -- conf ;;
+  v|ver|versión) set -- ver ;;
+  g|gen|generar) set -- generar ${@:2} ;;
+
+  # Commands arguments
+  *)
+    echo "Commande '$1' non reconnu"; exit 1
+    ;;
+esac
+
+# execute
+$@
+
+)
+
+
+[ "${BASH_SOURCE[0]}"  != "$0" ] || nous $@
+
