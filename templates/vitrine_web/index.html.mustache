@@ -86,7 +86,7 @@
             </ul>
         </div>
 
-        <div class="text-sm  text-white  dark:text-{{light_mode_color}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
+        <div class="text-sm  text-{{dark_mode_about_color}}  dark:text-{{dark_mode_color}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
         md:leading-tight md:font-bold md:flex md:flex-col md:justify-start md:items-center     
         lg:leading-tight lg:font-bold lg:flex lg:flex-col lg:justify-start lg:items-center">
             <p class="pl-10">{{{second_section_left_message}}}
@@ -112,7 +112,7 @@
 <!--Third section-->
 <!--MOBILE-->
 <section name="rodeate " class="block md:hidden lg:hidden">
-    <div class="bg-about dark:bg-white pt-20 pb-10 w-auto ">
+    <div class="bg-{{light_mode_about_color}} dark:bg-{{dark_mode_about_color}} pt-20 pb-10 w-auto ">
         <div class="h-auto text-{{light_mode_color}}-600 font-semibold tracking-widest pl-10">
             <p>{{third_section_tittle}}</p>
         </div>
@@ -165,7 +165,7 @@
 </section>
 <!--END MOBILE-->
 <section name="rodeate" class="hidden md:block lg:block">
-    <div class="bg-about dark:bg-white pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
+    <div class="bg-{{light_mode_about_color}} dark:bg-{{dark_mode_about_color}} pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
         <div class="md:pl-10 lg:pl-40 h-auto text-{{light_mode_color}}-600 font-semibold tracking-widest">
             <p>{{third_section_tittle}}</p>
         </div>
@@ -213,14 +213,14 @@
 <!--Fifth section-->
 
 <section name="especialidad">
-    <div class="bg-white dark:bg-{{dark_mode_color}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="bg-{{dark_mode_about_color}} dark:bg-{{dark_mode_color}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 sm:pl-10 lg:pl-40">
             <p class="text-{{light_mode_color}}-600 font-semibold tracking-widest">
                 {{fifth_section_title}}
             </p>
         </div>
         <div class="pl-10 md:pr-56 lg:pr-56">
-            <p class="text-{{dark_mode_color}}-900 dark:text-white text-2xl md:text-4xl lg:text-4xl">
+            <p class="text-{{dark_mode_color}}-900 dark:text-{{dark_mode_about_color}} text-2xl md:text-4xl lg:text-4xl">
                 {{{fifth_section_subtitle}}}
             </p>
         </div>
@@ -234,10 +234,10 @@
 </section>
 <!--Seventh section-->
 <section name="strategics">
-    <div class="bg-white dark:bg-{{dark_mode_color}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="bg-{{dark_mode_about_color}} dark:bg-{{dark_mode_color}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 flex flex-col justify-start lg:items-center sm:pl-20">
             <p class="text-{{light_mode_color}}-600 text-2xl font-semibold">{{seventh_section_left_title}}</p>
-            <p class="pt-10 text-xs text-black dark:text-white md:text-lg lg:text-lg font-semibold">
+            <p class="pt-10 text-xs text-{{light_mode_about_color_two}} dark:text-{{dark_mode_about_color}} md:text-lg lg:text-lg font-semibold">
                 {{{seventh_section_left_text}}}
             </p>
 
@@ -256,7 +256,7 @@
 </section>
 <!--Footer-->
 <footer>
-    <div class=" bg-black dark:bg-{{light_mode_color}}-600 py-10 flex flex-col justify-center items-center">
+    <div class=" bg-{{light_mode_about_color_two}} dark:bg-{{light_mode_color}}-600 py-10 flex flex-col justify-center items-center">
         <div>
             <quote class="text-white text-2xl sm:text-4xl lg:text-lg font-normal text-center">
                 <p>{{email}}</p>
@@ -270,7 +270,7 @@
         <img class="w-96 pl-10 block dark:hidden" src="assets/img/logo noumanity-white.png" alt="">
     </div>
     <div
-        class="sm:pl-10 sm:text-xs text-sm bg-black dark:bg-{{light_mode_color}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
+        class="sm:pl-10 sm:text-xs text-sm bg-{{light_mode_about_color_two}} dark:bg-{{light_mode_color}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
         <div>
             <quote class="text-white tracking-widest sm:text-sm">
                 <p>{{copyright}}</p>
@@ -284,7 +284,7 @@
         <div>
             <a href="#nav-bar-noumanity">
                 <svg xmlns="http://www.w3.org/2000/svg"
-                    class=" text-{{light_mode_color}}-600 dark:text-white hover:text-{{dark_mode_color}}-900 h-10 w-10" fill="none"
+                    class=" text-{{light_mode_color}}-600 dark:text-{{dark_mode_about_color}} hover:text-{{dark_mode_color}}-900 h-10 w-10" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
                 </svg>

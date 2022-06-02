@@ -18,10 +18,10 @@ nous()(
 
             nous [VERBOS] [ARGS]
 
-            nous [g|gen|generar] TEMPLATE CONTENIDO DISENO   # generar el sitio 
-            nous c|conf|configuración                        # mostrar los configuraciones (variables de entorno)
+            nous [g|gen|generar|generar_win] TEMPLATE CONTENIDO DISENO    # generar el sitio 
+            nous c|conf|configuración                                     # mostrar los configuraciones (variables de entorno)
             nous v|ver|versión
-            nous help|man|usage                              # mostrar página de ayuda
+            nous help|man|usage                                           # mostrar página de ayuda
 
         ARGS
         
@@ -64,8 +64,21 @@ generar(){
   mkdir -p ./build/
   rsync -a "$SCRIPT_BASE"/assets/ build/assets
   cat $contenido $diseno | mustache - $template_index > build/index.html
+}
+
+generar_win(){
+
+  template=$1
+  #contenido=$2
+  #diseno=$3
+  contenido=$SCRIPT_BASE/templates/$template/content.yml 
+  diseno=$SCRIPT_BASE/templates/$template/diseno.yml 
+  template_index=$SCRIPT_BASE/templates/$template/index.html.mustache
 
 
+  mkdir -p ./build/
+  cp -R "$SCRIPT_BASE"/assets/ build/assets
+  cat $contenido $diseno | mustache - $template_index > build/index.html
 }
 
 
@@ -78,6 +91,7 @@ case ${nous_COMMAND} in
   c|conf|configuración) set -- conf ;;
   v|ver|versión) set -- ver ;;
   g|gen|generar) set -- generar ${@:2} ;;
+  gw|genwin|generar_win) set -- generar_win ${@:2} ;;
 
   # Commands arguments
   *)
