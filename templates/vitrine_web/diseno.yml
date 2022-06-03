@@ -1,5 +1,40 @@
-light_mode_color : "orange"
-dark_mode_color : "stone"
-light_mode_about_color : "about"
-light_mode_about_color_two : "black"
-dark_mode_about_color : "white"
+claro:
+  color:
+    seccion:  
+      primario: "orange"
+      secundario: "about"
+    menu:
+      primario:
+        hover: orange
+    titulo:
+      primario: "orange"
+    subtitulo:
+      primario: "stone"
+    parrafo:
+      primario: "black"  
+    footer:
+      primario: "black"  
+      quote: "white"
+      enlace: "white"
+      icono: "orange"
+     
+
+oscuro:
+  color:
+    seccion:
+      primario: "stone"
+      secondario: "white"
+    menu:
+      primario:
+        hover: orange
+    titulo:
+      primario: "orange"
+    subtitulo:
+      primario: "white"
+    parrafo:
+      primario: "white"  
+    footer:
+      primario: "black"  
+      quote: "white"
+      enlace: "orange"
+      icono: "white"
