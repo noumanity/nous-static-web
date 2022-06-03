@@ -41,14 +41,14 @@
 
             <div class="hidden md:block lg:block">
                 <div class=" pt-8 text-right md:grid grid-cols-3">
-                    <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 pr-3">{{about}}</a>
-                    <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 pr-3">{{specialty}}</a>
-                    <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 ">{{blog}}</a>
+                    <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 pr-3">{{about}}</a>
+                    <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 pr-3">{{specialty}}</a>
+                    <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 ">{{blog}}</a>
                 </div>
             </div>
             <div class="hidden md:block lg:block pt-8 md:pl-10 lg:pl-40 text-center">
-                <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 pr-2 hover:font-bold">{{lenguage_es}}</a>
-                <a href="#" class="text-sm text-white hover:text-{{light_mode_color}}-600 hover:font-bold">{{lenguage_fr}}</a>
+                <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 pr-2 hover:font-bold">{{lenguage_es}}</a>
+                <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 hover:font-bold">{{lenguage_fr}}</a>
             </div>
             <!--</div>-->
         </div>
@@ -63,7 +63,7 @@
 
     <div class="grid grid-cols-4 hidden md:block lg:block">
         <div
-            class="col-start-2 col-span-4 text-white hover:text-{{light_mode_color}}-600 text-5xl flex flex-col justify-center items-center">
+            class="col-start-2 col-span-4 text-white hover:text-{{claro.color.menu.primario.hover}}-600 text-5xl flex flex-col justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -76,7 +76,7 @@
 
 <!--Second section-->
 <section name="rodeate">
-    <div class="bg-{{light_mode_color}}-600 dark:bg-{{dark_mode_color}}-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
+    <div class="bg-{{claro.color.seccion.primario}}-600 dark:bg-{{modo_oscuro.color.seccion.primario}}-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
         <div class="block sm:hidden lg:hidden text-xl pl-20 text-white  font-bold flex flex-col justify-start ">
             <ul class="px-20">
                 <li>Consultoría digital.</li>
@@ -86,7 +86,7 @@
             </ul>
         </div>
 
-        <div class="text-sm  text-{{dark_mode_about_color}}  dark:text-{{dark_mode_color}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
+        <div class="text-sm  text-{{claro.color.subtitulo.primario}}  dark:text-{{oscuro.color.subtitulo.primario}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
         md:leading-tight md:font-bold md:flex md:flex-col md:justify-start md:items-center     
         lg:leading-tight lg:font-bold lg:flex lg:flex-col lg:justify-start lg:items-center">
             <p class="pl-10">{{{second_section_left_message}}}
@@ -99,7 +99,7 @@
         
         <div class="grid grid-cols-4 block md:hidden lg:hidden">
             <div
-                class="col-start-2 col-span-4 text-white hover:text-{{light_mode_color}}-600 text-5xl flex flex-col justify-center items-center">
+                class="col-start-2 col-span-4 text-white hover:text-{{claro.color.titulo.primario}}-600 text-5xl flex flex-col justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -112,8 +112,8 @@
 <!--Third section-->
 <!--MOBILE-->
 <section name="rodeate " class="block md:hidden lg:hidden">
-    <div class="bg-{{light_mode_about_color}} dark:bg-{{dark_mode_about_color}} pt-20 pb-10 w-auto ">
-        <div class="h-auto text-{{light_mode_color}}-600 font-semibold tracking-widest pl-10">
+    <div class="bg-{{claro.color.seccion.secundario}} dark:bg-{{oscuro.color.seccion.secundario}} pt-20 pb-10 w-auto ">
+        <div class="h-auto text-{{claro.color.titulo.primario}}-600 font-semibold tracking-widest pl-10">
             <p>{{third_section_tittle}}</p>
         </div>
         <div class="h-auto text-2xl pl-10 pt-10">
@@ -136,7 +136,7 @@
                 {{{text_below_image}}}
             </p>
         </div>
-        <div class=" h-auto text-{{light_mode_color}}-600  justify-start ">
+        <div class=" h-auto text-{{claro.color.titulo.primario}}-600 justify-start ">
             <p class="md:text-4xl lg:text-5xl font-normal pl-10 pr-10">
                 {{{fourth_section_title}}}
             </p>
@@ -165,8 +165,8 @@
 </section>
 <!--END MOBILE-->
 <section name="rodeate" class="hidden md:block lg:block">
-    <div class="bg-{{light_mode_about_color}} dark:bg-{{dark_mode_about_color}} pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
-        <div class="md:pl-10 lg:pl-40 h-auto text-{{light_mode_color}}-600 font-semibold tracking-widest">
+    <div class="bg-{{claro.color.seccion.secundario}} dark:bg-{{oscuro.color.seccion.secundario}} pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
+        <div class="md:pl-10 lg:pl-40 h-auto text-{{claro.color.titulo.primario}}-600 font-semibold tracking-widest">
             <p>{{third_section_tittle}}</p>
         </div>
         <div class="h-auto text-black md:text-4xl lg:text-5xl">
@@ -186,7 +186,7 @@
                 {{{text_below_image}}}
             </p>
         </div>
-        <div class="col-span-2 h-auto text-{{light_mode_color}}-600 flex flex-col justify-start items-center">
+        <div class="col-span-2 h-auto text-{{claro.color.titulo.primario}}-600 flex flex-col justify-start items-center">
             <p class="md:text-4xl lg:text-5xl font-normal "> {{{fourth_section_title}}}
             </p>
         </div>
@@ -213,14 +213,14 @@
 <!--Fifth section-->
 
 <section name="especialidad">
-    <div class="bg-{{dark_mode_about_color}} dark:bg-{{dark_mode_color}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="bg-white dark:bg-{{oscuro.color.seccion.primario}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 sm:pl-10 lg:pl-40">
-            <p class="text-{{light_mode_color}}-600 font-semibold tracking-widest">
+            <p class="text-{{claro.color.titulo.primario}}-600 font-semibold tracking-widest">
                 {{fifth_section_title}}
             </p>
         </div>
         <div class="pl-10 md:pr-56 lg:pr-56">
-            <p class="text-{{dark_mode_color}}-900 dark:text-{{dark_mode_about_color}} text-2xl md:text-4xl lg:text-4xl">
+            <p class="text-{{claro.color.subtitulo.primario}}-900 dark:text-{{oscuro.color.subtitulo.primario}} text-2xl md:text-4xl lg:text-4xl">
                 {{{fifth_section_subtitle}}}
             </p>
         </div>
@@ -234,10 +234,10 @@
 </section>
 <!--Seventh section-->
 <section name="strategics">
-    <div class="bg-{{dark_mode_about_color}} dark:bg-{{dark_mode_color}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="bg-white dark:bg-{{oscuro.color.seccion.primario}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 flex flex-col justify-start lg:items-center sm:pl-20">
-            <p class="text-{{light_mode_color}}-600 text-2xl font-semibold">{{seventh_section_left_title}}</p>
-            <p class="pt-10 text-xs text-{{light_mode_about_color_two}} dark:text-{{dark_mode_about_color}} md:text-lg lg:text-lg font-semibold">
+            <p class="text-{{claro.color.titulo.primario}}-600 text-2xl font-semibold">{{seventh_section_left_title}}</p>
+            <p class="pt-10 text-xs text-{{claro.color.parrafo.primario}} dark:text-{{oscuro.color.parrafo.primario}} md:text-lg lg:text-lg font-semibold">
                 {{{seventh_section_left_text}}}
             </p>
 
@@ -248,7 +248,7 @@
         </div>
         <div
             class="pl-10 md:pd-0 lg:pd-0 pt-10 col-span-2  flex flex-col md:justify-center md:items-center lg:justify-center lg:items-center">
-            <p class="text-{{light_mode_color}}-600 sm:text-4xl lg:text-5xl font-normal">
+            <p class="text-{{claro.color.titulo.primario}}-600 sm:text-4xl lg:text-5xl font-normal">
                 {{{seventh_section_title}}}
             </p>
         </div>
@@ -256,7 +256,7 @@
 </section>
 <!--Footer-->
 <footer>
-    <div class=" bg-{{light_mode_about_color_two}} dark:bg-{{light_mode_color}}-600 py-10 flex flex-col justify-center items-center">
+    <div class=" bg-{{claro.color.footer.primario}} dark:bg-{{oscuro.color.footer.primario}}-600 py-10 flex flex-col justify-center items-center">
         <div>
             <quote class="text-white text-2xl sm:text-4xl lg:text-lg font-normal text-center">
                 <p>{{email}}</p>
@@ -270,21 +270,21 @@
         <img class="w-96 pl-10 block dark:hidden" src="assets/img/logo noumanity-white.png" alt="">
     </div>
     <div
-        class="sm:pl-10 sm:text-xs text-sm bg-{{light_mode_about_color_two}} dark:bg-{{light_mode_color}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
+        class="sm:pl-10 sm:text-xs text-sm bg-{{claro.color.footer.primario}} dark:bg-{{oscuro.color.footer.primario}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
         <div>
-            <quote class="text-white tracking-widest sm:text-sm">
+            <quote class="text-{{claro.color.footer.quote}} dark:text-{{oscuro.color.footer.quote}}-600 tracking-widest sm:text-sm">
                 <p>{{copyright}}</p>
             </quote>
         </div>
         <div class="hidden md:block lg:block">
-            <a href="#" class="sm:text-sm text-white hover:text-{{dark_mode_color}}-900 px-5">{{about}}</a>
-            <a href="#" class="sm:text-sm text-white hover:text-{{dark_mode_color}}-900 px-5">{{specialty}}</a>
-            <a href="#" class="sm:text-sm text-white hover:text-{{dark_mode_color}}-900 px-5">{{blog}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.enlace}} hover:text-{{oscuro.color.footer.enlace}}-600 px-5">{{about}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.enlace}} hover:text-{{oscuro.color.footer.enlace}}-600 px-5">{{specialty}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.enlace}} hover:text-{{oscuro.color.footer.enlace}}-600 px-5">{{blog}}</a>
         </div>
         <div>
             <a href="#nav-bar-noumanity">
                 <svg xmlns="http://www.w3.org/2000/svg"
-                    class=" text-{{light_mode_color}}-600 dark:text-{{dark_mode_about_color}} hover:text-{{dark_mode_color}}-900 h-10 w-10" fill="none"
+                    class=" text-{{claro.color.footer.icono}}-600 dark:text-{{oscuro.color.footer.icono}} hover:text-{{dark_mode_color}}-900 h-10 w-10" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
                 </svg>
