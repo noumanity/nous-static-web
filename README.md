@@ -36,4 +36,5 @@ git clone git@github.com:noumanity/nous-static-web
 cd nous-static-web
 ./setup.sh
 echo "export PATH=$PATH:$(pwd)/bin" >> ~/.bashrc
+. ~/.bashrc
 ````
