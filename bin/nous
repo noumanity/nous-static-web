@@ -105,12 +105,11 @@ EOM
     plantilla_repertorio=$REPERTORIO_DE_PLANTILLA/$plantilla_nombre
     afirmar_repositorio_existe -m "El plantilla '$plantilla_nombre' no existe" "$plantilla_repertorio" 
     plantilla_index=$plantilla_repertorio/index.html.mustache
-    afirmar_archivo_existe "$plantilla_index"
 
  
     afirmar_archivo_existe "$contenido"
     afirmar_archivo_existe "$diseno"
-    afirmar_archivo_existe "$contenido"
+    afirmar_archivo_existe "$plantilla_index"
 
     [ ! -z "${REINICIAR:-}" ] || rm -rf "$REPERTORIO_DE_PRODUCTO"
     mkdir -p $REPERTORIO_DE_PRODUCTO
