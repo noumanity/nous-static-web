@@ -1,2 +1,5 @@
 light_mode_color : "orange"
 dark_mode_color : "stone"
+light_mode_about_color : "about"
+light_mode_about_color_two : "black"
+dark_mode_about_color : "white"
