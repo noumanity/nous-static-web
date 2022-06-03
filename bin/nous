@@ -1,13 +1,12 @@
-
 #! /bin/bash
 
 nous()(
   set -eu -o pipefail
      SCRIPT_BASE=$(dirname $(dirname "$(readlink -f ${BASH_SOURCE[0]})"))
-     failed(){
-         >&2 echo -e "\nnous ERROR\nFailed $@\n" && exit 1 ;
+     fatal(){
+         >&2 echo -e "\nnous FATAL\n $@\n" && exit 1 ;
      }
-
+ 
      usage(){
      cat <<-EOM
 
@@ -16,94 +15,91 @@ nous()(
 
         SYNOPSIS
 
-            nous [VERBOS] [ARGS]
-
-            nous [g|gen|generar|generar_win] TEMPLATE CONTENIDO DISENO    # generar el sitio 
+            nous [g|gen|generar] PLANTILLA CONTENIDO DISENO               # generar el sitio 
             nous c|conf|configuración                                     # mostrar los configuraciones (variables de entorno)
-            nous v|ver|versión
+            nous v|ver|versión                                            # version del programa
             nous help|man|usage                                           # mostrar página de ayuda
 
         ARGS
         
-            TEMPLATE
+            PLANTILLA
+
+            CONTENIDO
+
+            DISENO
+
+       VARIABLE DE ENTORNO
+
+         RERPERTORIO_DE_PRODUCTO
 
 
 
 EOM
 }
+  affirmar_archivo_existe(){ [ -f "$1" ] || fatal "El archivo '$1' no existe" ; }
 
+  kv(){ echo "$1: ${!1}" ; }
 
+  _init_config(){
+    REPERTORIO_DE_PLANTILLA=${SCRIPT_BASE}/plantilla
+    REPERTORIO_DE_PRODUCTO="${REPERTORIO_DE_PRODUCTO:-$(pwd)/build}"  
+  }
 
-ver(){
-  echo "branch: $(git -C ${SCRIPT_BASE} branch | grep \* | awk '{ print $2}' )"
-  echo "ref:    $(git -C ${SCRIPT_BASE} rev-parse HEAD)"
-}
+  # VERBOS
+  version(){
+    # monstrar la version, rama y git ref
+    echo "branch: $(git -C ${SCRIPT_BASE} branch | grep \* | awk '{ print $2}' )"
+    echo "ref:    $(git -C ${SCRIPT_BASE} rev-parse HEAD)"
+  }
+  conf(){
+    kv SCRIPT_BASE
+    kv REPERTORIO_DE_PRODUCTO
+    kv REPERTORIO_DE_PLANTILLA
+  }
 
-conf(){
-  echo "SCRIPT_BASE: $SCRIPT_BASE"
+  generar(){
 
-}
+    template=$1
+    #contenido=$2
+    #diseno=$3
+    contenido=$REPERTORIO_DE_PLANTILLA/$template/content.yml
+    diseno=$REPERTORIO_DE_PLANTILLA/$template/diseno.yml
+    plantilla_index=$REPERTORIO_DE_PLANTILLA/$template/index.html.mustache
 
-# Variables de Entorno
+    affirmar_archivo_existe "$contenido"
+    affirmar_archivo_existe "$diseno"
+    affirmar_archivo_existe "$contenido"
 
-NOUS_TEMPLATES=${SCRIPT_BASE}/templates
-
-# VERBOS
-
-
-generar(){
-
-  template=$1
-  #contenido=$2
-  #diseno=$3
-  contenido=$SCRIPT_BASE/templates/$template/content.yml 
-  diseno=$SCRIPT_BASE/templates/$template/diseno.yml 
-  template_index=$SCRIPT_BASE/templates/$template/index.html.mustache
-
-
-  mkdir -p ./build/
-  rsync -a "$SCRIPT_BASE"/assets/ build/assets
-  cat $contenido $diseno | mustache - $template_index > build/index.html
-}
-
-generar_win(){
-
-  template=$1
-  #contenido=$2
-  #diseno=$3
-  contenido=$SCRIPT_BASE/templates/$template/content.yml 
-  diseno=$SCRIPT_BASE/templates/$template/diseno.yml 
-  template_index=$SCRIPT_BASE/templates/$template/index.html.mustache
-
-
-  mkdir -p ./build/
-  cp -R "$SCRIPT_BASE"/assets/ build/assets
-  cat $contenido $diseno | mustache - $template_index > build/index.html
+    mkdir -p .$REPERTORIO_DE_PRODUCTO
+    [ -z "$(which rsync)"  ] && \
+      _copia(){  rsync -a $@  ; } || \
+      _copia(){ cp -r  $@ ; }  
+    _copia "$SCRIPT_BASE"/assets/ $REPERTORIO_DE_PRODUCTO
+    cat $contenido $diseno | mustache $plantilla_index > $REPERTORIO_DE_PRODUCTO/index.html
 }
 
 
+  while getopts "d" opt; do
+    case ${opt} in
+      d) set -x ;;
+    esac
+  done
 
-# Parse et valide les arguments
-nous_COMMAND=${1:-g}
+  shift $((OPTIND -1)) 
 
-case ${nous_COMMAND} in
-  usage|help|man|h|-h|--help) set -- usage ${@:2} ;;
-  c|conf|configuración) set -- conf ;;
-  v|ver|versión) set -- ver ;;
-  g|gen|generar) set -- generar ${@:2} ;;
-  gw|genwin|generar_win) set -- generar_win ${@:2} ;;
 
-  # Commands arguments
-  *)
-    echo "Commande '$1' non reconnu"; exit 1
-    ;;
-esac
+  # Parse et valide les arguments
+  nous_COMMAND=${1:-g}
 
-# execute
-$@
+  case ${nous_COMMAND} in
+    usage|help|man|h|-h|--help) set -- usage ${@:2} ;;
+    c|conf|configuración) _init_config; set -- conf ;;
+    v|ver|versión) set -- version;;
+    g|gen|generar) _init_config; set -- generar ${@:2} ;;
+    *) echo "Commande '$1' non reconnu"; exit 1 ;;
+  esac
 
+  # ejecutar
+  $@
 )
-
-
 [ "${BASH_SOURCE[0]}"  != "$0" ] || nous $@
-
