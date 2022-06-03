@@ -57,13 +57,14 @@ EOM
        esac
     done
     shift $((OPTIND -1))
-    [ -f "$1" ] || fatal $msg;
+    [ -d "$1" ] || fatal $msg;
   }
 
   kv(){ echo "$1: ${!1}" ; }
 
   _init_config(){
     REPERTORIO_DE_PLANTILLA=${SCRIPT_BASE}/plantilla
+    REPERTORIO_DE_DISENO=${REPERTORIO_DE_DISENO:-${SCRIPT_BASE}/diseno}
     REPERTORIO_DE_PRODUCTO="${REPERTORIO_DE_PRODUCTO:-$(pwd)/build}"  
   }
 
@@ -81,15 +82,32 @@ EOM
 
   generar(){
 
-    plantilla_repertorio=$REPERTORIO_DE_PLANTILLA/$1
-    afirmar_repositorio_existe -m "El plantilla '$1' no existe" "$plantilla_repertorio" 
+   # Defectos
+ 
+    local OPTIND o
+    while getopts "c:" o; do
+      case "$o" in
+	c) _tmp=${OPTARG}
+	   afirmar_archivo_existe $_tmp
+	   contenido=$(realpath $_tmp)
+	   ;;
+      esac
+    done      
 
-    #contenido=$2
-    #diseno=$3
-    contenido=$REPERTORIO_DE_PLANTILLA/$template/contenido-defecto.yml
-    diseno=$REPERTORIO_DE_PLANTILLA/$template/diseno.yml
-    plantilla_index=$REPERTORIO_DE_PLANTILLA/$template/index.html.mustache
+    shift $((OPTIND -1))
+   
+    plantilla_nombre=$1
 
+    [ ! -z "${contenido:-}" ] || contenido=$REPERTORIO_DE_PLANTILLA/$plantilla_nombre/contenido-defecto.yml
+    diseno=$REPERTORIO_DE_DISENO/defecto/diseno.yml
+
+    # PLANTILLA
+    plantilla_repertorio=$REPERTORIO_DE_PLANTILLA/$plantilla_nombre
+    afirmar_repositorio_existe -m "El plantilla '$plantilla_nombre' no existe" "$plantilla_repertorio" 
+    plantilla_index=$plantilla_repertorio/index.html.mustache
+    afirmar_archivo_existe "$plantilla_index"
+
+ 
     afirmar_archivo_existe "$contenido"
     afirmar_archivo_existe "$diseno"
     afirmar_archivo_existe "$contenido"
