@@ -16,6 +16,7 @@ nous()(
         SYNOPSIS
 
             nous [g|gen|generar] PLANTILLA CONTENIDO DISENO               # generar el sitio 
+            nous [p|pla|plantilla]                                        lista de plantillas
             nous c|conf|configuración                                     # mostrar los configuraciones (variables de entorno)
             nous v|ver|versión                                            # version del programa
             nous help|man|usage                                           # mostrar página de ayuda
@@ -36,12 +37,34 @@ nous()(
 
 EOM
 }
-  affirmar_archivo_existe(){ [ -f "$1" ] || fatal "El archivo '$1' no existe" ; }
+  afirmar_archivo_existe(){
+    local OPTIND o msg
+    msg="El archivo '$1' no existe" 
+    while getopts "m:" o; do
+      case "$o" in
+        m) msg="${OPTARG}" ;;
+       esac
+    done
+    shift $((OPTIND -1))
+    [ -f "$1" ] || fatal $msg;
+  }
+  afirmar_repositorio_existe(){
+    local OPTIND o msg
+    msg="El repositorio '$1' no existe" 
+    while getopts "m:" o; do
+      case "$o" in
+        m) msg="${OPTARG}" ;;
+       esac
+    done
+    shift $((OPTIND -1))
+    [ -d "$1" ] || fatal $msg;
+  }
 
   kv(){ echo "$1: ${!1}" ; }
 
   _init_config(){
     REPERTORIO_DE_PLANTILLA=${SCRIPT_BASE}/plantilla
+    REPERTORIO_DE_DISENO=${REPERTORIO_DE_DISENO:-${SCRIPT_BASE}/diseno}
     REPERTORIO_DE_PRODUCTO="${REPERTORIO_DE_PRODUCTO:-$(pwd)/build}"  
   }
 
@@ -59,29 +82,52 @@ EOM
 
   generar(){
 
-    template=$1
-    #contenido=$2
-    #diseno=$3
-    contenido=$REPERTORIO_DE_PLANTILLA/$template/content.yml
-    diseno=$REPERTORIO_DE_PLANTILLA/$template/diseno.yml
-    plantilla_index=$REPERTORIO_DE_PLANTILLA/$template/index.html.mustache
+   # Defectos
+ 
+    local OPTIND o
+    while getopts "c:" o; do
+      case "$o" in
+	c) _tmp=${OPTARG}
+	   afirmar_archivo_existe $_tmp
+	   contenido=$(realpath $_tmp)
+	   ;;
+      esac
+    done      
 
-    affirmar_archivo_existe "$contenido"
-    affirmar_archivo_existe "$diseno"
-    affirmar_archivo_existe "$contenido"
+    shift $((OPTIND -1))
+   
+    plantilla_nombre=$1
 
-    mkdir -p .$REPERTORIO_DE_PRODUCTO
-    [ -z "$(which rsync)"  ] && \
+    [ ! -z "${contenido:-}" ] || contenido=$REPERTORIO_DE_PLANTILLA/$plantilla_nombre/contenido-defecto.yml
+    diseno=$REPERTORIO_DE_DISENO/defecto/diseno.yml
+
+    # PLANTILLA
+    plantilla_repertorio=$REPERTORIO_DE_PLANTILLA/$plantilla_nombre
+    afirmar_repositorio_existe -m "La plantilla '$plantilla_nombre' no existe" "$plantilla_repertorio" 
+    plantilla_index=$plantilla_repertorio/index.html.mustache
+
+ 
+    afirmar_archivo_existe "$contenido"
+    afirmar_archivo_existe "$diseno"
+    afirmar_archivo_existe "$plantilla_index"
+
+    [ ! -z "${REINICIAR:-}" ] || rm -rf "$REPERTORIO_DE_PRODUCTO"
+    mkdir -p $REPERTORIO_DE_PRODUCTO
+    [ ! -z "$(which iirsync 2> /dev/null)"  ] && \
       _copia(){  rsync -a $@  ; } || \
-      _copia(){ cp -r  $@ ; }  
-    _copia "$SCRIPT_BASE"/assets/ $REPERTORIO_DE_PRODUCTO
+      _copia(){ cp -R  $1 $2/assets ; }  
+    _copia "$SCRIPT_BASE"/assets $REPERTORIO_DE_PRODUCTO
     cat $contenido $diseno | mustache $plantilla_index > $REPERTORIO_DE_PRODUCTO/index.html
-}
+  }
 
+  plantilla(){
+    ls $REPERTORIO_DE_PLANTILLA
+  }
 
-  while getopts "d" opt; do
+  while getopts "dr" opt; do
     case ${opt} in
       d) set -x ;;
+      r) REINCIAR=TRUE;;
     esac
   done
 
@@ -96,6 +142,7 @@ EOM
     c|conf|configuración) _init_config; set -- conf ;;
     v|ver|versión) set -- version;;
     g|gen|generar) _init_config; set -- generar ${@:2} ;;
+    p|pla|plantilla) _init_config; set -- plantilla ${@:2} ;;
     *) echo "Commande '$1' non reconnu"; exit 1 ;;
   esac
 

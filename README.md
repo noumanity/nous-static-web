@@ -10,14 +10,31 @@ Implementación de [nous](https://github.com/noumanity/nous) por un sitio web.
 # Uso
 
 ```
-yum install mustache
+# Generar un sitio web con el plantilla 'vitrine_web'
+# defecto diseno y contenido 
+nous g vitrine_web
 
-
-
-git clone git@github.com:noumanity/nous-static-web
-cd nous-static-web
-./bin/nous vitrine_web
+# y miralo
 firefox build/index.html
-
 ```
 
+
+```
+# Generar un sitio con otra contenido
+
+git clone git@github.com:noumanity/vitrine-web
+cd vitrine-web
+
+nous g -c contenido.yml vitrine-web
+```
+
+
+### Instalación
+
+```
+git clone git@github.com:noumanity/nous-static-web
+cd nous-static-web
+./setup.sh
+echo "export PATH=$PATH:$(pwd)/bin" >> ~/.bashrc
+. ~/.bashrc
+````
