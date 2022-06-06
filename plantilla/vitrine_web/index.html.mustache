@@ -41,14 +41,14 @@
 
             <div class="hidden md:block lg:block">
                 <div class=" pt-8 text-right md:grid grid-cols-3">
-                    <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 pr-3">{{about}}</a>
-                    <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 pr-3">{{specialty}}</a>
-                    <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 ">{{blog}}</a>
+                    <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:hover:text-{{oscuro.color.menu.primario.hover}}-600 pr-3">{{about}}</a>
+                    <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:hover:text-{{oscuro.color.menu.primario.hover}} pr-3">{{specialty}}</a>
+                    <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:hover:text-{{oscuro.color.menu.primario.hover}}">{{blog}}</a>
                 </div>
             </div>
             <div class="hidden md:block lg:block pt-8 md:pl-10 lg:pl-40 text-center">
-                <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 pr-2 hover:font-bold">{{lenguage_es}}</a>
-                <a href="#" class="text-sm text-white hover:text-{{claro.color.menu.primario.hover}}-600 hover:font-bold">{{lenguage_fr}}</a>
+                <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:text-{{oscuro.color.menu.primario.blur}} dark:hover:text-{{oscuro.color.menu.primario.hover}}-600 pr-2 hover:font-bold">{{lenguage_es}}</a>
+                <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:text-{{oscuro.color.menu.primario.blur}} dark:hover:text-{{oscuro.color.menu.primario.hover}}-600 hover:font-bold">{{lenguage_fr}}</a>
             </div>
             <!--</div>-->
         </div>
@@ -57,7 +57,7 @@
     <div
         class="py-20 grid grid-cols-1 justify-center items-center md:py-96 md:pt-80 md:pb-32 md:flex md:flex-col md:justify-end md:items-end lg:py-96 lg:flex lg:flex-col lg:justify-end lg:items-end">
         <p
-            class="text-white text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
+            class="text-{{claro.color.banner}} dark:text-{{oscuro.color.banner}} text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
             {{{banner_message}}}
     </div>
 
@@ -76,22 +76,19 @@
 
 <!--Second section-->
 <section name="rodeate">
-    <div class="bg-{{claro.color.seccion.primario}}-600 dark:bg-{{modo_oscuro.color.seccion.primario}}-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
-        <div class="block sm:hidden lg:hidden text-xl pl-20 text-white  font-bold flex flex-col justify-start ">
+    <div class="bg-{{claro.color.servicios.fondo}}-600 dark:bg-{{oscuro.color.servicios.fondo}}-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
+        <div class="block sm:hidden lg:hidden text-xl pl-20 text-{{claro.color.servicios.listado}} dark:text-{{oscuro.color.servicios.listado}}  font-bold flex flex-col justify-start ">
             <ul class="px-20">
-                <li>Consultoría digital.</li>
-                <li>Investigación y práctica </li>
-                <li>de la innovación.</li>
-                <li>Transformación digital.</li>
+                {{{second_section_right_message}}}
             </ul>
         </div>
 
-        <div class="text-sm  text-{{claro.color.subtitulo.primario}}  dark:text-{{oscuro.color.subtitulo.primario}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
+        <div class="text-sm  text-{{claro.color.servicios.titulo}}  dark:text-{{oscuro.color.servicios.titulo}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
         md:leading-tight md:font-bold md:flex md:flex-col md:justify-start md:items-center     
         lg:leading-tight lg:font-bold lg:flex lg:flex-col lg:justify-start lg:items-center">
             <p class="pl-10">{{{second_section_left_message}}}
         </div>
-        <div class="hidden sm:block lg:block text-2xl sm:text-base pt-8 text-white  font-bold flex flex-col justify-start items-center">
+        <div class="hidden sm:block lg:block text-2xl sm:text-base pt-8 text-{{claro.color.servicios.listado}} dark:text-{{oscuro.color.servicios.listado}} font-bold flex flex-col justify-start items-center">
             <ul>
                 {{{second_section_right_message}}}
             </ul>
@@ -99,7 +96,7 @@
         
         <div class="grid grid-cols-4 block md:hidden lg:hidden">
             <div
-                class="col-start-2 col-span-4 text-white hover:text-{{claro.color.titulo.primario}}-600 text-5xl flex flex-col justify-center items-center">
+                class="col-start-2 col-span-4 text-{{claro.color.servicios.icono.blur}} hover:text-{{claro.color.servicios.icono.hover}}-900 dark:text-{{oscuro.color.servicios.icono.blur}} dark:hover:text-{{oscuro.color.servicios.icono.hover}}-600 text-5xl flex flex-col justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -112,18 +109,18 @@
 <!--Third section-->
 <!--MOBILE-->
 <section name="rodeate " class="block md:hidden lg:hidden">
-    <div class="bg-{{claro.color.seccion.secundario}} dark:bg-{{oscuro.color.seccion.secundario}} pt-20 pb-10 w-auto ">
-        <div class="h-auto text-{{claro.color.titulo.primario}}-600 font-semibold tracking-widest pl-10">
-            <p>{{third_section_tittle}}</p>
+    <div class="bg-{{claro.color.acerca_de.fondo}} dark:bg-{{oscuro.color.acerca_de.fondo}} pt-20 pb-10 w-auto ">
+        <div class="h-auto font-semibold tracking-widest pl-10">
+            <p class="text-{{claro.color.acerca_de.titulo}}-600 dark:text-{{oscuro.color.acerca_de.titulo}}-600">{{third_section_tittle}}</p>
         </div>
         <div class="h-auto text-2xl pl-10 pt-10">
-            <p>{{{third_section_subtittle}}}</p>
+            <p class="text-{{claro.color.acerca_de.subtitulo}} dark:text-{{oscuro.color.acerca_de.subtitulo}}">{{{third_section_subtittle}}}</p>
         </div>
         <div class="h-auto md:w-80 pl-10 pt-10 pr-10">
             <img src="./assets/img/business-people.jpg" alt="">
         </div>
         <div class="pt-10 pb-10 pl-10 pr-10 h-auto text-xs justify-start items-center">
-            <p class="text-black  font-semibold">
+            <p class="text-{{claro.color.acerca_de.parrafo_izq}} dark:text-{{oscuro.color.acerca_de.parrafo_izq}} font-semibold">
                 {{{text_above_image}}}
             </p>
         </div>
@@ -131,33 +128,33 @@
         <div class=" justify-center items-center pl-10 pr-10">
             <img src="./assets/img/business-man-talk.jpg" alt="">
         </div>
-        <div class="h-auto text-black md:text-base lg:text-lg font-semibold pl-10 pr-10 py-10">
-            <p>
+        <div class="h-auto md:text-base lg:text-lg font-semibold pl-10 pr-10 py-10">
+            <p class="text-{{claro.color.acerca_de.parrafo_der}} dark:text-{{oscuro.color.acerca_de.parrafo_der}}">
                 {{{text_below_image}}}
             </p>
         </div>
-        <div class=" h-auto text-{{claro.color.titulo.primario}}-600 justify-start ">
-            <p class="md:text-4xl lg:text-5xl font-normal pl-10 pr-10">
+        <div class=" h-auto justify-start ">
+            <p class="text-{{claro.color.acerca_de.cualidad.titulo}}-600 dark:text-{{oscuro.color.acerca_de.cualidad.titulo}}-600 md:text-4xl lg:text-5xl font-normal pl-10 pr-10">
                 {{{fourth_section_title}}}
             </p>
         </div>
         <div class="h-auto justify-start pl-10 pr-10 py-10">
-            <p class="text-black sm:text-2xl lg:text-4xl">
+            <p class="text-{{claro.color.acerca_de.cualidad.subtitulo}} dark:text-{{oscuro.color.acerca_de.cualidad.subtitulo}} sm:text-2xl lg:text-4xl">
                 {{{fourth_section_subtitle}}}
             </p>
         </div>
         <div class="h-auto"></div>
         <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
-            <ul class="leading-loose text-black sm:text-xl lg:text-2xl font-semibold">
+            <ul class="leading-loose text-{{claro.color.acerca_de.cualidad.detalle}} dark:text-{{oscuro.color.acerca_de.cualidad.detalle}} sm:text-xl lg:text-2xl font-semibold">
                 <div class=" h-auto">
-                    <p class="text-black pb-10 ">
+                    <p class="text-{{claro.color.acerca_de.cualidad.detalle}} dark:text-{{oscuro.color.acerca_de.cualidad.detalle}} pb-10 ">
                         {{{fourth_section_right_message}}}
                     </p>
                 </div>
-                <li class="hover:font-bold">{{security}}</li>
-                <li class="hover:font-bold">{{quality}}</li>
-                <li class="hover:font-bold">{{confidence}}</li>
-                <li class="hover:font-bold">{{experience}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{security}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{quality}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{confidence}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{experience}}</li>
             </ul>
         </div>
 
@@ -165,15 +162,15 @@
 </section>
 <!--END MOBILE-->
 <section name="rodeate" class="hidden md:block lg:block">
-    <div class="bg-{{claro.color.seccion.secundario}} dark:bg-{{oscuro.color.seccion.secundario}} pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
-        <div class="md:pl-10 lg:pl-40 h-auto text-{{claro.color.titulo.primario}}-600 font-semibold tracking-widest">
-            <p>{{third_section_tittle}}</p>
+    <div class="bg-{{claro.color.acerca_de.fondo}} dark:bg-{{oscuro.color.acerca_de.fondo}} pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
+        <div class="md:pl-10 lg:pl-40 h-auto font-semibold tracking-widest">
+            <p class="text-{{claro.color.acerca_de.titulo}}-600 dark:text-{{oscuro.color.acerca_de.titulo}}-600">{{third_section_tittle}}</p>
         </div>
-        <div class="h-auto text-black md:text-4xl lg:text-5xl">
+        <div class="text-{{claro.color.acerca_de.subtitulo}} dark:text-{{oscuro.color.acerca_de.subtitulo}} h-auto text-black md:text-4xl lg:text-5xl">
             {{{third_section_subtittle}}}
         </div>
         <div class="pt-10 h-auto flex flex-col justify-start items-center">
-            <p class="text-black md:text-base lg:text-lg font-semibold">{{{text_above_image}}}</p>
+            <p class="text-{{claro.color.acerca_de.parrafo_izq}} dark:text-{{oscuro.color.acerca_de.parrafo_izq}} md:text-base lg:text-lg font-semibold">{{{text_above_image}}}</p>
         </div>
         <div class="h-auto md:w-80">
             <img src="./assets/img/business-people.jpg" alt="">
@@ -181,30 +178,30 @@
         <div class="md:pl-10 -mt-36 h-auto flex flex-col justify-center items-center">
             <img src="./assets/img/business-man-talk.jpg" alt="">
         </div>
-        <div class="h-auto text-black md:text-base lg:text-lg font-semibold">
-            <p>
+        <div class="h-auto md:text-base lg:text-lg font-semibold">
+            <p class="text-{{claro.color.acerca_de.parrafo_der}} dark:text-{{oscuro.color.acerca_de.parrafo_der}}">
                 {{{text_below_image}}}
             </p>
         </div>
-        <div class="col-span-2 h-auto text-{{claro.color.titulo.primario}}-600 flex flex-col justify-start items-center">
-            <p class="md:text-4xl lg:text-5xl font-normal "> {{{fourth_section_title}}}
+        <div class="col-span-2 h-auto flex flex-col justify-start items-center">
+            <p class="text-{{claro.color.acerca_de.cualidad.titulo}}-600 dark:text-{{oscuro.color.acerca_de.cualidad.titulo}}-600 md:text-4xl lg:text-5xl font-normal "> {{{fourth_section_title}}}
             </p>
         </div>
         <div class="h-auto flex flex-col justify-start items-center">
-            <p class="text-black sm:text-2xl lg:text-4xl"> {{{fourth_section_subtitle}}}
+            <p class="text-{{claro.color.acerca_de.cualidad.subtitulo}} dark:text-{{oscuro.color.acerca_de.cualidad.subtitulo}} sm:text-2xl lg:text-4xl"> {{{fourth_section_subtitle}}}
             </p>
         </div>
         <div class="h-auto"></div>
         <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
             <ul class="leading-loose text-black sm:text-xl lg:text-2xl font-semibold">
-                <li class="hover:font-bold">{{security}}</li>
-                <li class="hover:font-bold">{{quality}}</li>
-                <li class="hover:font-bold">{{confidence}}</li>
-                <li class="hover:font-bold">{{experience}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{security}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{quality}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{confidence}}</li>
+                <li class="text-{{claro.color.acerca_de.cualidad.listado}} dark:text-{{oscuro.color.acerca_de.cualidad.listado}} hover:font-bold">{{experience}}</li>
             </ul>
         </div>
         <div class="-ml-40 h-auto">
-            <p class="text-black sm:text-lg lg:text-xl">
+            <p class="text-{{claro.color.acerca_de.cualidad.detalle}} dark:text-{{oscuro.color.acerca_de.cualidad.detalle}} sm:text-lg lg:text-xl">
                 {{{fourth_section_right_message}}}
             </p>
         </div>
@@ -213,14 +210,14 @@
 <!--Fifth section-->
 
 <section name="especialidad">
-    <div class="bg-white dark:bg-{{oscuro.color.seccion.primario}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="bg-{{claro.color.especialidad.fondo}} dark:bg-{{oscuro.color.especialidad.fondo}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 sm:pl-10 lg:pl-40">
-            <p class="text-{{claro.color.titulo.primario}}-600 font-semibold tracking-widest">
+            <p class="text-{{claro.color.especialidad.titulo}}-600 dark:text-{{oscuro.color.especialidad.titulo}}-600 font-semibold tracking-widest">
                 {{fifth_section_title}}
             </p>
         </div>
         <div class="pl-10 md:pr-56 lg:pr-56">
-            <p class="text-{{claro.color.subtitulo.primario}}-900 dark:text-{{oscuro.color.subtitulo.primario}} text-2xl md:text-4xl lg:text-4xl">
+            <p class="text-{{claro.color.especialidad.subtitulo}} dark:text-{{oscuro.color.especialidad.subtitulo}} text-2xl md:text-4xl lg:text-4xl">
                 {{{fifth_section_subtitle}}}
             </p>
         </div>
@@ -234,10 +231,10 @@
 </section>
 <!--Seventh section-->
 <section name="strategics">
-    <div class="bg-white dark:bg-{{oscuro.color.seccion.primario}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="bg-{{claro.color.analisis.fondo}} dark:bg-{{oscuro.color.analisis.fondo}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 flex flex-col justify-start lg:items-center sm:pl-20">
-            <p class="text-{{claro.color.titulo.primario}}-600 text-2xl font-semibold">{{seventh_section_left_title}}</p>
-            <p class="pt-10 text-xs text-{{claro.color.parrafo.primario}} dark:text-{{oscuro.color.parrafo.primario}} md:text-lg lg:text-lg font-semibold">
+            <p class="text-{{claro.color.analisis.titulo}}-600 dark:text-{{oscuro.color.analisis.titulo}}-600 text-2xl font-semibold">{{seventh_section_left_title}}</p>
+            <p class="pt-10 text-xs text-{{claro.color.analisis.parrafo}} dark:text-{{oscuro.color.analisis.parrafo}} md:text-lg lg:text-lg font-semibold">
                 {{{seventh_section_left_text}}}
             </p>
 
@@ -248,7 +245,7 @@
         </div>
         <div
             class="pl-10 md:pd-0 lg:pd-0 pt-10 col-span-2  flex flex-col md:justify-center md:items-center lg:justify-center lg:items-center">
-            <p class="text-{{claro.color.titulo.primario}}-600 sm:text-4xl lg:text-5xl font-normal">
+            <p class="text-{{claro.color.analisis.slogan}}-600 dark:text-{{oscuro.color.analisis.slogan}}-600 sm:text-4xl lg:text-5xl font-normal">
                 {{{seventh_section_title}}}
             </p>
         </div>
@@ -256,9 +253,9 @@
 </section>
 <!--Footer-->
 <footer>
-    <div class=" bg-{{claro.color.footer.primario}} dark:bg-{{oscuro.color.footer.primario}}-600 py-10 flex flex-col justify-center items-center">
+    <div class=" bg-{{claro.color.footer.fondo}}-900 dark:bg-{{oscuro.color.footer.fondo}}-600 py-10 flex flex-col justify-center items-center">
         <div>
-            <quote class="text-white text-2xl sm:text-4xl lg:text-lg font-normal text-center">
+            <quote class="text-{{claro.color.footer.contacto}} dark:text-{{claro.color.footer.contacto}} text-2xl sm:text-4xl lg:text-lg font-normal text-center">
                 <p>{{email}}</p>
                 <br class="block md:hidden lg:hidden">
                 <p class="">{{cellphone}}</p>
@@ -270,21 +267,21 @@
         <img class="w-96 pl-10 block dark:hidden" src="assets/img/logo noumanity-white.png" alt="">
     </div>
     <div
-        class="sm:pl-10 sm:text-xs text-sm bg-{{claro.color.footer.primario}} dark:bg-{{oscuro.color.footer.primario}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
+        class="sm:pl-10 sm:text-xs text-sm bg-{{claro.color.footer.fondo}}-900 dark:bg-{{oscuro.color.footer.fondo}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
         <div>
-            <quote class="text-{{claro.color.footer.quote}} dark:text-{{oscuro.color.footer.quote}}-600 tracking-widest sm:text-sm">
+            <quote class="text-{{claro.color.footer.copyright}} dark:text-{{oscuro.color.footer.copyright}} tracking-widest sm:text-sm">
                 <p>{{copyright}}</p>
             </quote>
         </div>
         <div class="hidden md:block lg:block">
-            <a href="#" class="sm:text-sm text-{{claro.color.footer.enlace}} hover:text-{{oscuro.color.footer.enlace}}-600 px-5">{{about}}</a>
-            <a href="#" class="sm:text-sm text-{{claro.color.footer.enlace}} hover:text-{{oscuro.color.footer.enlace}}-600 px-5">{{specialty}}</a>
-            <a href="#" class="sm:text-sm text-{{claro.color.footer.enlace}} hover:text-{{oscuro.color.footer.enlace}}-600 px-5">{{blog}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{about}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{specialty}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{blog}}</a>
         </div>
         <div>
-            <a href="#nav-bar-noumanity">
+            <a href="#nav-bar-noumanity">.blur
                 <svg xmlns="http://www.w3.org/2000/svg"
-                    class=" text-{{claro.color.footer.icono}}-600 dark:text-{{oscuro.color.footer.icono}} hover:text-{{dark_mode_color}}-900 h-10 w-10" fill="none"
+                    class=" text-{{claro.color.footer.icono.blur}} dark:text-{{oscuro.color.footer.icono.blur}} hover:text-{{claro.color.footer.icono.blur}}-600 dark:hover:text-{{oscuro.color.footer.icono.blur}}-900h-10 w-10" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
                 </svg>
