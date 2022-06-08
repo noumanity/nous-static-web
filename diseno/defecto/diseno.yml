@@ -1,11 +1,11 @@
 claro:
   color:
     menu:
-      primario:
+      enlace:
         blur: white
         hover: orange
     banner:
-      primario: white    
+      titulo: white    
       icono:
         blur: white
         hover: orange
@@ -51,11 +51,11 @@ claro:
 oscuro:
   color:
     menu:
-      primario:
+      enlace:
         blur: white
         hover: orange
     banner:
-      primario: white
+      titulo: white
       icono:
         blur: white
         hover: orange

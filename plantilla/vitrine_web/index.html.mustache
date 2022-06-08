@@ -25,9 +25,6 @@
                     src="./assets/img/logo noumanity-white.png" alt="">
                 <!--END MOBILE-->
             </div>
-            <!--</div>-->
-            <!--<div class="flex flex-grow justify-between">-->
-
             <!--MOBILE-->
             <div class=" block md:hidden lg:hidden grid grid-cols-3 items-center">
                 <div class="col-end-auto">
@@ -38,32 +35,33 @@
                 </div>
             </div>
             <!--END MOBILE-->
-
+            <!--Menú-->
             <div class="hidden md:block lg:block">
                 <div class=" pt-8 text-right md:grid grid-cols-3">
-                    <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:hover:text-{{oscuro.color.menu.primario.hover}}-600 pr-3">{{about}}</a>
-                    <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:hover:text-{{oscuro.color.menu.primario.hover}} pr-3">{{specialty}}</a>
-                    <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:hover:text-{{oscuro.color.menu.primario.hover}}">{{blog}}</a>
+                    <a href="#" class="text-sm text-{{claro.color.menu.enlace.blur}} hover:text-{{claro.color.menu.enlace.hover}}-600 dark:hover:text-{{oscuro.color.menu.enlace.hover}}-600 pr-3">{{contenido.menu.enlace_uno}}</a>
+                    <a href="#" class="text-sm text-{{claro.color.menu.enlace.blur}} hover:text-{{claro.color.menu.enlace.hover}}-600 dark:hover:text-{{oscuro.color.menu.enlace.hover}} pr-3">{{contenido.menu.enlace_dos}}</a>
+                    <a href="#" class="text-sm text-{{claro.color.menu.enlace.blur}} hover:text-{{claro.color.menu.enlace.hover}}-600 dark:hover:text-{{oscuro.color.menu.enlace.hover}}">{{contenido.menu.enlace_tres}}</a>
                 </div>
             </div>
             <div class="hidden md:block lg:block pt-8 md:pl-10 lg:pl-40 text-center">
-                <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:text-{{oscuro.color.menu.primario.blur}} dark:hover:text-{{oscuro.color.menu.primario.hover}}-600 pr-2 hover:font-bold">{{lenguage_es}}</a>
-                <a href="#" class="text-sm text-{{claro.color.menu.primario.blur}} hover:text-{{claro.color.menu.primario.hover}}-600 dark:text-{{oscuro.color.menu.primario.blur}} dark:hover:text-{{oscuro.color.menu.primario.hover}}-600 hover:font-bold">{{lenguage_fr}}</a>
+                <a href="#" class="text-sm text-{{claro.color.menu.enlace.blur}} hover:text-{{claro.color.menu.enlace.hover}}-600 dark:text-{{oscuro.color.menu.enlace.blur}} dark:hover:text-{{oscuro.color.menu.enlace.hover}}-600 pr-2 hover:font-bold">{{contenido.idioma.uno}}</a>
+                <a href="#" class="text-sm text-{{claro.color.menu.enlace.blur}} hover:text-{{claro.color.menu.enlace.hover}}-600 dark:text-{{oscuro.color.menu.enlace.blur}} dark:hover:text-{{oscuro.color.menu.enlace.hover}}-600 hover:font-bold">{{contenido.idioma.dos}}</a>
             </div>
-            <!--</div>-->
+            <!--End Menú-->
         </div>
     </nav>
-
-    <div
+    <!--Banner-->
+    <div name="banner"
         class="py-20 grid grid-cols-1 justify-center items-center md:py-96 md:pt-80 md:pb-32 md:flex md:flex-col md:justify-end md:items-end lg:py-96 lg:flex lg:flex-col lg:justify-end lg:items-end">
         <p
-            class="text-{{claro.color.banner}} dark:text-{{oscuro.color.banner}} text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
-            {{{banner_message}}}
+            class="text-{{claro.color.banner.titulo}} dark:text-{{oscuro.color.banner.titulo}} text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
+            {{{contenido.banner.titulo}}}
     </div>
-
+    <!--End Banner-->
+    <!--Menú Icono-->
     <div class="grid grid-cols-4 hidden md:block lg:block">
         <div
-            class="col-start-2 col-span-4 text-white hover:text-{{claro.color.menu.primario.hover}}-600 text-5xl flex flex-col justify-center items-center">
+            class="col-start-2 col-span-4 text-white hover:text-{{claro.color.menu.enlace.hover}}-600 text-5xl flex flex-col justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -71,26 +69,26 @@
             </svg>
         </div>
     </div>
-
+    <!--End Menú Icono-->
 </div>
 
-<!--Second section-->
-<section name="rodeate">
+<!--Primera sección-->
+<section name="primera_seccion">
     <div class="bg-{{claro.color.primera_seccion.fondo}}-600 dark:bg-{{oscuro.color.primera_seccion.fondo}}-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
         <div class="block sm:hidden lg:hidden text-xl pl-20 text-{{claro.color.primera_seccion.listado}} dark:text-{{oscuro.color.primera_seccion.listado}}  font-bold flex flex-col justify-start ">
             <ul class="px-20">
-             {{{second_section_left_message}}}
+             {{{contenido.primera_seccion.titulo}}}
             </ul>
         </div>
 
         <div class="text-sm  text-{{claro.color.primera_seccion.titulo}}  dark:text-{{oscuro.color.primera_seccion.titulo}}-600 leading-tight font-bold lg:text-2xl md:text-2xl   
         md:leading-tight md:font-bold md:flex md:flex-col md:justify-start md:items-center     
         lg:leading-tight lg:font-bold lg:flex lg:flex-col lg:justify-start lg:items-center">
-		<p class="pl-10">{{{second_section_right_message}}}</p>
+		<p class="pl-10">{{{contenido.primera_seccion.listado}}}</p>
         </div>
         <div class="hidden sm:block lg:block text-2xl sm:text-base pt-8 text-{{claro.color.primera_seccion.listado}} dark:text-{{oscuro.color.primera_seccion.listado}} font-bold flex flex-col justify-start items-center">
             <ul>
-                {{{second_section_right_message}}}
+                {{{contenido.primera_seccion.listado}}}
             </ul>
         </div>
         
@@ -104,24 +102,23 @@
                 </svg>
             </div>
         </div>
-
 </section>
-<!--Third section-->
+<!--Segunda sección-->
 <!--MOBILE-->
-<section name="rodeate " class="block md:hidden lg:hidden">
+<section name="segunda_seccion_mobile" class="block md:hidden lg:hidden">
     <div class="bg-{{claro.color.segunda_seccion.fondo}} dark:bg-{{oscuro.color.segunda_seccion.fondo}} pt-20 pb-10 w-auto ">
         <div class="h-auto font-semibold tracking-widest pl-10">
-            <p class="text-{{claro.color.segunda_seccion.titulo}}-600 dark:text-{{oscuro.color.segunda_seccion.titulo}}-600">{{third_section_tittle}}</p>
+            <p class="text-{{claro.color.segunda_seccion.titulo}}-600 dark:text-{{oscuro.color.segunda_seccion.titulo}}-600">{{contenido.segunda_seccion.titulo}}</p>
         </div>
         <div class="h-auto text-2xl pl-10 pt-10">
-            <p class="text-{{claro.color.segunda_seccion.subtitulo}} dark:text-{{oscuro.color.segunda_seccion.subtitulo}}">{{{third_section_subtittle}}}</p>
+            <p class="text-{{claro.color.segunda_seccion.subtitulo}} dark:text-{{oscuro.color.segunda_seccion.subtitulo}}">{{{contenido.segunda_seccion.subtitulo}}}</p>
         </div>
         <div class="h-auto md:w-80 pl-10 pt-10 pr-10">
             <img src="./assets/img/business-people.jpg" alt="">
         </div>
         <div class="pt-10 pb-10 pl-10 pr-10 h-auto text-xs justify-start items-center">
             <p class="text-{{claro.color.segunda_seccion.parrafo_izq}} dark:text-{{oscuro.color.segunda_seccion.parrafo_izq}} font-semibold">
-                {{{text_above_image}}}
+                {{{contenido.segunda_seccion.parrafo_izq}}}
             </p>
         </div>
 
@@ -130,17 +127,17 @@
         </div>
         <div class="h-auto md:text-base lg:text-lg font-semibold pl-10 pr-10 py-10">
             <p class="text-{{claro.color.segunda_seccion.parrafo_der}} dark:text-{{oscuro.color.segunda_seccion.parrafo_der}}">
-                {{{text_below_image}}}
+                {{{contenido.segunda_seccion.parrafo_der}}}
             </p>
         </div>
         <div class=" h-auto justify-start ">
             <p class="text-{{claro.color.segunda_seccion.subseccion.titulo}}-600 dark:text-{{oscuro.color.segunda_seccion.subseccion.titulo}}-600 md:text-4xl lg:text-5xl font-normal pl-10 pr-10">
-                {{{fourth_section_title}}}
+                {{{contenido.segunda_seccion.subseccion.titulo}}}
             </p>
         </div>
         <div class="h-auto justify-start pl-10 pr-10 py-10">
             <p class="text-{{claro.color.segunda_seccion.subseccion.subtitulo}} dark:text-{{oscuro.color.segunda_seccion.subseccion.subtitulo}} sm:text-2xl lg:text-4xl">
-                {{{fourth_section_subtitle}}}
+                {{{contenido.segunda_seccion.subseccion.subtitulo}}}
             </p>
         </div>
         <div class="h-auto"></div>
@@ -148,29 +145,31 @@
             <ul class="leading-loose text-{{claro.color.segunda_seccion.subseccion.detalle}} dark:text-{{oscuro.color.segunda_seccion.subseccion.detalle}} sm:text-xl lg:text-2xl font-semibold">
                 <div class=" h-auto">
                     <p class="text-{{claro.color.segunda_seccion.subseccion.detalle}} dark:text-{{oscuro.color.segunda_seccion.subseccion.detalle}} pb-10 ">
-                        {{{fourth_section_right_message}}}
+                        {{{contenido.segunda_seccion.subseccion.detalle.tab_uno}}}
                     </p>
                 </div>
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{security}}</li>
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{quality}}</li>
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{confidence}}</li>
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{experience}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_uno}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_dos}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_tres}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_cuatro}}</li>
             </ul>
         </div>
 
     </div>
 </section>
 <!--END MOBILE-->
-<section name="rodeate" class="hidden md:block lg:block">
+<!--Segunda sección-->
+<!--DESKTOP-->
+<section name="segunda_seccion" class="hidden md:block lg:block">
     <div class="bg-{{claro.color.segunda_seccion.fondo}} dark:bg-{{oscuro.color.segunda_seccion.fondo}} pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
         <div class="md:pl-10 lg:pl-40 h-auto font-semibold tracking-widest">
-            <p class="text-{{claro.color.segunda_seccion.titulo}}-600 dark:text-{{oscuro.color.segunda_seccion.titulo}}-600">{{third_section_tittle}}</p>
+            <p class="text-{{claro.color.segunda_seccion.titulo}}-600 dark:text-{{oscuro.color.segunda_seccion.titulo}}-600">{{contenido.segunda_seccion.titulo}}</p>
         </div>
         <div class="text-{{claro.color.segunda_seccion.subtitulo}} dark:text-{{oscuro.color.segunda_seccion.subtitulo}} h-auto text-black md:text-4xl lg:text-5xl">
-            {{{third_section_subtittle}}}
+            {{{contenido.segunda_seccion.subtitulo}}}
         </div>
         <div class="pt-10 h-auto flex flex-col justify-start items-center">
-            <p class="text-{{claro.color.segunda_seccion.parrafo_izq}} dark:text-{{oscuro.color.segunda_seccion.parrafo_izq}} md:text-base lg:text-lg font-semibold">{{{text_above_image}}}</p>
+            <p class="text-{{claro.color.segunda_seccion.parrafo_izq}} dark:text-{{oscuro.color.segunda_seccion.parrafo_izq}} md:text-base lg:text-lg font-semibold">{{{contenido.segunda_seccion.parrafo_izq}}}</p>
         </div>
         <div class="h-auto md:w-80">
             <img src="./assets/img/business-people.jpg" alt="">
@@ -180,62 +179,61 @@
         </div>
         <div class="h-auto md:text-base lg:text-lg font-semibold">
             <p class="text-{{claro.color.segunda_seccion.parrafo_der}} dark:text-{{oscuro.color.segunda_seccion.parrafo_der}}">
-                {{{text_below_image}}}
+                {{{contenido.segunda_seccion.parrafo_der}}}
             </p>
         </div>
         <div class="col-span-2 h-auto flex flex-col justify-start items-center">
-            <p class="text-{{claro.color.segunda_seccion.subseccion.titulo}}-600 dark:text-{{oscuro.color.segunda_seccion.subseccion.titulo}}-600 md:text-4xl lg:text-5xl font-normal "> {{{fourth_section_title}}}
+            <p class="text-{{claro.color.segunda_seccion.subseccion.titulo}}-600 dark:text-{{oscuro.color.segunda_seccion.subseccion.titulo}}-600 md:text-4xl lg:text-5xl font-normal "> {{{contenido.segunda_seccion.subseccion.titulo}}}
             </p>
         </div>
         <div class="h-auto flex flex-col justify-start items-center">
-            <p class="text-{{claro.color.segunda_seccion.subseccion.subtitulo}} dark:text-{{oscuro.color.segunda_seccion.subseccion.subtitulo}} sm:text-2xl lg:text-4xl"> {{{fourth_section_subtitle}}}
+            <p class="text-{{claro.color.segunda_seccion.subseccion.subtitulo}} dark:text-{{oscuro.color.segunda_seccion.subseccion.subtitulo}} sm:text-2xl lg:text-4xl"> {{{contenido.segunda_seccion.subseccion.subtitulo}}}
             </p>
         </div>
         <div class="h-auto"></div>
         <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
             <ul class="leading-loose text-black sm:text-xl lg:text-2xl font-semibold">
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{security}}</li>
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{quality}}</li>
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{confidence}}</li>
-                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{experience}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_uno}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_dos}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_tres}}</li>
+                <li class="text-{{claro.color.segunda_seccion.subseccion.listado}} dark:text-{{oscuro.color.segunda_seccion.subseccion.listado}} hover:font-bold">{{contenido.segunda_seccion.subseccion.listado.tab_cuatro}}</li>
             </ul>
         </div>
         <div class="-ml-40 h-auto">
             <p class="text-{{claro.color.segunda_seccion.subseccion.detalle}} dark:text-{{oscuro.color.segunda_seccion.subseccion.detalle}} sm:text-lg lg:text-xl">
-                {{{fourth_section_right_message}}}
+                {{{contenido.segunda_seccion.subseccion.detalle.tab_uno}}}
             </p>
         </div>
     </div>
 </section>
-<!--Fifth section-->
-
-<section name="especialidad">
+<!--Tercera sección-->
+<section name="tercera_seccion">
     <div class="bg-{{claro.color.tercera_seccion.fondo}} dark:bg-{{oscuro.color.tercera_seccion.fondo}}-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 sm:pl-10 lg:pl-40">
             <p class="text-{{claro.color.tercera_seccion.titulo}}-600 dark:text-{{oscuro.color.tercera_seccion.titulo}}-600 font-semibold tracking-widest">
-                {{fifth_section_title}}
+                {{contenido.tercera_seccion.titulo}}
             </p>
         </div>
         <div class="pl-10 md:pr-56 lg:pr-56">
             <p class="text-{{claro.color.tercera_seccion.subtitulo}} dark:text-{{oscuro.color.tercera_seccion.subtitulo}} text-2xl md:text-4xl lg:text-4xl">
-                {{{fifth_section_subtitle}}}
+                {{{contenido.tercera_seccion.subtitulo}}}
             </p>
         </div>
     </div>
 </section>
-<!--Sixth  section-->
+<!--Sección imagen-->
 <section name="pexels">
     <div>
         <img src="assets/img/pexels-fauxels-3184302.jpg" alt="">
     </div>
 </section>
-<!--Seventh section-->
-<section name="strategics">
+<!--Cuarta sección-->
+<section name="cuarta_seccion">
     <div class="bg-{{claro.color.cuarta_seccion.fondo}} dark:bg-{{oscuro.color.cuarta_seccion.fondo}}-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
         <div class="pl-10 flex flex-col justify-start lg:items-center sm:pl-20">
-            <p class="text-{{claro.color.cuarta_seccion.titulo}}-600 dark:text-{{oscuro.color.cuarta_seccion.titulo}}-600 text-2xl font-semibold">{{seventh_section_left_title}}</p>
+            <p class="text-{{claro.color.cuarta_seccion.titulo}}-600 dark:text-{{oscuro.color.cuarta_seccion.titulo}}-600 text-2xl font-semibold">{{contenido.cuarta_seccion.titulo}}</p>
             <p class="pt-10 text-xs text-{{claro.color.cuarta_seccion.parrafo}} dark:text-{{oscuro.color.cuarta_seccion.parrafo}} md:text-lg lg:text-lg font-semibold">
-                {{{seventh_section_left_text}}}
+                {{{contenido.cuarta_seccion.parrafo}}}
             </p>
 
         </div>
@@ -246,7 +244,7 @@
         <div
             class="pl-10 md:pd-0 lg:pd-0 pt-10 col-span-2  flex flex-col md:justify-center md:items-center lg:justify-center lg:items-center">
             <p class="text-{{claro.color.cuarta_seccion.slogan}}-600 dark:text-{{oscuro.color.cuarta_seccion.slogan}}-600 sm:text-4xl lg:text-5xl font-normal">
-                {{{seventh_section_title}}}
+                {{{contenido.cuarta_seccion.slogan}}}
             </p>
         </div>
     </div>
@@ -256,9 +254,9 @@
     <div class=" bg-{{claro.color.footer.fondo}}-900 dark:bg-{{oscuro.color.footer.fondo}}-600 py-10 flex flex-col justify-center items-center">
         <div>
             <quote class="text-{{claro.color.footer.contacto}} dark:text-{{claro.color.footer.contacto}} text-2xl sm:text-4xl lg:text-lg font-normal text-center">
-                <p>{{email}}</p>
+                <p>{{contenido.footer.contacto.email}}</p>
                 <br class="block md:hidden lg:hidden">
-                <p class="">{{cellphone}}</p>
+                <p class="">{{contenido.footer.contacto.celular}}</p>
                 <img class="w-96 pt-20 hidden dark:block" src="assets/img/logo noumanity-white.png" alt="">
             </quote>
         </div>
@@ -270,13 +268,13 @@
         class="sm:pl-10 sm:text-xs text-sm bg-{{claro.color.footer.fondo}}-900 dark:bg-{{oscuro.color.footer.fondo}}-600 lg:px-20 pb-5 flex flex-grow justify-between">
         <div>
             <quote class="text-{{claro.color.footer.copyright}} dark:text-{{oscuro.color.footer.copyright}} tracking-widest sm:text-sm">
-                <p>{{copyright}}</p>
+                <p>{{contenido.footer.copyright}}</p>
             </quote>
         </div>
         <div class="hidden md:block lg:block">
-            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{about}}</a>
-            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{specialty}}</a>
-            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{blog}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{contenido.footer.menu.enlace_uno}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{contenido.footer.menu.enlace_dos}}</a>
+            <a href="#" class="sm:text-sm text-{{claro.color.footer.menu.blur}} hover:text-{{claro.color.footer.menu.hover}}-600 dark:text-{{oscuro.color.footer.menu.blur}} dark:hover:text-{{oscuro.color.footer.menu.hover}}-900 px-5">{{contenido.footer.menu.enlace_tres}}</a>
         </div>
         <div>
             <a href="#nav-bar-noumanity">.blur
