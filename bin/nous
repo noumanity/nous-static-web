@@ -135,7 +135,7 @@ EOM
 
 
   # Parse et valide les arguments
-  nous_COMMAND=${1:-g}
+  nous_COMMAND=${1:-h}
 
   case ${nous_COMMAND} in
     usage|help|man|h|-h|--help) set -- usage ${@:2} ;;

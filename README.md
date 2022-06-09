@@ -29,7 +29,36 @@ nous g -c contenido.yml vitrine-web
 ```
 
 
-### Instalación
+## Instalación
+
+
+### Con Docker
+
+Comandos configurados están disponibles en el script `./dev`.
+```
+# construye e inicia nous
+./dev up
+
+# usa nous
+./dev sh nous g vitrine_web 
+
+# o con alias
+alias nous="$(pwd)/dev sh nous"
+nous g vitrine_web 
+
+# granja y destruye el servicio
+./dev down
+```
+
+Los archivos se pueden editar localmente.
+
+Y podemos entrar en el contenedor
+
+```
+./dev sh
+```
+
+### En Linux
 
 ```
 git clone git@github.com:noumanity/nous-static-web
@@ -38,3 +67,6 @@ cd nous-static-web
 echo "export PATH=$PATH:$(pwd)/bin" >> ~/.bashrc
 . ~/.bashrc
 ````
+
+
+
