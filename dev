@@ -44,11 +44,19 @@ dev()(
     _rm   || true
     _rmi  || true
   }
-  
+ 
+  sanity(){
+    # sh sintaxis
+    shellcheck -S error -s sh "$SRC/dev" "$SRC/bin/nous"
+    # yaml sintaxis
+    find "$SRC" | grep -E "yaml^|yml^" | xargs -I % yamllint --no-warnings %
+  }
+
   case "${1:-}" in
     up) set -- up ${@:2} ;;
     down) set -- down ${@:2} ;;
     sh) set -- sh_ "${@:2}" ;;
+    sanity) set -- sanity "${@:2}" ;;
     *) echo "command '${1:-}' not found" && exit 1 ;;
   esac
 
