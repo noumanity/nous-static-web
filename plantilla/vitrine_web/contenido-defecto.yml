@@ -1,3 +1,4 @@
+---
 contenido:
   menu:
     enlace_uno: "Acerca"
@@ -19,30 +20,30 @@ contenido:
              para asegurar tu éxito.<br>"
     listado: "<li>Consultoría digital.</li>\
               <li>Investigación y práctica de la innovación.</li>\
-              <li>Transformación digital.</li>"          
+              <li>Transformación digital.</li>"
   segunda_seccion:
-    titulo: "ACERCA DE" 
+    titulo: "ACERCA DE"
     subtitulo: "Estámos ayudando a las<br> \
-                                      empresas a evolucionar<br> \
-                                      gracias a las nuevas<br> \
-                                      tecnologías."
+                empresas a evolucionar<br> \
+                gracias a las nuevas<br> \
+                tecnologías."
     parrafo_izq: "Numanity es una empresa de innovación<br> \
-                              tecnológica que lleva a las empresas hacia la<br> \
-                              transformación digital. Lorem ipsum dolor sit amet,<br> \
-                              nibh euismod tincidunt ut laoreet dolore magna erad<br> \
-                              voluptat."
+                  tecnológica que lleva a las empresas hacia la<br> \
+                  transformación digital. Lorem ipsum dolor sit amet,<br> \
+                  nibh euismod tincidunt ut laoreet dolore magna erad<br> \
+                  voluptat."
     parrafo_der: "Aquí va una imagen de trabajo y una breve<br> \
-                              descripción sobre el proceso que se lleva a cabo<br> \
-                              para cada proyecto. Lorem ipsum dolor sit amet,<br> \
-                              consectetuer adipiscing elit, sed diam<br> \
-                              nonummy nibh euismod tincidunt ut<br> \
-                              laoreet dolore magna erat<br> \
-                              volutpat. Lorem ipsum dolor sit amet,<br> \
-                              consectetuer adipiscing elit."
+                  descripción sobre el proceso que se lleva a cabo<br> \
+                  para cada proyecto. Lorem ipsum dolor sit amet,<br> \
+                  consectetuer adipiscing elit, sed diam<br> \
+                  nonummy nibh euismod tincidunt ut<br> \
+                  laoreet dolore magna erat<br> \
+                  volutpat. Lorem ipsum dolor sit amet,<br> \
+                  consectetuer adipiscing elit."
     subseccion:
       titulo: "Enfoque multidisciplinar,<br> \
                pero siempre bajo la lupa <br> \
-               digital.<br>"  
+               digital.<br>"
       subtitulo: "Trabajar con Noumanity es avanzar<br> \
                   con confianza y seguridad.<br>"
       listado:
@@ -50,7 +51,7 @@ contenido:
         tab_dos: "Calidad"
         tab_tres: "Confianza"
         tab_cuatro: "Experiencia"
-      detalle: 
+      detalle:
         tab_uno: "Breve descripción de cada cualidad seguridad,<br> \
                   principio o valor que tiene Noumanity como<br> \
                   proveedor de servicio.Lorem ipsum dolor<br> \
@@ -67,9 +68,9 @@ contenido:
                   principio o valor que tiene Noumanity como<br> \
                   proveedor de servicio.Lorem ipsum dolor<br> \
                   sit amet, consectetuer.<br>"
-  tercera_seccion: 
-    titulo : "ESPECIALIDAD"
-    subtitulo : "Te ayudamos a <br> \
+  tercera_seccion:
+    titulo: "ESPECIALIDAD"
+    subtitulo: "Te ayudamos a <br> \
                 poner el uso de la <br> \
                 tecnología en el<br> \
                 centro de tus<br> \
@@ -77,7 +78,7 @@ contenido:
                 empresariales<br> \
                 para lograr tus <br> \
                 objetivos<br> \
-                comerciales."       
+                comerciales."
   cuarta_seccion:
     titulo: "Análisis estratégico"
     parrafo: "Identifica las fortalezas y debilidades de<br> \
@@ -90,11 +91,11 @@ contenido:
     slogan: "Innovación tecnológica que abre<br> \
              nuevas posibilidades"
   footer:
-    contacto: 
-      email : "hola@noumanity.com"
-      celular : "+55 999 123 4567"
-    copyright : "Noumanity 2022.Todos los derechos reservados"
-    menu: 
+    contacto:
+      email: "hola@noumanity.com"
+      celular: "+55 999 123 4567"
+    copyright: "Noumanity 2022.Todos los derechos reservados"
+    menu:
       enlace_uno: "Acerca"
       enlace_dos: "Especialidad"
       enlace_tres: "Blog"

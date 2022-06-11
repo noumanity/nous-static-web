@@ -1,3 +1,4 @@
+---
 claro:
   color:
     menu:
@@ -5,14 +6,14 @@ claro:
         blur: white
         hover: orange
     banner:
-      titulo: white    
+      titulo: white
       icono:
         blur: white
         hover: orange
     primera_seccion:
       fondo: orange
       titulo: white
-      listado: white 
+      listado: white
       icono:
         blur: white
         hover: stone
@@ -20,7 +21,7 @@ claro:
       fondo: about
       titulo: orange
       subtitulo: black
-      parrafo_izq: black 
+      parrafo_izq: black
       parrafo_der: black
       subseccion:
         titulo: orange
@@ -37,17 +38,15 @@ claro:
       parrafo: black
       slogan: orange
     footer:
-      fondo: "orange"  
-      contacto: "white"
-      copyright: "white"
-      menu: 
-        blur: "white"
-        hover: "stone"
-      icono: 
-        blur: "white"
-        hover: "stone"  
-     
-
+      fondo: orange
+      contacto: white
+      copyright: white
+      menu:
+        blur: white
+        hover: stone
+      icono:
+        blur: white
+        hover: stone
 oscuro:
   color:
     menu:
@@ -70,13 +69,13 @@ oscuro:
       fondo: white
       titulo: orange
       subtitulo: black
-      parrafo_izq: black 
-      parrafo_der: black  
+      parrafo_izq: black
+      parrafo_der: black
       subseccion:
         titulo: orange
         subtitulo: black
         listado: black
-        detalle: black  
+        detalle: black
     tercera_seccion:
       fondo: stone
       titulo: orange
@@ -87,12 +86,12 @@ oscuro:
       parrafo: white
       slogan: orange
     footer:
-      fondo: "stone"  
-      contacto: "white"
-      copyright: "white"
-      menu: 
-        blur: "white"
-        hover: "orange"
-      icono: 
-        blur: "white"
-        hover: "orange"  
+      fondo: stone
+      contacto: white
+      copyright: white
+      menu:
+        blur: white
+        hover: orange
+      icono:
+        blur: white
+        hover: orange
