@@ -1,0 +1,106 @@
+#! /bin/bash
+
+dev()(
+  set -eu -o pipefail
+
+  fatal(){ >&2 echo "dev command FATAL:\n$*" ; exit 1 ; }
+
+
+  local IMAGE_NAME=nous-image
+  local CONTAINER_NAME=nous
+  local SRC="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")"
+
+
+
+  usage(){
+  cat <<-EOM
+  NAME
+    dev  - nous' cli dev helper script
+
+  SYNOPSIS
+
+    dev up              # build and start nous' docker
+    dev down            # destroy all docker objects
+    dev sh [command]    # enter in the container or execute a command
+
+  DESCRIPTION
+
+    This helper script help to build and run nous from a docker.
+    It is mainly useful for development purpose. 
+    dev provide a configuration that allow live development in the source code.
+
+  EXAMPLE
+
+    # Start nous 
+    dev up
+
+    # Create an alias to use nous' container as a cli
+    alias="\$(pwd)/dev sh nous"
+
+    nous -h
+    
+EOM
+  
+  }
+
+
+  _build(){
+    docker build -t "$IMAGE_NAME" "$SRC"/.
+  }
+
+  _run(){
+    docker run -d -v "$SRC"/:/src/ --name "$CONTAINER_NAME" "$IMAGE_NAME"
+  }
+
+  sh_(){
+
+    local command="(${@:-})" 
+     [ "$(echo "$@" | wc -w)" = "0" ]\
+	    && docker exec -it $CONTAINER_NAME sh  \
+	    || docker exec -it $CONTAINER_NAME sh -c "${command[@]}"
+  }
+
+  _stop(){
+    docker stop "$CONTAINER_NAME"
+  }
+
+  _rm(){
+    docker rm "$CONTAINER_NAME"
+  }
+
+  _rmi(){
+    docker rmi "$IMAGE_NAME"
+  }
+
+  up(){
+    _build || true
+    _run   || true
+  }
+
+  down(){
+    _stop || true
+    _rm   || true
+    _rmi  || true
+  }
+  
+  while getopts "hd" opt; do
+    case "${opt}" in
+      h) usage && exit ;;
+      d) set -x ;;
+      *) fatal "'$opt' is not a known option" ;;
+    esac
+  done
+
+  shift $((OPTIND -1))
+
+  case "${1:-}" in
+    up) set -- up "${@:2}" ;;
+    down) set -- down "${@:2}" ;;
+    sh) set -- sh_ "${@:2}" ;;
+    --help) usage ;;
+    *) echo "command '${1:-}' not found" && exit 1 ;;
+  esac
+  # EXECUTAR
+  "$@"
+)
+[ "${BASH_SOURCE[0]}" != "$0" ] || dev "$@"
