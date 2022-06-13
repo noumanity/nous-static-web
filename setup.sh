@@ -5,14 +5,14 @@
 dist=$(lsb_release -a)
 
 # ubuntu/debian
-[[ "$dist =~ "buntu" ]] && {
+[[ "$dis" =~ "buntu" ]] && {
   sudo apt install ruby-mustache
   exit
 }
 
 
 # archlinux base
-[[ "$dist =~ "anjaro" ]] && {
+[[ "$dist" =~ "anjaro" ]] && {
   sudo pacman -S mustache
   exit
 }
