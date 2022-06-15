@@ -1,0 +1,22 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: Directivas de construcción
+type: oject
+propertie:
+  marca-diseno:
+    type: object
+    properties:
+      git:
+        type: string
+      file:
+        type: string
+  pagina-diseno:
+    type: object
+    properties:
+      file: string
+      schema: string
+  contenido:
+    type: object
+    properties:
+      file: string
+      path: string
+
