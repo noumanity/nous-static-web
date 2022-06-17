@@ -1,0 +1,6 @@
+title: Este Blog
+type: object
+properties:
+  titulo:
+    type: string
+

@@ -1,0 +1,20 @@
+#! /bin/bash
+set -eu
+
+# Recupera las rutas
+diseno=$(cat cursor.yml | yq .rutas.diseno)
+esteblog=$(cat cursor.yml | yq .rutas.esteblog)
+contenido=$(cat cursor.yml | yq .rutas.contenido)
+plantilla=blog
+
+
+
+# Valida los datos
+yajsv -s $plantilla/esteblog.schema.yml "$esteblog"
+yajsv -s $plantilla/diseno.schema.yml "$diseno"
+
+
+
+
+
+
