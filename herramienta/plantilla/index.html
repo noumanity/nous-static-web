@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>noumanity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+  <img class="xs:w-60 sm:w-60 md:w-60 lg:w-60" src="./assets/img/logo noumanity-orange.png"
+    alt="">  
+  <h2 class="pt-20 text-center text-3xl font-bold text-orange-600">
+    IDENTIFICACIÓN DE ELEMENTOS PARA LA PLANTILLA EN EL ARCHIVO diseno.yml 
+  </h2>
+
+  <div name="primera_pagina">
+    <h3 class="pt-6 text-center text-3xl font-bold text-stone-900">
+      Menú, banner & icono 
+    </h3>
+  
+    <img class="pt-20 mx-auto" src="./assets/img/image_1.PNG"
+    alt=""> 
+  
+    <section class="codigo_yml">
+        <div class="grid grid-cols-12 pt-10 mx-auto">
+          <code class="bg-black mx-auto col-start-5 col-span-2 px-4 py-2">
+              <p class="text-orange-600">claro:</p> 
+              <p class="text-orange-600 pl-4">color:</p> 
+              <p class="text-orange-600 pl-8">menu:</p> 
+              <p class="text-orange-600 pl-12">enlace:</p> 
+              <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+              <p class="text-orange-600 pl-16">hover: <span class="text-white">orange</span></p> 
+              <p class="text-orange-600 pl-8">banner:</p> 
+              <p class="text-orange-600 pl-12">titulo: <span class="text-white">white</span></p> 
+              <p class="text-orange-600 pl-8">icono:</p> 
+              <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+              <p class="text-orange-600 pl-16">hover: <span class="text-white">orange</span></p> 
+            </code>
+
+            <code class="bg-black mx-auto col-start-7 col-span-2 px-4 py-2">
+              <p class="text-orange-600">oscuro:</p> 
+              <p class="text-orange-600 pl-4">color:</p> 
+              <p class="text-orange-600 pl-8">menu:</p> 
+              <p class="text-orange-600 pl-12">enlace:</p> 
+              <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+              <p class="text-orange-600 pl-16">hover: <span class="text-white">orange</span></p> 
+              <p class="text-orange-600 pl-8">banner:</p> 
+              <p class="text-orange-600 pl-12">titulo: <span class="text-white">white</span></p> 
+              <p class="text-orange-600 pl-8">icono:</p> 
+              <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+              <p class="text-orange-600 pl-16">hover: <span class="text-white">orange</span></p> 
+            </code>
+        </div>
+    <section class="codigo_yml">
+    </section>
+    <section class="tabla_yaml py-10">
+        <table class="table-auto text-orange-600 mx-auto border border-collapse border-slate-500">
+            <thead>
+              <tr class="bg-black text-white">
+                <th rowspan="2">#</th>
+                <th class="border border-slate-600" colspan="2">Modo claro</th>
+                <th class="border border-slate-600" colspan="2">Modo oscuro</th>
+              </tr>
+              <tr class="bg-black text-white">
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-600 px-2">1</td>
+                <td class="border border-slate-600 px-2">claro.color.menu.enlace.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.menu.enlace.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">2</td>
+                <td class="border border-slate-600 px-2">claro.color.menu.enlace.hover</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.menu.enlace.hover</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">3</td>
+                <td class="border border-slate-600 px-2">claro.color.banner.titulo</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.banner.titulo</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>  
+              <tr>
+                <td class="border border-slate-600 px-2">4</td>
+                <td class="border border-slate-600 px-2">claro.color.banner.icono.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.banner.icono.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>  
+              <tr>
+                <td class="border border-slate-600 px-2">5</td>
+                <td class="border border-slate-600 px-2">claro.color.banner.icono.hover</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.banner.icono.hover</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+  <hr>
+  <div name="segunda_pagina">
+    <h3 class="pt-10 text-center text-3xl font-bold text-stone-900">
+      Primera sección
+    </h3>
+  
+    <img class="pt-10 mx-auto" src="./assets/img/image_2.PNG"
+    alt=""> 
+    <img class="pt-10 mx-auto" src="./assets/img/image_3.PNG"
+    alt=""> 
+  
+    <section class="codigo_yml">
+        <div class="grid grid-cols-12 pt-10 mx-auto">
+          <code class="bg-black mx-auto col-start-5 col-span-2 px-4 py-2">
+            <p class="text-orange-600">claro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">primera_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">listado: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">icono:</p> 
+            <p class="text-orange-600 pl-16">enlace:</p> 
+            <p class="text-orange-600 pl-20">blur: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-20">hover: <span class="text-white">stone</span></p> 
+          </code>
+
+          <code class="bg-black mx-auto col-start-7 col-span-2 px-4 py-2">
+            <p class="text-orange-600">oscuro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">primera_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">stone</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">listado: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">icono:</p> 
+            <p class="text-orange-600 pl-16">enlace:</p> 
+            <p class="text-orange-600 pl-20">blur: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-20">hover: <span class="text-white">orange</span></p> 
+          </code>
+        </div>
+    <section class="codigo_yml">
+    </section>
+    <section class="tabla_yaml py-10">
+        <table class="table-auto text-orange-600 mx-auto border border-collapse border-slate-500">
+            <thead>
+              <tr class="bg-black text-white">
+                <th rowspan="2">#</th>
+                <th class="border border-slate-600" colspan="2">Modo claro</th>
+                <th class="border border-slate-600" colspan="2">Modo oscuro</th>
+              </tr>
+              <tr class="bg-black text-white">
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-600 px-2">1</td>
+                <td class="border border-slate-600 px-2">claro.color.primera_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.primera_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">stone</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">2</td>
+                <td class="border border-slate-600 px-2">claro.color.primera_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.primera_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">3</td>
+                <td class="border border-slate-600 px-2">claro.color.primera_seccion.listado</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.primera_seccion.listado</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>  
+              <tr>
+                <td class="border border-slate-600 px-2">4</td>
+                <td class="border border-slate-600 px-2">claro.color.primera_seccion.icono.enlace.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.primera_seccion.icono.enlace.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>  
+              <tr>
+                <td class="border border-slate-600 px-2">5</td>
+                <td class="border border-slate-600 px-2">claro.color.primera_seccion.icono.enlace.hover</td>
+                <td class="border border-slate-600 px-2">stone</td>
+                <td class="border border-slate-600 px-2">oscuro.color.primera_seccion.icono.enlace.hover</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+  <hr>
+  <div name="tercer_pagina">
+    <h3 class="pt-10 text-center text-3xl font-bold text-stone-900">
+      Segunda sección
+    </h3>
+  
+    <img class="pt-10 mx-auto" src="./assets/img/image_4.PNG"
+    alt=""> 
+     
+  
+    <section class="codigo_yml">
+        <div class="grid grid-cols-12 pt-10 mx-auto">
+          <code class="bg-black mx-auto col-start-5 col-span-2 px-4 py-2">
+            <p class="text-orange-600">claro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">segunda_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">about</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">subtitulo: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">parrafo_izq: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">parrafo_der: <span class="text-white">black</span></p> 
+          </code>
+
+          <code class="bg-black mx-auto col-start-7 col-span-2 px-4 py-2">
+            <p class="text-orange-600">oscuro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">segunda_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">subtitulo: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">parrafo_izq: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">parrafo_der: <span class="text-white">black</span></p> 
+          </code>
+        </div>
+    <section class="codigo_yml">
+    </section>
+    <section class="tabla_yaml py-10">
+        <table class="table-auto text-orange-600 mx-auto border border-collapse border-slate-500">
+            <thead>
+              <tr class="bg-black text-white">
+                <th rowspan="2">#</th>
+                <th class="border border-slate-600" colspan="2">Modo claro</th>
+                <th class="border border-slate-600" colspan="2">Modo oscuro</th>
+              </tr>
+              <tr class="bg-black text-white">
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-600 px-2">1</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">about</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">stone</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">2</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">3</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.subtitulo</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.subtitulo</td>
+                <td class="border border-slate-600 px-2">black</td>
+              </tr>
+              <tr>  
+                <td class="border border-slate-600 px-2">4</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.parrafo_izq</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.parrafo_izq</td>
+                <td class="border border-slate-600 px-2">black</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">5</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.parrafo_der</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.parrafo_der</td>
+                <td class="border border-slate-600 px-2">black</td>
+              </tr>
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+  <hr>
+  <div name="cuarta_pagina">
+    <h3 class="pt-10 text-center text-3xl font-bold text-stone-900">
+      Segunda sección - subsección
+    </h3>
+  
+    <img class="pt-10 mx-auto" src="./assets/img/image_5.PNG"
+    alt=""> 
+     
+  
+    <section class="codigo_yml">
+        <div class="grid grid-cols-12 pt-10 mx-auto">
+          <code class="bg-black mx-auto col-start-5 col-span-2 px-4 py-2">
+            <p class="text-orange-600">claro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">segunda_seccion:</p> 
+            <p class="text-orange-600 pl-8">subseccion:</p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">subtitulo: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">listado: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">detalle: <span class="text-white">black</span></p> 
+          </code>
+
+          <code class="bg-black mx-auto col-start-7 col-span-2 px-4 py-2">
+            <p class="text-orange-600">oscuro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">segunda_seccion:</p> 
+            <p class="text-orange-600 pl-8">subseccion:</p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">subtitulo: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">listado: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">detalle: <span class="text-white">black</span></p> 
+          </code>
+        </div>
+    <section class="codigo_yml">
+    </section>
+    <section class="tabla_yaml py-10">
+        <table class="table-auto text-orange-600 mx-auto border border-collapse border-slate-500">
+            <thead>
+              <tr class="bg-black text-white">
+                <th rowspan="2">#</th>
+                <th class="border border-slate-600" colspan="2">Modo claro</th>
+                <th class="border border-slate-600" colspan="2">Modo oscuro</th>
+              </tr>
+              <tr class="bg-black text-white">
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-600 px-2">1</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">2</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.subtitulo</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.subtitulo</td>
+                <td class="border border-slate-600 px-2">black</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">3</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.listado</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.listado</td>
+                <td class="border border-slate-600 px-2">black</td>
+              </tr>
+              <tr>  
+                <td class="border border-slate-600 px-2">4</td>
+                <td class="border border-slate-600 px-2">claro.color.segunda_seccion.detalle</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.segunda_seccion.detalle</td>
+                <td class="border border-slate-600 px-2">black</td>
+              </tr>  
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+  <hr>
+  <div name="quinta_pagina">
+    <h3 class="pt-10 text-center text-3xl font-bold text-stone-900">
+      Tercera sección
+    </h3>
+  
+    <img class="pt-10 mx-auto" src="./assets/img/image_6.PNG"
+    alt=""> 
+     
+  
+    <section class="codigo_yml">
+        <div class="grid grid-cols-12 pt-10 mx-auto">
+          <code class="bg-black mx-auto col-start-5 col-span-2 px-4 py-2">
+            <p class="text-orange-600">claro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">tercera_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">subtitulo: <span class="text-white">black</span></p> 
+          </code>
+
+          <code class="bg-black mx-auto col-start-7 col-span-2 px-4 py-2">
+            <p class="text-orange-600">oscuro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">tercera_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">stone</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">subtitulo: <span class="text-white">white</span></p> 
+          </code>
+        </div>
+    <section class="codigo_yml">
+    </section>
+    <section class="tabla_yaml py-10">
+        <table class="table-auto text-orange-600 mx-auto border border-collapse border-slate-500">
+            <thead>
+              <tr class="bg-black text-white">
+                <th rowspan="2">#</th>
+                <th class="border border-slate-600" colspan="2">Modo claro</th>
+                <th class="border border-slate-600" colspan="2">Modo oscuro</th>
+              </tr>
+              <tr class="bg-black text-white">
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-600 px-2">1</td>
+                <td class="border border-slate-600 px-2">claro.color.tercera_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.tercera_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">stone</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">2</td>
+                <td class="border border-slate-600 px-2">claro.color.tercera_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.tercera_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">3</td>
+                <td class="border border-slate-600 px-2">claro.color.tercera_seccion.subtitulo</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.tercera_seccion.subtitulo</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+  <hr>
+  <div name="sexta_pagina">
+    <h3 class="pt-10 text-center text-3xl font-bold text-stone-900">
+      Cuarta sección
+    </h3>
+  
+    <img class="pt-10 mx-auto" src="./assets/img/image_7.PNG"
+    alt=""> 
+     
+  
+    <section class="codigo_yml">
+        <div class="grid grid-cols-12 pt-10 mx-auto">
+          <code class="bg-black mx-auto col-start-5 col-span-2 px-4 py-2">
+            <p class="text-orange-600">claro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">cuarta_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">about</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">parrafo: <span class="text-white">black</span></p> 
+            <p class="text-orange-600 pl-12">slogan: <span class="text-white">orange</span></p> 
+          </code>
+
+          <code class="bg-black mx-auto col-start-7 col-span-2 px-4 py-2">
+            <p class="text-orange-600">oscuro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">cuarta_seccion:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">stone</span></p> 
+            <p class="text-orange-600 pl-12">titulo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">parrafo: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">slogan: <span class="text-white">orange</span></p> 
+          </code>
+        </div>
+    <section class="codigo_yml">
+    </section>
+    <section class="tabla_yaml py-10">
+        <table class="table-auto text-orange-600 mx-auto border border-collapse border-slate-500">
+            <thead>
+              <tr class="bg-black text-white">
+                <th rowspan="2">#</th>
+                <th class="border border-slate-600" colspan="2">Modo claro</th>
+                <th class="border border-slate-600" colspan="2">Modo oscuro</th>
+              </tr>
+              <tr class="bg-black text-white">
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-600 px-2">1</td>
+                <td class="border border-slate-600 px-2">claro.color.cuarta_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">about</td>
+                <td class="border border-slate-600 px-2">oscuro.color.cuarta_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">stone</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">2</td>
+                <td class="border border-slate-600 px-2">claro.color.cuarta_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.cuarta_seccion.titulo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">3</td>
+                <td class="border border-slate-600 px-2">claro.color.cuarta_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">black</td>
+                <td class="border border-slate-600 px-2">oscuro.color.cuarta_seccion.fondo</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">4</td>
+                <td class="border border-slate-600 px-2">claro.color.cuarta_seccion.slogan</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.cuarta_seccion.slogan</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>  
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+  <hr>
+  <div name="septima_pagina">
+    <h3 class="pt-10 text-center text-3xl font-bold text-stone-900">
+      Pie de página
+    </h3>
+  
+    <img class="pt-10 mx-auto" src="./assets/img/image_8.PNG"
+    alt=""> 
+     
+  
+    <section class="codigo_yml">
+        <div class="grid grid-cols-12 pt-10 mx-auto">
+          <code class="bg-black mx-auto col-start-5 col-span-2 px-4 py-2">
+            <p class="text-orange-600">claro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">footer:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">contacto: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">copyright: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">menu:</p> 
+            <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-16">hover: <span class="text-white">stone</span></p> 
+            <p class="text-orange-600 pl-12">icono:</p> 
+            <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-16">hover: <span class="text-white">stone</span></p> 
+          </code>
+
+          <code class="bg-black mx-auto col-start-7 col-span-2 px-4 py-2">
+            <p class="text-orange-600">oscuro:</p> 
+            <p class="text-orange-600 pl-4">color:</p> 
+            <p class="text-orange-600 pl-8">footer:</p> 
+            <p class="text-orange-600 pl-12">fondo: <span class="text-white">stone</span></p> 
+            <p class="text-orange-600 pl-12">contacto: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">copyright: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-12">menu:</p> 
+            <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-16">hover: <span class="text-white">orange</span></p> 
+            <p class="text-orange-600 pl-12">icono:</p> 
+            <p class="text-orange-600 pl-16">blur: <span class="text-white">white</span></p> 
+            <p class="text-orange-600 pl-16">hover: <span class="text-white">orange</span></p> 
+          </code>
+        </div>
+    <section class="codigo_yml">
+    </section>
+    <section class="tabla_yaml py-10">
+        <table class="table-auto text-orange-600 mx-auto border border-collapse border-slate-500">
+            <thead>
+              <tr class="bg-black text-white">
+                <th rowspan="2">#</th>
+                <th class="border border-slate-600" colspan="2">Modo claro</th>
+                <th class="border border-slate-600" colspan="2">Modo oscuro</th>
+              </tr>
+              <tr class="bg-black text-white">
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+                <th scope="col" class="border border-slate-600">Variable</th>
+                <th scope="col" class="border border-slate-600">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-600 px-2">1</td>
+                <td class="border border-slate-600 px-2">claro.color.footer.fondo</td>
+                <td class="border border-slate-600 px-2">orange</td>
+                <td class="border border-slate-600 px-2">oscuro.color.footer.fondo</td>
+                <td class="border border-slate-600 px-2">stone</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">2</td>
+                <td class="border border-slate-600 px-2">claro.color.footer.contacto</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.footer.contacto</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">3</td>
+                <td class="border border-slate-600 px-2">claro.color.footer.copyright</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.footer.copyright</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>  
+              <tr>
+                <td class="border border-slate-600 px-2">4</td>
+                <td class="border border-slate-600 px-2">claro.color.footer.menu.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.footer.menu.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">5</td>
+                <td class="border border-slate-600 px-2">claro.color.footer.menu.hover</td>
+                <td class="border border-slate-600 px-2">stone</td>
+                <td class="border border-slate-600 px-2">oscuro.color.footer.menu.hover</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-600 px-2">6</td>
+                <td class="border border-slate-600 px-2">claro.color.footer.icono.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+                <td class="border border-slate-600 px-2">oscuro.color.footer.icono.blur</td>
+                <td class="border border-slate-600 px-2">white</td>
+              </tr>  
+              <tr>
+                <td class="border border-slate-600 px-2">7</td>
+                <td class="border border-slate-600 px-2">claro.color.footer.icono.hover</td>
+                <td class="border border-slate-600 px-2">stone</td>
+                <td class="border border-slate-600 px-2">oscuro.color.footer.icono.hover</td>
+                <td class="border border-slate-600 px-2">orange</td>
+              </tr>    
+            </tbody>
+        </table>
+    </section>
+  </div>
+   
+    
+</body>
+</html>
