@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nounamity</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-body">
+
+    <div class="bg-cover bg-no-repeat h-auto bg-hero-tablet lg:bg-hero-desktop px-10 sm:px-20">
+        <nav id="nav-bar-noumanity" class="bg-transparent py-6 relative">
+            <div class="container mx-auto grid grid-cols-3  gap-4">
+                <div class="col-span-2 col-end-3 md:10 lg:pl-20">
+                    <img class="block  w-16  " src="./assets/img/isotipo noumanity-color2.png" alt="">
+                </div>
+
+                <div class="  grid grid-cols-3 items-start pt-4">
+                    <div class="col-end-4">
+                        <a href="#" class="text-sm text-black hover:text-orange-600 hover:font-bold hidden md:block">{{contenido.menu.idioma}}</a>
+                        <svg xmlcol-span-4 ns="http://www.w3.org/2000/svg"
+                            class="stroke-0 text-black block md:hidden lg:hidden" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section>
+        <div class=" grid grid-cols-1 px-10 sm:px-80">
+            <p class="text-red-600">{{contenido.fecha}}</p>
+            <h2 class="text-2xl pt-4 font-bold md:text-4xl">{{contenido.primera_seccion.titulo}}</h2>
+            <p class="pt-4">Por: {{contenido.primera_seccion.por}}</p>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10  text-red-600">{{contenido.primera_seccion.subseccion_uno.titulo}}</h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.primera_seccion.subseccion_uno.contenido_uno}} </h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.primera_seccion.subseccion_uno.contenido_dos}} </h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.primera_seccion.subseccion_uno.contenido_tres}}</h3>
+
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10  text-red-600">{{contenido.primera_seccion.subseccion_dos.titulo}}</h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.primera_seccion.subseccion_dos.contenido}} </h3>
+        </div>
+        <div class="h-auto pt-10 sm:px-80">
+            <img src="./assets/img/diverse.jpg" alt="">
+        </div>
+         <div class=" grid grid-cols-1 px-10 sm:px-80">
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10  text-red-600 ">{{contenido.primera_seccion.subseccion_tres.titulo}}</h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.primera_seccion.subseccion_tres.contenido}}</h3>
+        </div>
+    </section>
+
+    <section>
+        <div class=" grid grid-cols-1 px-10 sm:px-80 ">
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-3xl pt-10 font-bold">{{contenido.segunda_seccion.titulo}}</h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.segunda_seccion.contenido_uno}}</h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.segunda_seccion.contenido_dos}}</h3>
+        </div>
+        <div class="h-auto sm:px-80 pt-10">
+            <img src="./assets/img/equipoLOW.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="">
+        <div class=" grid grid-cols-1 px-10 pb-10 sm:px-80">
+
+
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10  text-red-600">{{contenido.segunda_seccion.subseccion.titulo}}</h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 md:text-base">{{contenido.segunda_seccion.subseccion.contenid_uno}}</h3>
+            <h3 class="w-full container mx-auto pl-40 pr-40 text-2xl pt-10 pb-10 md:text-base">{{contenido.segunda_seccion.subseccion.titulo}}</h3>
+   
+
+    </section>
+
+
+    <section>
+        <div class=" grid grid-cols-1 px-10 pb-10 sm:px-80">
+            <div class="p-4 mb-4 text-sm text-blue-700 bg-red-50 rounded-lg dark:bg-blue-200 dark:text-blue-800"
+                role="alert">
+                <h3 class="w-full container mx-auto pl-3 pt-5 text-lg pr-3 md:text-sm font-bold">{{contenido.tercera_seccion.titulo}}</h3>
+                <h3 class="w-full container mx-auto pl-3 pt-5 pr-3 text-lg md:text-sm">{{contenido.tercera_seccion.contenido_uno}}</h3>
+
+                <h3 class="w-full container mx-auto pl-3 pt-5 pr-3 text-lg md:text-sm">{{contenido.tercera_seccion.contenido_dos}}</h3>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class=" grid grid-cols-1 divide-y divide-red-500  pl-10 sm:px-80">
+        </div>
+    </section>
+
+    <section>
+        <div class=" grid grid-cols-1 px-10 sm:px-80">
+            <h3 class="w-full container mx-auto pl-3 pt-5 text-lg pr-3 md:text-xs font-bold">{{contenido.cuarta_seccion.titulo}}</h3>
+            <ul class="list-disc text-2xl">
+                <li class="md:text-xs">{{contenido.cuarta_seccion.subseccion_uno.contenido_black}}<span class="text-red-600  md:text-xs">{{contenido.cuarta_seccion.subseccion_uno.contenido_red}}</span></li>
+                <li class="md:text-xs">{{contenido.cuarta_seccion.subseccion_dos.contenido_black}}<span class="text-red-600  md:text-xs">{{contenido.cuarta_seccion.subseccion_dos.contenido_red}}</span></li>
+                <li class="md:text-xs">{{contenido.cuarta_seccion.subseccion_tres.contenido_black}}<span class="text-red-600  md:text-xs">{{contenido.cuarta_seccion.subseccion_tres.contenido_red}}</span></li>
+                <li class="md:text-xs">{{contenido.cuarta_seccion.subseccion_cuatro.contenido_black}}<span class="text-red-600  md:text-xs">{{contenido.cuarta_seccion.subseccion_cuatro.contenido_red}}</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="grid md:grid-cols-4 sm:px-20 gap-4">
+        <section>
+            <div class=" grid grid-cols-1 px-10 md:mx-20 pb-10 pt-10 text-xl">
+                <h3 class="w-full container mx-auto pt-5  pr-3 block md:hidden ">{{contenido_quinta_seccion.titulo}}</h3>
+                <div class="h-auto md:w-80 pt-5">
+                    <img src="./assets/img/equipoLOW.jpg" alt="" class="md:h-48 md:w-64">
+                </div>
+                <h3 class="w-full container mx-auto pl-40 pr-40 text-xl pt-10 md:text-sm font-bold">{{contenido_quinta_seccion.subseccion_uno.titulo}}</h3>
+                <h3 class="w-full container mx-auto pl-40 pr-40 md:pr-10 text-xl pt-10 md:text-sm">{{contenido_quinta_seccion.subseccion_uno.contenido}}</h3>
+
+            </div>
+        </section>
+
+        <section>
+            <div class=" grid grid-cols-1 px-10 md:mx-20 pb-10 pt-10 ">
+                <div class="h-auto md:w-80 pt-5">
+                    <img src="./assets/img/business-people.jpg" alt="" class="md:h-48 md:w-64">
+                </div>
+                <h3 class="w-full container mx-auto pl-40 pr-40 text-xl pt-10 md:text-sm font-bold">{{contenido_quinta_seccion.subseccion_dos.titulo}}</h3>
+                <h3 class="w-full container mx-auto pl-40 pr-40 md:pr-10 text-xl pt-10 md:text-sm">{{contenido_quinta_seccion.subseccion_dos.contenido}}</h3>
+
+            </div>
+        </section>
+
+        <section>
+            <div class=" grid grid-cols-1 px-10 md:mx-20 pb-10 pt-10 ">
+                <div class="h-auto md:w-80 pt-5">
+                    <img src="./assets/img/searching.jpg" alt="" class="md:h-48 md:w-64">
+                </div>
+                <h3 class="w-full container mx-auto pl-40 pr-40 text-xl pt-10 md:text-sm font-bold">{{contenido_quinta_seccion.subseccion_tres.titulo}}</h3>
+                <h3 class="w-full container mx-auto pl-40 pr-40 md:pr-10 text-xl pt-10 md:text-sm ">{{contenido_quinta_seccion.subseccion_tres.contenido}}</h3>
+
+            </div>
+        </section>
+
+        <div class=" hidden md:block lg:block grid grid-cols-3 items-start pt-32 pl-10">
+            <div class="col-end-4">
+                <a href="#nav-bar-noumanity">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="bg-cover bg-no-repeat h-auto px-10 sm:px-20">
+            <nav id="nav-bar-noumanity" class="bg-transparent py-6 relative">
+                <div class="container mx-auto grid grid-cols-3 gap-4">
+                    <div class="col-span-2 col-end-3 md:10 lg:pl-20">
+                        <img class="block  w-16  " 
+                            src="./assets/img/isotipo noumanity-color2.png" alt="">
+                    </div>
+
+                    <div class="  grid grid-cols-3 items-start pt-4 hidden md:block">
+                        <div class="col-end-4 col-end-3 md:10 lg:pl-20">
+                            <a href="#" class="text-sm text-black hover:text-orange-600 hover:font-bold">{{contenido.footer.idioma}}</a>
+                            <svg xmlcol-span-4 ns="http://www.w3.org/2000/svg"
+                                class="stroke-0 text-black block md:hidden lg:hidden" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class=" block md:hidden lg:hidden grid grid-cols-3 items-start pt-4">
+                        <div class="col-end-4 ">
+                            <a href="#nav-bar-noumanity">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class=" text-dark dark:text-black hover:text-stone-900 h-10 w-10" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

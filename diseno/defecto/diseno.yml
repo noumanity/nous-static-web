@@ -111,9 +111,10 @@ claro_bloc:
         contenido: black
     segunda_seccion:
       titulo: black
+      contenido: black
       subseccion:
         titulo: orange
-        subtitulo: black
+        contenido: black
     tercera_seccion:
       fondo: stone
       titulo: black
