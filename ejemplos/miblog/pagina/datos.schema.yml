@@ -1,0 +1,43 @@
+title: Datos del Blog
+type: object
+properties:
+  blog:
+    type: object
+    properties:
+      titulo: 
+        type: string
+      descripcion:
+        type: string
+    required: [ titulo ]
+  articulo:
+    type: object
+    properties:
+      titulo:
+        type: string
+      fecha:
+        type: string
+      autors:
+        type: array
+        items:
+          type: object
+          properties:
+            nombre:
+              type: string
+          required: [ nombre ]
+      resumen:
+        type: string
+      secciones:
+        type: array
+        items:
+          type: object
+          properties:
+            titulo: 
+              type: string
+            parrafos:
+              type: array
+              items:
+                type: string
+          required: [ parrafos ]
+    required: [ titulo, autors, secciones]
+required: [ blog, articulo ]
+

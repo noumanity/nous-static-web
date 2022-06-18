@@ -94,4 +94,24 @@ echo "export PATH=$PATH:$(pwd)/bin" >> ~/.bashrc
 ````
 
 
+# Ejemplo
+
+## Pagina
+
+Una página describe como hacer una pagina web. Un  pagina tiene todo lo necesatio:
+
+  - los plantillas
+  - los schemas
+
+Y datos por defecto:
+  - contenido textual
+  - contenido visual
+
+Por construir un pagina web con los datos por defecto:
+
+```
+nous pagina RUTA_POR_PAGINA_REPISOTORIO
+```
+
+
 
