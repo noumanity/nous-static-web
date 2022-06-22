@@ -1,17 +1,27 @@
 #! /bin/bash
 set -eu
 
+set -x 
+
 
 if [ "$1" = "por-defecto" ] ; then
 
+ # reset workdir (brute force)
+
+ rm -rf build
+ mkdir -p build/dist
+
  # Comprueba la estructura de los datos
   yajsv -s pagina/datos.schema.yml pagina/por-defecto/contenido.yml
-
+  yajsv -s pagina/diseno.schema.yml pagina/por-defecto/diseno.yml
+  
   # Construye
   DATOS="pagina/por-defecto/contenido.yml"
-  cat "$DATOS" | mustache - pagina/index.html.mustache
+  cat "$DATOS" | mustache - pagina/index.html.mustache > build/dist/index.html
 
-if
+  npx tailwindcss -i ./pagina/css/input.css -o ./build/dist/output.css &
+
+fi
 
 if [ "$1" = "subjecto" ] ; then
   # Recupera las rutas
