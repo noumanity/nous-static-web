@@ -4,7 +4,6 @@ set -eu
 set -x 
 
 
-if [ "$1" = "por-defecto" ] ; then
 
  # reset workdir (brute force)
 
@@ -17,41 +16,9 @@ if [ "$1" = "por-defecto" ] ; then
   
   # Construye
   DATOS="pagina/por-defecto/contenido.yml"
+  DISENO=diseno/marca.yml
   cat "$DATOS" | mustache - pagina/index.html.mustache > build/dist/index.html
+  cat "$DISENO" | mustache - tailwind.config.js.mustache > tailwind.config.js
 
-  npx tailwindcss -i ./pagina/css/input.css -o ./build/dist/output.css &
-
-fi
-
-if [ "$1" = "subjecto" ] ; then
-  # Recupera las rutas
-  diseno=$(cat cursor.yml | yq .rutas.diseno)
-  esteblog=$(cat cursor.yml | yq .rutas.esteblog)
-  contenido=$(cat cursor.yml | yq .rutas.contenido)
-  plantilla=blog
-
-
-  # valida los datos intermedios
-  # yajsv -s meta.schema.yml meta.yml
-  # yajsv -s articulo.schema.yml articulo.yml
-  
-
-  # convercion del datos
-  #conversion(){
-  #  mustache meta.yml
-  #}
-  #datos=$( conversion )
-
-  # Valida los datos final
-  #yajsv -s datos.schema.yml datos.yml
-  #yajsv -s diseno.schema.yml diseno.yml
-
-  # construye
-  # mustache datos.yml index.html.mustache
-  
-
-fi
-
-
-
+  npx tailwindcss -i ./pagina/css/input.css -o ./build/dist/style.css
 

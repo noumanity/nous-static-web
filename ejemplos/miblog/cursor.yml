@@ -1,8 +1,0 @@
-plantilla: blog
-rutas:
-  diseno: diseno/marca.yml
-  esteblog: esteblog/miblog.yml
-  contenido: contenido/articulo1.yml
-  visual: visual/indices.yml
-  banco_de_imagenes: imagenes_proveedor/indices.yml
-

@@ -4,34 +4,36 @@
   <meta charset="utf-8">
   <title>{{ blog.titulo }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="output.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-indigo-500">
-<header>
-  <h1>{{blog.titulo}}</h1>
-  <p>{{blog.descripcion}}</p>
+<body>
+<div class="container mx-auto">
+<header class="bg-blanco">
+  <h1 class="text-primario">{{blog.titulo}}</h1>
+  <p class="text-negro">{{blog.descripcion}}</p>
 <header>
   {{#articulo}}
-<article class="bg-primary">
-  <h1>{{titulo}}</h1>
+<article class="bg-blanco">
+  <h1 class="text-primario">{{titulo}}</h1>
   {{#autors}}
-  <h3>{{nombre}}</h3>
+  <h3 class="text-negro">{{nombre}}</h3>
   {{/autors}}
   
-  <small>{{fecha}}</small>
+  <small class="text-negro">{{fecha}}</small>
   {{#resumen}}
   <article>
-    <h2>Resumen:</h2>
-    <p>{{.}}</p>
+    <h2 class="text-negro">Resumen:</h2>
+    <p class="text-negro">{{.}}</p>
   </article>
   {{/resumen}}
   {{#secciones}}
   <section>
-    {{#titulo}}<h2>{{.}}</h2>{{/titulo}}
-    {{#parrafos}}<p>{{.}}</p>{{/parrafos}}
+    {{#titulo}}<h2 class="text-primario">{{.}}</h2>{{/titulo}}
+    {{#parrafos}}<p class="text-negro">{{.}}</p>{{/parrafos}}
   </section>
   {{/secciones}}
 </article>
 {{/articulo}}
+  </div>
 </body>
 </html>
