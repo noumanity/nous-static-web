@@ -1,0 +1,24 @@
+#! /bin/bash
+set -eu
+
+set -x 
+
+
+
+ # reset workdir (brute force)
+
+ rm -rf build
+ mkdir -p build/dist
+
+ # Comprueba la estructura de los datos
+  yajsv -s pagina/datos.schema.yml pagina/por-defecto/contenido.yml
+  yajsv -s pagina/diseno.schema.yml pagina/por-defecto/diseno.yml
+  
+  # Construye
+  DATOS="pagina/por-defecto/contenido.yml"
+  DISENO=diseno/marca.yml
+  cat "$DATOS" | mustache - pagina/index.html.mustache > build/dist/index.html
+  cat "$DISENO" | mustache - tailwind.config.js.mustache > tailwind.config.js
+
+  npx tailwindcss -i ./pagina/css/input.css -o ./build/dist/style.css
+

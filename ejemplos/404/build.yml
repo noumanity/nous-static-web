@@ -1,0 +1,10 @@
+---
+marca-diseno:
+  git: "git@github.com:noumanity/imagen"
+  file: marca.yml
+pagina-diseno:
+  file: plantilla/404.html.mustache
+  schema: schema/404.yml
+contenido:
+  path: 404.html
+  file: contenido/nohaynada.yml

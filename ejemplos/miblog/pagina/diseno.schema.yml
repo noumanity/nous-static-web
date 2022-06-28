@@ -1,0 +1,27 @@
+title: Diseño
+type: object
+properties:
+  colores:
+    type: object
+    properties:
+      colores:
+        type: object
+        poperties:
+          primeario:
+            type: string
+          blanco:
+            type: string
+          negro:
+            type: string
+      fonts:
+        type: object
+        properties:
+          primario:
+            type: string
+          secundario:
+            type: string
+      logo:
+        type: object
+        properties:
+          norma:
+            type: string
