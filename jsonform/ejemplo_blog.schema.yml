@@ -1,0 +1,76 @@
+type: object
+title: Datos del blog
+properties:
+  blog:
+    type: object
+    title: Blog
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+        required: true
+      descripcion:
+        type: string
+        title: Descripción
+  articulo:
+    type: object
+    title: Artículo
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+      subtitulo:
+        type: string
+        title: Subtítulo  
+      fecha:
+        type: string
+        title: Fecha
+      autores: 
+        title: Autores
+        type: array
+        items:
+          type: object
+          properties:
+            nombre:
+              type: object
+              properties:
+                nombres: 
+                  type: string
+                  title: Nombre y apellido
+                  required: true   
+      resumen:
+        type: string
+        title: Resumen   
+      secciones: 
+        title: Secciones
+        type: array
+        required: true
+        items:
+          type: object
+          properties:
+            seccion:
+              type: object
+              properties:
+                titulo: 
+                  type: string
+                  title: Titulo
+                  required: true
+                parrafos: 
+                  title: Párrafos
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      parrafo:
+                        type: object
+                        properties:
+                          nombre: 
+                            type: string
+                            title: Párrafo
+                            required: true
+
+
+
+
