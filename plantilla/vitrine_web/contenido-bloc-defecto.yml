@@ -1,0 +1,130 @@
+---
+contenido:
+  idioma: ES-FR
+  fecha: 30 ENE 2022
+  primera_seccion:
+    titulo: Qué es la transformación digital.
+    por: Jérémy Viau-Trudel
+    subseccion_uno:
+      titulo: |
+            Hablamos mucho de eso, pero ¿qué significa realmente?¿Es solo una
+            palabra de moda para mí? ¿vender otra aplicación?¿Cómo ayudará a mi negocio?
+      contenido_uno: |
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Fusce malesuada imperdiet neque sed lacinia.
+                  Nullam venenatis sollicitudin felis sit amet mattis.
+                  Praesent sollicitudin consequat mauris sed convallis.
+                  Aliquam sodales vestibulum nisi malesuada varius.
+                  Vivamus a ante nec libero fermentum ornare et eu sapien.
+                  Aliquam erat volutpat. Aliquam tempus ex eget vehicula pretium.
+      contenido_dos: |
+                  Vivamus tincidunt ullamcorper risus, et tempus arcu.
+                  Integer ut vulputate justo. Praesent quis semper quam.
+                  Aenean venenatis ipsum quis rutrum mollis.
+                  Aenean tincidunt turpis a mollis pretium.
+                  Suspendisse auctor faucibus nunc sed faucibus.
+                  Duis vitae vehicula erat. Sed cursus, magna aliquam aliquet placerat,
+                  orci tellus malesuada ligula, sed rhoncus sem diam dapibus urna.
+                  Donec convallis viverra facilisis.
+      contenido_tres: |
+                  Aliquam scelerisque nunc non ligula imperdiet ullamcorper.
+                  Curabitur est est, dignissim ut diam eget, facilisis eleifend dui. Mauris vel viverra risus,
+                  in sodales dui. Aenean lectus lorem, ultricies quis eros id, bibendum vestibulum justo. 
+    subseccion_dos:
+      titulo: Lorem ipsum dolor sit amet
+      contenido: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+              Nullam venenatis sollicitudin felis sit amet mattis.
+              Praesent sollicitudin consequat mauris sed convallis.
+              Aliquam sodales vestibulum nisi malesuada varius.
+              Vivamus a ante nec libero fermentum ornare et eu sapien.
+              Aliquam erat volutpat. Aliquam tempus ex eget vehicula pretium.
+    subseccion_tres:
+      titulo: Lorem ipsum dolor sit amet
+      contenido: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+              Nullam venenatis sollicitudin felis sit amet mattis.
+              Praesent sollicitudin consequat mauris sed convallis.
+              Aliquam sodales vestibulum nisi malesuada varius.
+              Vivamus a ante nec libero fermentum ornare et eu sapien.
+              Aliquam erat volutpat. Aliquam tempus ex eget vehicula pretium.  
+  segunda_seccion:
+    titulo: Lorem ipsum dolor sit amet, consectetur adipiscing.
+    contenido_uno: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Fusce malesuada imperdiet neque sed lacinia.
+            Nullam venenatis sollicitudin felis sit amet mattis.
+    contenido_dos: |
+            Numanity es una empresa de innovación
+            tecnológica que lleva a las empresas hacia la
+            transformación digital. Lorem ipsum dolor sit amet,
+            nibh euismod tincidunt ut laoreet dolore magna erad
+            voluptat.
+    subseccion:
+      titulo: |
+          Lorem ipsum dolor sit amet
+      contenido_uno: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+              Nullam venenatis sollicitudin felis sit amet mattis.
+      contenido_dos: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+              Nullam venenatis sollicitudin felis sit amet mattis.
+              Praesent sollicitudin consequat mauris sed convallis.
+  tercera_seccion:
+    titulo: Jérémy Viau-Trudel
+    contenido_uno: |
+              Consultor en innovación, negocio y transformación digital
+    contenido_dos: |
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+              Nullam venenatis sollicitudin felis sit amet mattis.
+              Praesent sollicitudin consequat mauris sed convallis.
+  cuarta_seccion:
+    titulo: Referencias
+    subseccion_uno:
+      contenido_black: Lorem ipsum dolor sit amet,
+      contenido_red: |   
+                  consectetur
+                  adipiscing elit.
+                  Fusce malesuada
+    subseccion_dos:
+      contenido_black: Lorem ipsum dolor sit amet,
+      contenido_red: |   
+                  consectetur
+                  adipiscing elit.
+                  Fusce malesuada
+    subseccion_tres:
+      contenido_black: Lorem ipsum dolor sit amet,
+      contenido_red: |   
+                  consectetur
+                  adipiscing elit.
+                  Fusce malesuada
+    subseccion_cuatro:
+      contenido_black: Lorem ipsum dolor sit amet,
+      contenido_red: |   
+                  consectetur
+                  adipiscing elit.
+                  Fusce malesuada
+  quinta_seccion:
+    titulo: Explora más artículos
+    subseccion_uno:
+      titulo: Nombre del siguiente artículo.
+      contenido: |
+              orem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+    subseccion_dos:
+      titulo: Nombre del siguiente artículo.
+      contenido: |
+              orem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+    subseccion_tres:
+      titulo: Nombre del siguiente artículo.
+      contenido: |
+              orem ipsum dolor sit amet, consectetur adipiscing elit.
+              Fusce malesuada imperdiet neque sed lacinia.
+  footer:
+    idioma: ES-FR

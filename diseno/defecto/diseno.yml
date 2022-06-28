@@ -95,3 +95,42 @@ oscuro:
       icono:
         blur: white
         hover: orange
+claro_bloc:
+  color:
+    menu:
+      enlace:
+        blur: white
+        hover: orange
+    fecha: orange
+    primera_seccion:
+      titulo: black
+      por: black
+      content: black
+      subseccion:
+        title: orange
+        contenido: black
+    segunda_seccion:
+      titulo: black
+      contenido: black
+      subseccion:
+        titulo: orange
+        contenido: black
+    tercera_seccion:
+      fondo: stone
+      titulo: black
+      subtitulo: black
+    cuarta_seccion:
+      titulo: black
+      subseccion:
+        titulo: black
+    quinta_seccion:
+      titulo: black
+      contenido: black
+      icon: black
+    footer:
+      menu:
+        blur: white
+        hover: stone
+      icono:
+        blur: white
+        hover: stone
