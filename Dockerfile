@@ -4,14 +4,15 @@ COPY ./ /src/
 RUN ln -s /src/bin/nous /bin/nous
 
 RUN apk add --no-cache \
-        ruby-mustache \
         bash \
         shellcheck \
         yamllint
 
-RUN ln -s "`gem env gemdir`/bin/mustache" /usr/bin/mustache
+
+RUN wget https://github.com/cbroglie/mustache/releases/download/v1.3.1/mustache_1.3.1_linux_amd64.tar.gz && \
+     tar xf mustache_1.3.1_linux_amd64.tar.gz -C /usr/bin
 
 WORKDIR /src
 
-#CMD "nous"
+#ENTRYPOINT "/src/bin/nous"
 CMD sh -c 'while :; do :; done & kill -STOP $! && wait $!'
