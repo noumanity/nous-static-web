@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Schema.yml & JsonForm</title>
+  <link rel="stylesheet" type="text/css" href="js/deps/opt/bootstrap.css" />
+</head>
+<body class="container">
+  <h1>Formulario generado con schema.yml</h1>
+  <input id="data" type="hidden" value="<%= formulario %>" />
+  <form action="/save-values" method="POST"></form>
+  <div id="res" class="alert"></div>
+  <script type="text/javascript" src="js/deps/jquery.min.js"></script>
+  <script type="text/javascript" src="js/deps/underscore.js"></script>
+  <script type="text/javascript" src="js/deps/opt/jsv.js"></script>
+  <script type="text/javascript" src="js/lib/jsonform.js"></script>
+  <script>
+   let data = JSON.parse(document.getElementById("data").value);
+   $('form').jsonForm({
+        schema: {
+          data
+        },
+        "form": [
+            "*",
+            {
+            "type": "submit",
+            "title": "Enviar formulario"
+            }    
+        ],
+        onSubmit: function (errors, values) {
+          if (errors) {
+            $('#res').html('<p>Ha ocurrido un error al momento de intentar enviar el formulario</p>');
+          }else{
+            $.ajax({
+              type: "POST",
+              url: '/save-values',
+              data: {body: values.data},
+              success: function(result){
+                $('#res').html('<p>El artículo ' + values.data.articulo.titulo + ' con fecha <br/>' +
+                values.data.articulo.fecha + ', ha sido creado. </p>');     
+              }
+            });
+          }
+        }
+      });
+  </script>
+</body>
+</html>
