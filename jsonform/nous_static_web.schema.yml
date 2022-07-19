@@ -1,0 +1,171 @@
+type: object
+properties:
+  pagina:
+    type: object
+    title: Información de la página
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+      fecha:
+        type: string
+        title: Fecha de creación  
+  menus: 
+    title: Menús
+    type: array
+    items:
+      type: object
+      properties:
+        menu:
+          type: object
+          properties:
+            enlace: 
+              type: string
+              title: Nombre del enlace
+              required: true
+            referencia: 
+              type: string
+              title: Sección de referencia en el sitio
+              required: true     
+  idiomas: 
+    title: Idiomas
+    type: array
+    items:
+      type: object
+      properties:
+        idioma:
+          type: object
+          properties:
+            nombre: 
+              type: string
+              title: Iniciales del idioma en mayúscula
+              required: true
+  banner:
+    type: object
+    title: Información del banner
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+  primera_seccion:
+    type: object
+    title: Información de la primera sección
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+      listado:
+        type: string
+        title: Listado 
+  segunda_seccion:
+    type: object
+    title: Información de la segunda sección
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+      subtitulo:
+        type: string
+        title: Subtitulo
+      parrafo_izq:
+        type: string
+        title: Párrafo izquierdo
+      parrafo_der:
+        type: string
+        title: Párrafo derecho
+      subseccion:
+        type: object
+        title: Información de la subsección
+        required: true  
+        properties:
+          titulo:
+            type: string
+            title: Título
+          subtitulo:
+            type: string
+            title: Subtitulo
+          listado:
+            type: object
+            title: Información del listado
+            required: true  
+            properties:
+              tab_uno:
+                type: string
+                title: Tab uno
+              tab_dos:
+                type: string
+                title: Tab dos
+              tab_tres:
+                type: string
+                title: Tab tres
+              tab_cuatro:
+                type: string
+                title: Tab cuatro      
+          detalle:
+            type: object
+            title: Información detallada del listado
+            required: true  
+            properties:
+              tab_uno:
+                type: string
+                title: Tab uno
+              tab_dos:
+                type: string
+                title: Tab dos
+              tab_tres:
+                type: string
+                title: Tab tres
+              tab_cuatro:
+                type: string
+                title: Tab cuatro            
+  tercera_seccion:
+    type: object
+    title: Información de la tercera sección
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+      subtitulo:
+        type: string
+        title: Subtitulo
+  cuarta_seccion:
+    type: object
+    title: Información de la cuarta sección
+    required: true
+    properties:
+      titulo:
+        type: string
+        title: Título
+      parrafo:
+        type: string
+        title: Párrafo
+      slogan:
+        type: string
+        title: Slogan
+  footer:
+    type: object
+    title: Información del pie de página
+    required: true
+    properties:
+      contacto:
+        type: object
+        title: Información del contacto
+        required: true
+        properties:
+          email:
+            type: string
+            title: Correo electrónico
+          celular:
+            type: string
+            title: Celular
+      copyright:
+        type: string
+        title: Derechos de autor, año         
+
+
+

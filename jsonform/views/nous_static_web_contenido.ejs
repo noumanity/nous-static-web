@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Contenidos en el sitio web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+</head>
+<body class="container">
+  <h1>Cantidad de contenidos en el sitio web</h1>
+  <a href="/" class="btn btn-sm btn-success">Ir a inicio</a>
+  <a href="/sitio/nuevo" class="btn btn-sm btn-primary">Agregar página</a>
+
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i<files_data.length; i++) {%>
+        <tr>
+          <th scope="row"><%=(i+1)%></th>
+          <td><%=files_data[i].titulo%></td>
+          <td><%=files_data[i].fecha%></td>
+          <td>
+            <a class="btn btn-sm btn-warning" href="/sitio/edicion/<%=files_data[i].archivo%>">Editar</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  
+  
+  
+
+
+</body>
+</html>
