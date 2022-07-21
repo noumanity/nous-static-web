@@ -5,14 +5,39 @@
   <title>Blog | Articulo edición</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css">
+  <link rel="stylesheet" href="/assets/css/starter-template.css">
 </head>
 <body class="container">
-  <h1>Formulario para editar el artículo</h1>
-  <a href="/blog/contenido" class="btn btn-sm btn-primary"> << Regresar a tabla de contenidos del blog</a>
-  <input id="data" type="hidden" value="<%= formulario %>" />
-  <input id="data_values" type="hidden" value="<%= formulario_values %>" />
-  <form action="/save-values" method="POST"></form>
-  <div id="res" class="alert"></div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Nous static web</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Nous static web</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Bienvenido(a): <%=usuario%></a></li>
+          <li><a href="#">Rol: <%=rol%></a></li>
+          <li><a href="/logout">Cerrar sesión</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
+    <div class="starter-template">
+      <h1>Formulario para editar el artículo</h1>
+      <a href="/blog/contenido" class="btn btn-sm btn-primary"> << Regresar a tabla de contenidos del blog</a>
+      <input id="data" type="hidden" value="<%= formulario %>" />
+      <input id="data_values" type="hidden" value="<%= formulario_values %>" />
+      <form action="/save-values" method="POST"></form>
+      <div id="res" class="alert"></div>
+    </div>
+  </div>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.4/underscore-umd-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>

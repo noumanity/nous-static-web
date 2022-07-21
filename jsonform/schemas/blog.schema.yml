@@ -18,10 +18,6 @@ properties:
     title: Artículo
     required: true
     properties:
-      maincolor: 
-        type: string
-        title: Color principal
-        format: color
       titulo:
         type: string
         title: Título
