@@ -1,0 +1,19 @@
+usuarios:
+  - id: 1
+    usuario: hugo
+    contrasena: $2a$10$XUOoXyT0iUlcn1yuLClyc.T.4JJPJC6y6KLGwoaw0FHNloSQgQKYa
+    nombre: Hugo Cerda Minaya
+    rol: Proveedor de diseño
+    estatus: true
+  - id: 2
+    usuario: jérémy
+    contrasena: $2a$10$Ezoo4GHCw01.JyFmWOujH.jN1z8mLM26Y9u8wk0xuNyYXW4sXsLZa
+    nombre: Jérémy Viau-Trudel
+    rol: Proveedor de contenido
+    estatus: true
+  - id: 3
+    usuario: marce
+    nombre: Marce Ávila
+    contrasena: $2a$10$U3rg1APEeAkJQodg4B8z3.QV/ckREsPtuzjb7vZ056QhRrI7TICQu
+    rol: Administrador del sistema
+    estatus: true
