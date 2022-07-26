@@ -1,8 +1,9 @@
-const express=require('express');
+'use strict'
+
+const app = require('./app');
+const port = process.env.PORT || 3000;
 const yaml = require('js-yaml');
 const fs=require('fs');
-const fsPromises=require('fs/promises');
-const path = require('path');
 const crypto=require('crypto');
 const passport = require('passport');
 const cookieParser=require('cookie-parser');
@@ -47,8 +48,8 @@ const compare = async(passwordPlain, hashPassword) => {
   return await bcrypt.compare(passwordPlain, hashPassword)
 }
   
-app=express();
-app.use(express.urlencoded({extended:true}));
+
+//app.use(express.urlencoded({extended:true}));
 app.use(cookieParser('hashsecreto'));
 app.use(session({
   secret: 'hashsecreto',
@@ -75,11 +76,11 @@ passport.deserializeUser(function(id, done){
   done(null, {id: 1, nombre: "Sistema", rol: "Administrativo"});
 });
 /**********/
-app.set('view engine', 'ejs');
-app.engine('ejs', require('ejs').__express);
+//app.set('view engine', 'ejs');
+//app.engine('ejs', require('ejs').__express);
 /**********/
-app.set('views', __dirname+'/views');
-app.use(express.static(__dirname+'/'));
+//app.set('views', __dirname+'/views');
+//app.use(express.static(__dirname+'/'));
 
 
 app.get('/',(req, res) => {
@@ -264,6 +265,8 @@ app.post('/save-values-sitio', (req, res, next) => {
 
 
 
+//Creación del servidor
+app.listen(port, () => {
+  console.log('Servidor corriendo en el puerto http://localhost:'+port+', funcionando!!!!');
+});
 
-app.listen(3000);
-console.log('Servidor corriendo en el puerto 3000');
