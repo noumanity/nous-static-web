@@ -11,8 +11,8 @@ const encrypt = async(textPlain) => {
     return hash;
 }
   
-const compare = async(passwordPlain, hashPassword) => {
-    return await bcrypt.compare(passwordPlain, hashPassword)
+const compare = (passwordPlain, hashPassword) => {
+    return bcrypt.compareSync(passwordPlain, hashPassword);
 }
 
 const readJSON = (username, password) => {
@@ -20,7 +20,7 @@ const readJSON = (username, password) => {
     try {
       for(let i = 0; i < data.usuarios.length; i++) {
         if (data.usuarios[i].usuario == username && compare(password, data.usuarios[i].contrasena)){
-          return data.usuarios[i];
+            return data.usuarios[i];
         }
       }
       return false;
@@ -43,5 +43,5 @@ passport.use('local-signin', new PassportLocal(function(username,password,done){
     let validacion = readJSON(username, password);
     if(validacion)
       return done(null, {id: validacion.id, nombre: validacion.nombre, rol:validacion.rol});
-    done(null, false, req.flash('signinMessage','Usuario no encontrado.'));
+    done(null, false);
   }));

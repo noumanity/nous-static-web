@@ -25,6 +25,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 //Definición de engine views
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').__express);
