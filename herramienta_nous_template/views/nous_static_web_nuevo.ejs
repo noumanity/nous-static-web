@@ -62,7 +62,7 @@
             $.ajax({
               type: "POST",
               url: '/save-values-sitio',
-              data: {values: values},
+              data: {values: values, id: false },
               success: function(result){
                 $('#res').html('<p>La página ' + values.data.pagina.titulo + ' con fecha <br/>' +
                 values.data.pagina.fecha + ', ha sido creada. </p>');   

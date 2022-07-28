@@ -147,7 +147,7 @@ router.get('/panel_administrativo', (req, res, next) => {
     if(sessionUsuario.rol == 'Proveedor de diseño'){
       res.redirect("/panel_administrativo")
     }
-    res.render('nous_static_web_edicion', {formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8'), formulario_values:  JSON.stringify(content, 'utf-8'), usuario: sessionUsuario.nombre, rol: sessionUsuario.rol});
+    res.render('nous_static_web_edicion', {formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8'), formulario_values:  JSON.stringify(content, 'utf-8'), usuario: sessionUsuario.nombre, rol: sessionUsuario.rol, archivo_id: archivo_id});
   });
 
   router.get('/sitio/vista_previa/:archivo_id', (req, res, next) => {
@@ -188,6 +188,9 @@ router.get('/panel_administrativo', (req, res, next) => {
     var id = crypto.randomBytes(5).toString('hex');
     const outputfile = 'pagina_'+id+'.yml';
     fs.writeFileSync(path_contenidos_sitio+'/'+outputfile, yaml.dump(req.body.values));
+    if(req.body.id){
+      fs.unlinkSync(path_contenidos_sitio+'/pagina_'+req.body.id+'.yml');
+    }
     res.redirect('/sitio/contenido');
   });
 

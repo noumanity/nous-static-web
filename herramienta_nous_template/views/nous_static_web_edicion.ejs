@@ -32,6 +32,7 @@
     <div class="starter-template">
       <h1>Formulario para editar la página</h1>
       <a href="/sitio/contenido" class="btn btn-sm btn-primary"> << Regresar a tabla de contenidos del sitio</a>
+      <input id="archivo_id" type="hidden" value="<%= archivo_id %>" />
       <input id="data" type="hidden" value="<%= formulario %>" />
       <input id="data_values" type="hidden" value="<%= formulario_values %>" />
       <form action="/save-values-sitio" method="POST"></form>
@@ -45,6 +46,7 @@
   <script>
    let data = JSON.parse(document.getElementById("data").value);
    let data_values = JSON.parse(document.getElementById("data_values").value);
+   let archivo_id = document.getElementById("archivo_id").value;
    $('form').jsonForm({
         schema: {
           data
@@ -66,7 +68,7 @@
             $.ajax({
               type: "POST",
               url: '/save-values-sitio',
-              data: {values: values},
+              data: {values: values, id: archivo_id},
               success: function(result){
                 $('#res').html('<p>La página ' + values.data.pagina.titulo + ' con fecha <br/>' +
                 values.data.pagina.fecha + ', ha sido actualizada. </p>');  
