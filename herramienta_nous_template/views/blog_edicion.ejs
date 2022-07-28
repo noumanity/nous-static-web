@@ -69,7 +69,8 @@
               data: {values: values},
               success: function(result){
                 $('#res').html('<p>El artículo ' + values.data.articulo.titulo + ' con fecha <br/>' +
-                values.data.articulo.fecha + ', ha sido actualizado. </p>');     
+                values.data.articulo.fecha + ', ha sido actualizado. </p>');    
+                window.location.href = '/blog/contenido';
               }
             });
           }

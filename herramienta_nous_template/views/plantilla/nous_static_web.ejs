@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nounamity</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body class="font-body">
+
+
+<div class="bg-cover bg-no-repeat h-auto bg-hero-tablet lg:bg-hero-desktop">
+    <nav id="nav-bar-noumanity" class="bg-transparent py-6 relative">
+        <!--<div class="container mx-auto flex">-->
+        <div class="container mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <!--<div class="flex flex-grow">-->
+            <div class="col-span-2 md:10 lg:pl-20">
+                <img class="hidden md:block lg:block md:w-80 lg:w-96" src="/assets/img/logo noumanity-orange.png"
+                    alt="">
+                <!--MOBILE-->
+                <img class="block w-28 md:hidden lg:hidden md:w-80 lg:w-96"
+                    src="/assets/img/logo noumanity-white.png" alt="">
+                <!--END MOBILE-->
+            </div>
+            <!--MOBILE-->
+            <div class=" block md:hidden lg:hidden grid grid-cols-3 items-center">
+                <div class="col-end-auto">
+                    <svg xmlcol-span-4 ns="http://www.w3.org/2000/svg" class="stroke-0 text-white" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </div>
+            </div>
+            <!--END MOBILE-->
+            <!--Menú-->
+            <div class="hidden md:block lg:block">
+                <div class=" pt-8 text-right md:grid grid-cols-3">
+                    <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 pr-3"><%=contenido.data.menus[0].menu.enlace%></a>
+                    <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%> pr-3"><%=contenido.data.menus[1].menu.enlace%></a>
+                    <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>"><%=contenido.data.menus[2].menu.enlace%></a>
+                </div>
+            </div>
+            <div class="hidden md:block lg:block pt-8 md:pl-10 lg:pl-40 text-center">
+                <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:text-<%=diseno.oscuro.color.menu.enlace.blur%> dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 pr-2 hover:font-bold"><%=contenido.data.idiomas[0].idioma.nombre%></a>
+                <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:text-<%=diseno.oscuro.color.menu.enlace.blur%> dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 hover:font-bold"><%=contenido.data.idiomas[1].idioma.nombre%></a>
+            </div>
+            <!--End Menú-->
+        </div>
+    </nav>
+    <!--Banner-->
+    <div name="banner"
+        class="py-20 grid grid-cols-1 justify-center items-center md:py-96 md:pt-80 md:pb-32 md:flex md:flex-col md:justify-end md:items-end lg:py-96 lg:flex lg:flex-col lg:justify-end lg:items-end">
+        <p
+            class="text-<%=diseno.claro.color.banner.titulo%> dark:text-<%=diseno.oscuro.color.banner.titulo%> text-2xl font-bold px-20 md:text-right md:text-5xl lg:text-5xl md:font-bold md:px-44 lg:text-right lg:text-5xl lg:font-bold lg:px-44">
+            <%=contenido.data.banner.titulo%>
+    </div>
+    <!--End Banner-->
+    <!--Menú Icono-->
+    <div class="grid grid-cols-4 hidden md:block lg:block">
+        <div
+            class="col-start-2 col-span-4 text-white hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 text-5xl flex flex-col justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+            </svg>
+        </div>
+    </div>
+    <!--End Menú Icono-->
+</div>
+
+<!--Primera sección-->
+<section name="primera_seccion">
+    <div class="bg-<%=diseno.claro.color.primera_seccion.fondo%>-600 dark:bg-<%=diseno.oscuro.color.primera_seccion.fondo%>-900 py-10 w-auto grid grid-cols-1 gap-4 md:py-20 md:w-auto md:grid md:grid-cols-2 md:gap-4   lg:py-20 lg:w-auto lg:grid lg:grid-cols-2 lg:gap-4">
+        <div class="block sm:hidden lg:hidden text-xl pl-20 text-<%=diseno.claro.color.primera_seccion.listado%> dark:text-<%=diseno.oscuro.color.primera_seccion.listado%>  font-bold flex flex-col justify-start ">
+            <ul class="px-20">
+             <%=contenido.data.primera_seccion.titulo%>
+            </ul>
+        </div>
+
+        <div class="text-sm  text-<%=diseno.claro.color.primera_seccion.titulo%>  dark:text-<%=diseno.oscuro.color.primera_seccion.titulo%>-600 leading-tight font-bold lg:text-2xl md:text-2xl   
+        md:leading-tight md:font-bold md:flex md:flex-col md:justify-start md:items-center     
+        lg:leading-tight lg:font-bold lg:flex lg:flex-col lg:justify-start lg:items-center">
+		<p class="pl-10"><%=contenido.data.primera_seccion.listado%></p>
+        </div>
+        <div class="hidden sm:block lg:block text-2xl sm:text-base pt-8 text-<%=diseno.claro.color.primera_seccion.listado%> dark:text-<%=diseno.oscuro.color.primera_seccion.listado%> font-bold flex flex-col justify-start items-center">
+            <ul>
+                <%=contenido.data.primera_seccion.listado%>
+            </ul>
+        </div>
+        
+        <div class="grid grid-cols-4 block md:hidden lg:hidden">
+            <div
+                class="col-start-2 col-span-4 text-<%=diseno.claro.color.primera_seccion.icono.blur%> hover:text-<%=diseno.claro.color.primera_seccion.icono.hover%>-900 dark:text-<%=diseno.oscuro.color.primera_seccion.icono.blur%> dark:hover:text-<%=diseno.oscuro.color.primera_seccion.icono.hover%>-600 text-5xl flex flex-col justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+                </svg>
+            </div>
+        </div>
+</section>
+<!--Segunda sección-->
+<!--MOBILE-->
+<section name="segunda_seccion_mobile" class="block md:hidden lg:hidden">
+    <div class="bg-<%=diseno.claro.color.segunda_seccion.fondo%> dark:bg-<%=diseno.oscuro.color.segunda_seccion.fondo%> pt-20 pb-10 w-auto ">
+        <div class="h-auto font-semibold tracking-widest pl-10">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.titulo%>-600"><%=contenido.data.segunda_seccion.titulo%></p>
+        </div>
+        <div class="h-auto text-2xl pl-10 pt-10">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subtitulo%>"><%=contenido.data.segunda_seccion.subtitulo%></p>
+        </div>
+        <div class="h-auto md:w-80 pl-10 pt-10 pr-10">
+            <img src="/assets/img/business-people.jpg" alt="">
+        </div>
+        <div class="pt-10 pb-10 pl-10 pr-10 h-auto text-xs justify-start items-center">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_izq%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_izq%> font-semibold">
+                <%=contenido.data.segunda_seccion.parrafo_izq%>
+            </p>
+        </div>
+
+        <div class=" justify-center items-center pl-10 pr-10">
+            <img src="/assets/img/business-man-talk.jpg" alt="">
+        </div>
+        <div class="h-auto md:text-base lg:text-lg font-semibold pl-10 pr-10 py-10">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_der%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_der%>">
+                <%=contenido.data.segunda_seccion.parrafo_der%>
+            </p>
+        </div>
+        <div class=" h-auto justify-start ">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.titulo%>-600 md:text-4xl lg:text-5xl font-normal pl-10 pr-10">
+                <%=contenido.data.segunda_seccion.subseccion.titulo%>
+            </p>
+        </div>
+        <div class="h-auto justify-start pl-10 pr-10 py-10">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.subtitulo%> sm:text-2xl lg:text-4xl">
+                <%=contenido.data.segunda_seccion.subseccion.subtitulo%>
+            </p>
+        </div>
+        <div class="h-auto"></div>
+        <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
+            <ul class="leading-loose text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> sm:text-xl lg:text-2xl font-semibold">
+                <div class=" h-auto">
+                    <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> pb-10 ">
+                        <%=contenido.data.segunda_seccion.subseccion.detalle.tab_uno%>
+                    </p>
+                </div>
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_uno%></li>
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_dos%></li>
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_tres%></li>
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_cuatro%></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!--END MOBILE-->
+<!--Segunda sección-->
+<!--DESKTOP-->
+<section name="segunda_seccion" class="hidden md:block lg:block">
+    <div class="bg-<%=diseno.claro.color.segunda_seccion.fondo%> dark:bg-<%=diseno.oscuro.color.segunda_seccion.fondo%> pt-20 pb-10 w-auto grid grid-cols-2 gap-10 ">
+        <div class="md:pl-10 lg:pl-40 h-auto font-semibold tracking-widest">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.titulo%>-600"><%=contenido.data.segunda_seccion.titulo%></p>
+        </div>
+        <div class="text-<%=diseno.claro.color.segunda_seccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subtitulo%> h-auto text-black md:text-4xl lg:text-5xl">
+            <%=contenido.data.segunda_seccion.subtitulo%>
+        </div>
+        <div class="pt-10 h-auto flex flex-col justify-start items-center">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_izq%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_izq%> md:text-base lg:text-lg font-semibold"><%=contenido.data.segunda_seccion.parrafo_izq%></p>
+        </div>
+        <div class="h-auto md:w-80">
+            <img src="/assets/img/business-people.jpg" alt="">
+        </div>
+        <div class="md:pl-10 -mt-36 h-auto flex flex-col justify-center items-center">
+            <img src="/assets/img/business-man-talk.jpg" alt="">
+        </div>
+        <div class="h-auto md:text-base lg:text-lg font-semibold">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.parrafo_der%> dark:text-<%=diseno.oscuro.color.segunda_seccion.parrafo_der%>">
+                <%=contenido.data.segunda_seccion.parrafo_der%>
+            </p>
+        </div>
+        <div class="col-span-2 h-auto flex flex-col justify-start items-center">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.titulo%>-600 md:text-4xl lg:text-5xl font-normal "> <%=contenido.data.segunda_seccion.subseccion.titulo%>
+            </p>
+        </div>
+        <div class="h-auto flex flex-col justify-start items-center">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.subtitulo%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.subtitulo%> sm:text-2xl lg:text-4xl"> <%=contenido.data.segunda_seccion.subseccion.subtitulo%>
+            </p>
+        </div>
+        <div class="h-auto"></div>
+        <div class="h-auto sm:pl-10 lg:flex flex-col justify-start items-center">
+            <ul class="leading-loose text-black sm:text-xl lg:text-2xl font-semibold">
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_uno%></li>
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_dos%></li>
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_tres%></li>
+                <li class="text-<%=diseno.claro.color.segunda_seccion.subseccion.listado%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.listado%> hover:font-bold"><%=contenido.data.segunda_seccion.subseccion.listado.tab_cuatro%></li>
+            </ul>
+        </div>
+        <div class="-ml-40 h-auto">
+            <p class="text-<%=diseno.claro.color.segunda_seccion.subseccion.detalle%> dark:text-<%=diseno.oscuro.color.segunda_seccion.subseccion.detalle%> sm:text-lg lg:text-xl">
+                <%=contenido.data.segunda_seccion.subseccion.detalle.tab_uno%>
+            </p>
+        </div>
+    </div>
+</section>
+<!--Tercera sección-->
+<section name="tercera_seccion">
+    <div class="bg-<%=diseno.claro.color.tercera_seccion.fondo%> dark:bg-<%=diseno.oscuro.color.tercera_seccion.fondo%>-900 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="pl-10 sm:pl-10 lg:pl-40">
+            <p class="text-<%=diseno.claro.color.tercera_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.tercera_seccion.titulo%>-600 font-semibold tracking-widest">
+                <%=contenido.data.tercera_seccion.titulo%>
+            </p>
+        </div>
+        <div class="pl-10 md:pr-56 lg:pr-56">
+            <p class="text-<%=diseno.claro.color.tercera_seccion.subtitulo%> dark:text-<%=diseno.oscuro.color.tercera_seccion.subtitulo%> text-2xl md:text-4xl lg:text-4xl">
+                <%=contenido.data.tercera_seccion.subtitulo%>
+            </p>
+        </div>
+    </div>
+</section>
+<!--Sección imagen-->
+<section name="pexels">
+    <div>
+        <img src="assets/img/pexels-fauxels-3184302.jpg" alt="">
+    </div>
+</section>
+<!--Cuarta sección-->
+<section name="cuarta_seccion">
+    <div class="bg-<%=diseno.claro.color.cuarta_seccion.fondo%> dark:bg-<%=diseno.oscuro.color.cuarta_seccion.fondo%>-900 py-20 grid md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="pl-10 flex flex-col justify-start lg:items-center sm:pl-20">
+            <p class="text-<%=diseno.claro.color.cuarta_seccion.titulo%>-600 dark:text-<%=diseno.oscuro.color.cuarta_seccion.titulo%>-600 text-2xl font-semibold"><%=contenido.data.cuarta_seccion.titulo%></p>
+            <p class="pt-10 text-xs text-<%=diseno.claro.color.cuarta_seccion.parrafo%> dark:text-<%=diseno.oscuro.color.cuarta_seccion.parrafo%> md:text-lg lg:text-lg font-semibold">
+                <%=contenido.data.cuarta_seccion.parrafo%>
+            </p>
+
+        </div>
+        <div class="flex flex-col justify-center items-center w-40 md:w-80 lg:w-80">
+            <img class="hidden dark:block" src="assets/img/ilustraciones para web-black.png" alt="">
+            <img class="block dark:hidden" src="assets/img/ilustraciones para web-white.png" alt="">
+        </div>
+        <div
+            class="pl-10 md:pd-0 lg:pd-0 pt-10 col-span-2  flex flex-col md:justify-center md:items-center lg:justify-center lg:items-center">
+            <p class="text-<%=diseno.claro.color.cuarta_seccion.slogan%>-600 dark:text-<%=diseno.oscuro.color.cuarta_seccion.slogan%>-600 sm:text-4xl lg:text-5xl font-normal">
+                <%=contenido.data.cuarta_seccion.slogan%>
+            </p>
+        </div>
+    </div>
+</section>
+<!--Footer-->
+<footer>
+    <div class=" bg-<%=diseno.claro.color.footer.fondo%>-900 dark:bg-<%=diseno.oscuro.color.footer.fondo%>-600 py-10 flex flex-col justify-center items-center">
+        <div>
+            <quote class="text-<%=diseno.claro.color.footer.contacto%> dark:text-<%=diseno.claro.color.footer.contacto%> text-2xl sm:text-4xl lg:text-lg font-normal text-center">
+                <p><%=contenido.data.footer.contacto.email%></p>
+                <br class="block md:hidden lg:hidden">
+                <p class=""><%=contenido.data.footer.contacto.celular%></p>
+                <img class="w-96 pt-20 hidden dark:block" src="assets/img/logo noumanity-white.png" alt="">
+            </quote>
+        </div>
+    </div>
+    <div class=" block dark:hidden grid grid-cols-3 bg-black">
+        <img class="w-96 pl-10 block dark:hidden" src="assets/img/logo noumanity-white.png" alt="">
+    </div>
+    <div
+        class="sm:pl-10 sm:text-xs text-sm bg-<%=diseno.claro.color.footer.fondo%>-900 dark:bg-<%=diseno.oscuro.color.footer.fondo%>-600 lg:px-20 pb-5 flex flex-grow justify-between">
+        <div>
+            <quote class="text-<%=diseno.claro.color.footer.copyright%> dark:text-<%=diseno.oscuro.color.footer.copyright%> tracking-widest sm:text-sm">
+                <p><%=contenido.data.footer.copyright%></p>
+            </quote>
+        </div>
+        <div class="hidden md:block lg:block">
+            <a href="#" class="sm:text-sm text-<%=diseno.claro.color.footer.menu.blur%> hover:text-<%=diseno.claro.color.footer.menu.hover%>-600 dark:text-<%=diseno.oscuro.color.footer.menu.blur%> dark:hover:text-<%=diseno.oscuro.color.footer.menu.hover%>-900 px-5"><%=contenido.data.menus[0].menu.enlace%></a>
+            <a href="#" class="sm:text-sm text-<%=diseno.claro.color.footer.menu.blur%> hover:text-<%=diseno.claro.color.footer.menu.hover%>-600 dark:text-<%=diseno.oscuro.color.footer.menu.blur%> dark:hover:text-<%=diseno.oscuro.color.footer.menu.hover%>-900 px-5"><%=contenido.data.menus[1].menu.enlace%></a>
+            <a href="#" class="sm:text-sm text-<%=diseno.claro.color.footer.menu.blur%> hover:text-<%=diseno.claro.color.footer.menu.hover%>-600 dark:text-<%=diseno.oscuro.color.footer.menu.blur%> dark:hover:text-<%=diseno.oscuro.color.footer.menu.hover%>-900 px-5"><%=contenido.data.menus[2].menu.enlace%></a>
+        </div>
+        <div>
+            <a href="#nav-bar-noumanity">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class=" text-<%=diseno.claro.color.footer.icono.blur%> dark:text-<%=diseno.oscuro.color.footer.icono.blur%> hover:text-<%=diseno.claro.color.footer.icono.blur%>-600 dark:hover:text-<%=diseno.oscuro.color.footer.icono.blur%>-900h-10 w-10" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+

@@ -66,7 +66,7 @@
               success: function(result){
                 $('#res').html('<p>La página ' + values.data.pagina.titulo + ' con fecha <br/>' +
                 values.data.pagina.fecha + ', ha sido creada. </p>');   
-                redirect('/sitio/contenido');  
+                window.location.href = '/sitio/contenido';  
               }
             });
           }

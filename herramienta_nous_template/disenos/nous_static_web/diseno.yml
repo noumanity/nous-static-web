@@ -1,0 +1,96 @@
+claro:
+  color:
+    menu:
+      enlace:
+        blur: white
+        hover: orange
+    banner:
+      titulo: white
+      icono:
+        blur: white
+        hover: orange
+    primera_seccion:
+      fondo: orange
+      titulo: white
+      listado: white
+      icono:
+        blur: white
+        hover: stone
+    segunda_seccion:
+      fondo: about
+      titulo: orange
+      subtitulo: black
+      parrafo_izq: black
+      parrafo_der: black
+      subseccion:
+        titulo: orange
+        subtitulo: black
+        listado: black
+        detalle: black
+    tercera_seccion:
+      fondo: white
+      titulo: orange
+      subtitulo: black
+    cuarta_seccion:
+      fondo: about
+      titulo: orange
+      parrafo: black
+      slogan: orange
+    footer:
+      fondo: stone
+      contacto: white
+      copyright: white
+      menu:
+        blur: white
+        hover: stone
+      icono:
+        blur: white
+        hover: stone
+oscuro:
+  color:
+    menu:
+      enlace:
+        blur: white
+        hover: orange
+    banner:
+      titulo: white
+      icono:
+        blur: white
+        hover: orange
+    primera_seccion:
+      fondo: stone
+      titulo: orange
+      listado: white
+      icono:
+        blur: white
+        hover: orange
+    segunda_seccion:
+      fondo: white
+      titulo: orange
+      subtitulo: black
+      parrafo_izq: black
+      parrafo_der: black
+      subseccion:
+        titulo: orange
+        subtitulo: black
+        listado: black
+        detalle: black
+    tercera_seccion:
+      fondo: stone
+      titulo: orange
+      subtitulo: white
+    cuarta_seccion:
+      fondo: stone
+      titulo: orange
+      parrafo: white
+      slogan: orange
+    footer:
+      fondo: orange
+      contacto: white
+      copyright: white
+      menu:
+        blur: white
+        hover: orange
+      icono:
+        blur: white
+        hover: orange

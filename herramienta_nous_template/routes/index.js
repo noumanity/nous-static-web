@@ -12,6 +12,9 @@ let esquema_formulario = '';
 let esquema_formulario_sitio = '';
 const path_contenidos_blog = ubicacion.contenidos_blog;
 const path_contenidos_sitio = ubicacion.contenidos_sitio;
+let esquema_contenido_sitio = '';
+let esquema_diseno_sitio = '';
+
 
 try {
     esquema_formulario = yaml.load(fs.readFileSync(ubicacion.formulario_blog, 'utf-8'));
@@ -146,6 +149,17 @@ router.get('/panel_administrativo', (req, res, next) => {
     }
     res.render('nous_static_web_edicion', {formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8'), formulario_values:  JSON.stringify(content, 'utf-8'), usuario: sessionUsuario.nombre, rol: sessionUsuario.rol});
   });
+
+  router.get('/sitio/vista_previa/:archivo_id', (req, res, next) => {
+    let sessionUsuario = req.session.passport.user;
+    if(sessionUsuario.rol == 'Proveedor de diseño'){
+      res.redirect("/panel_administrativo")
+    }
+    let archivo_id = req.params.archivo_id;
+    esquema_contenido_sitio = yaml.load(fs.readFileSync(path_contenidos_sitio+'/pagina_'+archivo_id+'.yml', 'utf-8'));
+    esquema_diseno_sitio = yaml.load(fs.readFileSync(ubicacion.esquema_diseno_sitio, 'utf-8'));
+    res.render('plantilla/nous_static_web', {contenido:  esquema_contenido_sitio, diseno: esquema_diseno_sitio});
+  });
   
   router.get('/sitio/nuevo', (req, res, next) => {
     let sessionUsuario = req.session.passport.user;
@@ -174,6 +188,7 @@ router.get('/panel_administrativo', (req, res, next) => {
     var id = crypto.randomBytes(5).toString('hex');
     const outputfile = 'pagina_'+id+'.yml';
     fs.writeFileSync(path_contenidos_sitio+'/'+outputfile, yaml.dump(req.body.values));
+    res.redirect('/sitio/contenido');
   });
 
 module.exports = router;

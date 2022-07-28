@@ -5,7 +5,6 @@ const express=require('express');
 const passport=require('passport');
 const cookieParser=require('cookie-parser');
 const session=require('express-session');
-
 require('./passport/local-auth');
 
 //Ejecutar express
