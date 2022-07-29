@@ -68,6 +68,9 @@ router.get('/panel_administrativo', (req, res, next) => {
   });
 
   router.get('/blog/contenido', (req, res, next) => {
+    if (!fs.existsSync(path_contenidos_blog)) { 
+      fs.mkdirSync(path_contenidos_blog+'/',{recursive:true});
+    }
     let files = fs.readdirSync(path_contenidos_blog);
     let content;
     let files_data=[]; 
@@ -118,6 +121,9 @@ router.get('/panel_administrativo', (req, res, next) => {
   
   //Sitio web
   router.get('/sitio/contenido', (req, res, next) => {
+    if (!fs.existsSync(path_contenidos_sitio)) { 
+      fs.mkdirSync(path_contenidos_sitio+'/',{recursive:true});
+    } 
     let files = fs.readdirSync(path_contenidos_sitio);
     let content;
     let files_data=[]; 
