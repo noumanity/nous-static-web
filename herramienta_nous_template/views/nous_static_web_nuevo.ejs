@@ -30,11 +30,10 @@
     </div>
   </nav>
   <div class="container">
-    <div class="starter-template">
+    <div class="starter-template-form">
       <h1>Formulario para agregar nuevo artículo</h1>
-      <a href="/sitio/contenido" class="btn btn-sm btn-primary"> << Regresar a tabla de contenidos del blog</a>
+      <a href="/sitio/contenido" class="btn btn-sm btn-primary text-center button-form"> << Regresar a tabla de contenidos del blog</a>
       <input id="data" type="hidden" value="<%= formulario %>" />
-      <input id="formulario_placeholder" type="hidden" value="<%= placeholder %>" />
       <form action="/save-values" method="POST"></form>
       <div id="res" class="alert"></div>
     </div>
@@ -45,13 +44,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonform/2.2.5/jsonform.js"></script>
   <script>
    let data = JSON.parse(document.getElementById("data").value);
-   let formulario_placeholder = JSON.parse(document.getElementById("formulario_placeholder").value);
-   console.log(formulario_placeholder);
    $('form').jsonForm({
         schema: {
           data
         },
-        form:    formulario_placeholder
+        form:    
+        [
+          "*",
+        {
+          "type": "submit",
+          "title": "Enviar formulario"  
+        }
+      ]
+        //formulario_placeholder
         ,
         onSubmit: function (errors, values) {
           if (errors) {

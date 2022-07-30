@@ -5,3 +5,11 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.starter-template-form {
+  padding: 40px 15px;
+  text-align: left;
+}
+
+.button-form{
+  margin-bottom: 10px;
+}

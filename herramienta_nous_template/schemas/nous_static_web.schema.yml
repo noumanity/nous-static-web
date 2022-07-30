@@ -6,9 +6,11 @@ properties:
     required: true
     properties:
       titulo:
+        description: Ingresa el título con el que se guardará la página en la tabla de contenido
         type: string
         title: Título
       fecha:
+        description: Ingresa la fecha de creación o edición de la página.
         type: string
         title: Fecha de creación  
   menus: 
