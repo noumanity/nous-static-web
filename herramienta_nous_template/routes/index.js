@@ -10,15 +10,18 @@ const fs = require('fs');
 const path_build_index = ubicacion.build_index;
 let esquema_formulario = '';
 let esquema_formulario_sitio = '';
+let placeholder_formulario_sitio = '';
 const path_contenidos_blog = ubicacion.contenidos_blog;
 const path_contenidos_sitio = ubicacion.contenidos_sitio;
 let esquema_contenido_sitio = '';
 let esquema_diseno_sitio = '';
 
 
+
 try {
     esquema_formulario = yaml.load(fs.readFileSync(ubicacion.formulario_blog, 'utf-8'));
     esquema_formulario_sitio = yaml.load(fs.readFileSync(ubicacion.formulario_sitio, 'utf-8'));
+    placeholder_formulario_sitio = yaml.load(fs.readFileSync(ubicacion.placeholder_formulario_sitio, 'utf-8'));
 } catch (e) {
     console.log(e);
 } 
@@ -172,7 +175,7 @@ router.get('/panel_administrativo', (req, res, next) => {
     if(sessionUsuario.rol == 'Proveedor de diseño'){
       res.redirect("/panel_administrativo")
     }
-    res.render('nous_static_web_nuevo', {formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8'), usuario: sessionUsuario.nombre, rol: sessionUsuario.rol});
+    res.render('nous_static_web_nuevo', {placeholder: JSON.stringify(placeholder_formulario_sitio, 'utf-8'), formulario:  JSON.stringify(esquema_formulario_sitio, 'utf-8'), usuario: sessionUsuario.nombre, rol: sessionUsuario.rol});
   });
   
   router.get('/sitio/diseno', (req, res, next) => {

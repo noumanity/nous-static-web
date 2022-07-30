@@ -1,0 +1,11 @@
+- key: data.pagina.titulo
+  placeholder: Ingresa el título con el que se guardará la página en la tabla de contenido
+- key: data.pagina.fecha
+  placeholder: Ingresa la fecha de creación de la página
+- key: data.menus[].menu.enlace
+  placeholder: Ingresa el nombre del menú
+- key: data.menus[].menu.referencia
+  placeholder: Ingresa a que pagina te direcciona este elemento del menú
+- type: submit
+  title: Enviar formulario  
+

@@ -38,14 +38,15 @@
             <!--Menú-->
             <div class="hidden md:block lg:block">
                 <div class=" pt-8 text-right md:grid grid-cols-3">
-                    <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 pr-3"><%=contenido.data.menus[0].menu.enlace%></a>
-                    <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%> pr-3"><%=contenido.data.menus[1].menu.enlace%></a>
-                    <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>"><%=contenido.data.menus[2].menu.enlace%></a>
+                    <% for(var i=0; i<contenido.data.menus.length; i++) {%>
+                        <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 pr-3"><%=contenido.data.menus[i].menu.enlace%></a>
+                    <% } %>
                 </div>
             </div>
             <div class="hidden md:block lg:block pt-8 md:pl-10 lg:pl-40 text-center">
-                <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:text-<%=diseno.oscuro.color.menu.enlace.blur%> dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 pr-2 hover:font-bold"><%=contenido.data.idiomas[0].idioma.nombre%></a>
-                <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:text-<%=diseno.oscuro.color.menu.enlace.blur%> dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 hover:font-bold"><%=contenido.data.idiomas[1].idioma.nombre%></a>
+                <% for(var i=0; i<contenido.data.idiomas.length; i++) {%>
+                    <a href="#" class="text-sm text-<%=diseno.claro.color.menu.enlace.blur%> hover:text-<%=diseno.claro.color.menu.enlace.hover%>-600 dark:text-<%=diseno.oscuro.color.menu.enlace.blur%> dark:hover:text-<%=diseno.oscuro.color.menu.enlace.hover%>-600 pr-2 hover:font-bold"><%=contenido.data.idiomas[i].idioma.nombre%></a>
+                <% } %>
             </div>
             <!--End Menú-->
         </div>
@@ -272,9 +273,9 @@
             </quote>
         </div>
         <div class="hidden md:block lg:block">
-            <a href="#" class="sm:text-sm text-<%=diseno.claro.color.footer.menu.blur%> hover:text-<%=diseno.claro.color.footer.menu.hover%>-600 dark:text-<%=diseno.oscuro.color.footer.menu.blur%> dark:hover:text-<%=diseno.oscuro.color.footer.menu.hover%>-900 px-5"><%=contenido.data.menus[0].menu.enlace%></a>
-            <a href="#" class="sm:text-sm text-<%=diseno.claro.color.footer.menu.blur%> hover:text-<%=diseno.claro.color.footer.menu.hover%>-600 dark:text-<%=diseno.oscuro.color.footer.menu.blur%> dark:hover:text-<%=diseno.oscuro.color.footer.menu.hover%>-900 px-5"><%=contenido.data.menus[1].menu.enlace%></a>
-            <a href="#" class="sm:text-sm text-<%=diseno.claro.color.footer.menu.blur%> hover:text-<%=diseno.claro.color.footer.menu.hover%>-600 dark:text-<%=diseno.oscuro.color.footer.menu.blur%> dark:hover:text-<%=diseno.oscuro.color.footer.menu.hover%>-900 px-5"><%=contenido.data.menus[2].menu.enlace%></a>
+            <% for(var i=0; i<contenido.data.menus.length; i++) {%>
+                <a href="#" class="sm:text-sm text-<%=diseno.claro.color.footer.menu.blur%> hover:text-<%=diseno.claro.color.footer.menu.hover%>-600 dark:text-<%=diseno.oscuro.color.footer.menu.blur%> dark:hover:text-<%=diseno.oscuro.color.footer.menu.hover%>-900 px-5"><%=contenido.data.menus[0].menu.enlace%></a>
+            <% } %>
         </div>
         <div>
             <a href="#nav-bar-noumanity">
