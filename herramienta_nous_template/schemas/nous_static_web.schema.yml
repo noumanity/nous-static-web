@@ -11,7 +11,7 @@ properties:
         title: Título
       fecha:
         description: Ingresa la fecha de creación o edición de la página.
-        type: string
+        type: date
         title: Fecha de creación  
   menus: 
     title: Menús
@@ -23,11 +23,11 @@ properties:
           type: object
           properties:
             enlace: 
-              type: string
+              type: text
               title: Nombre del enlace
               required: true
             referencia: 
-              type: string
+              type: text
               title: Sección de referencia en el sitio
               required: true     
   idiomas: 
@@ -40,7 +40,7 @@ properties:
           type: object
           properties:
             nombre: 
-              type: string
+              type: text
               title: Iniciales del idioma en mayúscula
               required: true
   banner:
@@ -49,7 +49,7 @@ properties:
     required: true
     properties:
       titulo:
-        type: string
+        type: textarea
         title: Título
   primera_seccion:
     type: object
@@ -57,10 +57,10 @@ properties:
     required: true
     properties:
       titulo:
-        type: string
+        type: text
         title: Título
       listado:
-        type: string
+        type: textarea
         title: Listado 
   segunda_seccion:
     type: object
@@ -68,16 +68,16 @@ properties:
     required: true
     properties:
       titulo:
-        type: string
+        type: text
         title: Título
       subtitulo:
-        type: string
+        type: text
         title: Subtitulo
       parrafo_izq:
-        type: string
+        type: textarea
         title: Párrafo izquierdo
       parrafo_der:
-        type: string
+        type: textarea
         title: Párrafo derecho
       subseccion:
         type: object
@@ -85,10 +85,10 @@ properties:
         required: true  
         properties:
           titulo:
-            type: string
+            type: text
             title: Título
           subtitulo:
-            type: string
+            type: text
             title: Subtitulo
           listado:
             type: object
@@ -96,13 +96,13 @@ properties:
             required: true  
             properties:
               tab_uno:
-                type: string
+                type: text
                 title: Tab uno
               tab_dos:
-                type: string
+                type: text
                 title: Tab dos
               tab_tres:
-                type: string
+                type: text
                 title: Tab tres
               tab_cuatro:
                 type: string
@@ -113,16 +113,16 @@ properties:
             required: true  
             properties:
               tab_uno:
-                type: string
+                type: textarea
                 title: Tab uno
               tab_dos:
-                type: string
+                type: textarea
                 title: Tab dos
               tab_tres:
-                type: string
+                type: textarea
                 title: Tab tres
               tab_cuatro:
-                type: string
+                type: textarea
                 title: Tab cuatro            
   tercera_seccion:
     type: object
@@ -130,10 +130,10 @@ properties:
     required: true
     properties:
       titulo:
-        type: string
+        type: text
         title: Título
       subtitulo:
-        type: string
+        type: text
         title: Subtitulo
   cuarta_seccion:
     type: object
@@ -141,13 +141,13 @@ properties:
     required: true
     properties:
       titulo:
-        type: string
+        type: text
         title: Título
       parrafo:
-        type: string
+        type: textarea
         title: Párrafo
       slogan:
-        type: string
+        type: textarea
         title: Slogan
   footer:
     type: object
@@ -160,13 +160,13 @@ properties:
         required: true
         properties:
           email:
-            type: string
+            type: email
             title: Correo electrónico
           celular:
-            type: string
+            type: text
             title: Celular
       copyright:
-        type: string
+        type: text
         title: Derechos de autor, año         
 
 

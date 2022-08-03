@@ -52,12 +52,10 @@
         [
           "*",
         {
-          "type": "submit",
-          "title": "Enviar formulario"  
+          type: "submit",
+          title: "Enviar formulario"  
         }
-      ]
-        //formulario_placeholder
-        ,
+      ],
         onSubmit: function (errors, values) {
           if (errors) {
             $('#res').html('<p>Ha ocurrido un error al momento de intentar enviar el formulario</p>');
