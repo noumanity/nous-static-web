@@ -167,6 +167,16 @@ router.get('/panel_administrativo', (req, res, next) => {
     esquema_diseno_sitio = yaml.load(fs.readFileSync(ubicacion.esquema_diseno_sitio, 'utf-8'));
     res.render('plantilla/nous_static_web', {contenido:  esquema_contenido_sitio, diseno: esquema_diseno_sitio});
   });
+
+  router.get('/sitio/eliminar/:archivo_id', (req, res, next) => {
+    let sessionUsuario = req.session.passport.user;
+    if(sessionUsuario.rol == 'Proveedor de diseño'){
+      res.redirect("/panel_administrativo")
+    }
+    let archivo_id = req.params.archivo_id;
+    fs.unlinkSync(path_contenidos_sitio+'/pagina_'+archivo_id+'.yml');
+    res.redirect('/sitio/contenido');
+  });
   
   router.get('/sitio/nuevo', (req, res, next) => {
     let sessionUsuario = req.session.passport.user;
@@ -192,11 +202,13 @@ router.get('/panel_administrativo', (req, res, next) => {
   });
   
   router.post('/save-values-sitio', (req, res, next) => {
-    var id = crypto.randomBytes(5).toString('hex');
-    const outputfile = 'pagina_'+id+'.yml';
-    fs.writeFileSync(path_contenidos_sitio+'/'+outputfile, yaml.dump(req.body.values));
     if(req.body.id){
       fs.unlinkSync(path_contenidos_sitio+'/pagina_'+req.body.id+'.yml');
+      fs.writeFileSync(path_contenidos_sitio+'/pagina_'+req.body.id+'.yml', yaml.dump(req.body.values));
+    }else{
+      var id = crypto.randomBytes(5).toString('hex');
+      const outputfile = 'pagina_'+id+'.yml';
+      fs.writeFileSync(path_contenidos_sitio+'/'+outputfile, yaml.dump(req.body.values));
     }
     res.redirect('/sitio/contenido');
   });
