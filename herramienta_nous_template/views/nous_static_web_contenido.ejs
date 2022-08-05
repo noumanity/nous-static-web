@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Contenidos en el sitio web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/starter-template.css">
+</head>
+<body class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Nous static web</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Nous static web</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Bienvenido(a): <%=usuario%></a></li>
+          <li><a href="#">Rol: <%=rol%></a></li>
+          <li><a href="/logout">Cerrar sesión</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
+    <div class="starter-template">
+      <h1>Cantidad de contenidos en el sitio web</h1>
+      <a href="/panel_administrativo" class="btn btn-sm btn-success">Ir a inicio</a>
+      <a href="/sitio/nuevo" class="btn btn-sm btn-primary">Agregar página</a>
+
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (files_data.length > 0) {
+            for(var i=0; i<files_data.length; i++) { %>
+              <tr>
+                <th scope="row"><%=(i+1)%></th>
+                <td><%=files_data[i].titulo%></td>
+              <td><%=files_data[i].fecha%></td>
+              <td>
+                <a class="btn btn-sm btn-warning" href="/sitio/edicion/<%=files_data[i].archivo%>">Editar</a>
+                <a class="btn btn-sm btn-success" target="_blank" href="/sitio/vista_previa/<%=files_data[i].archivo%>">Vista previa</a>
+                <a class="btn btn-sm btn-danger" href="/sitio/eliminar/<%=files_data[i].archivo%>">Eliminar</a>
+              </td>
+              </tr>
+          <%  }
+            }else{ %>
+              <tr>
+                <td colspan=5>Por el momento no hay ningún contenido de página creada para el sitio web</td>
+              </tr>
+          <% } %>  
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+  
+  
+
+
+</body>
+</html>

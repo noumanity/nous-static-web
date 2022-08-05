@@ -1,0 +1,173 @@
+type: object
+properties:
+  pagina:
+    type: object
+    title: Información de la página
+    required: true
+    properties:
+      titulo:
+        description: Ingresa el título con el que se guardará la página en la tabla de contenido
+        type: string
+        title: Título
+      fecha:
+        description: Ingresa la fecha de creación o edición de la página.
+        type: date
+        title: Fecha de creación  
+  menus: 
+    title: Menús
+    type: array
+    items:
+      type: object
+      properties:
+        menu:
+          type: object
+          properties:
+            enlace: 
+              type: text
+              title: Nombre del enlace
+              required: true
+            referencia: 
+              type: text
+              title: Sección de referencia en el sitio
+              required: true     
+  idiomas: 
+    title: Idiomas
+    type: array
+    items:
+      type: object
+      properties:
+        idioma:
+          type: object
+          properties:
+            nombre: 
+              type: text
+              title: Iniciales del idioma en mayúscula
+              required: true
+  banner:
+    type: object
+    title: Información del banner
+    required: true
+    properties:
+      titulo:
+        type: textarea
+        title: Título
+  primera_seccion:
+    type: object
+    title: Información de la primera sección
+    required: true
+    properties:
+      titulo:
+        type: textarea
+        title: Título
+      listado:
+        type: textarea
+        title: Listado 
+  segunda_seccion:
+    type: object
+    title: Información de la segunda sección
+    required: true
+    properties:
+      titulo:
+        type: text
+        title: Título
+      subtitulo:
+        type: text
+        title: Subtitulo
+      parrafo_izq:
+        type: textarea
+        title: Párrafo izquierdo
+      parrafo_der:
+        type: textarea
+        title: Párrafo derecho
+      subseccion:
+        type: object
+        title: Información de la subsección
+        required: true  
+        properties:
+          titulo:
+            type: text
+            title: Título
+          subtitulo:
+            type: text
+            title: Subtitulo
+          listado:
+            type: object
+            title: Información del listado
+            required: true  
+            properties:
+              tab_uno:
+                type: text
+                title: Tab uno
+              tab_dos:
+                type: text
+                title: Tab dos
+              tab_tres:
+                type: text
+                title: Tab tres
+              tab_cuatro:
+                type: string
+                title: Tab cuatro      
+          detalle:
+            type: object
+            title: Información detallada del listado
+            required: true  
+            properties:
+              tab_uno:
+                type: textarea
+                title: Tab uno
+              tab_dos:
+                type: textarea
+                title: Tab dos
+              tab_tres:
+                type: textarea
+                title: Tab tres
+              tab_cuatro:
+                type: textarea
+                title: Tab cuatro            
+  tercera_seccion:
+    type: object
+    title: Información de la tercera sección
+    required: true
+    properties:
+      titulo:
+        type: text
+        title: Título
+      subtitulo:
+        type: text
+        title: Subtitulo
+  cuarta_seccion:
+    type: object
+    title: Información de la cuarta sección
+    required: true
+    properties:
+      titulo:
+        type: text
+        title: Título
+      parrafo:
+        type: textarea
+        title: Párrafo
+      slogan:
+        type: textarea
+        title: Slogan
+  footer:
+    type: object
+    title: Información del pie de página
+    required: true
+    properties:
+      contacto:
+        type: object
+        title: Información del contacto
+        required: true
+        properties:
+          email:
+            type: email
+            title: Correo electrónico
+          celular:
+            type: text
+            title: Celular
+      copyright:
+        type: text
+        title: Derechos de autor, año         
+
+
+
