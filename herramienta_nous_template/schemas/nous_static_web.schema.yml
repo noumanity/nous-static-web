@@ -57,7 +57,7 @@ properties:
     required: true
     properties:
       titulo:
-        type: text
+        type: textarea
         title: Título
       listado:
         type: textarea

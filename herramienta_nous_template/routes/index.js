@@ -202,7 +202,7 @@ router.get('/panel_administrativo', (req, res, next) => {
   });
   
   router.post('/save-values-sitio', (req, res, next) => {
-    if(req.body.id){
+    if(req.body.id != "false"){
       fs.unlinkSync(path_contenidos_sitio+'/pagina_'+req.body.id+'.yml');
       fs.writeFileSync(path_contenidos_sitio+'/pagina_'+req.body.id+'.yml', yaml.dump(req.body.values));
     }else{
